@@ -1,13 +1,13 @@
 {
   "version": 1,
-  "generatedAt": "2026-10-20T06:34:55.834Z",
+  "generatedAt": "2026-10-20T06:36:11.397Z",
   "tool": {
     "name": "agent-blame",
     "version": "0.1.0"
   },
   "repo": {
     "path": "…/agent-blame",
-    "head": "0711df7",
+    "head": "0123111",
     "branch": "fix/public-sample",
     "subdir": null
   },
@@ -26,16 +26,16 @@
   },
   "totals": {
     "files": 37,
-    "lines": 5529,
-    "counted": 5529,
-    "ai": 5491,
-    "human": 38,
+    "lines": 5525,
+    "counted": 5525,
+    "ai": 5525,
+    "human": 0,
     "bot": 0,
-    "uncommitted": 38,
+    "uncommitted": 0,
     "unknown": 0,
-    "aiShare": 0.993127,
-    "commits": 16,
-    "aiCommits": 16,
+    "aiShare": 1,
+    "commits": 17,
+    "aiCommits": 17,
     "humanCommits": 0,
     "botCommits": 0
   },
@@ -43,9 +43,9 @@
     {
       "id": "claude",
       "label": "Claude Code",
-      "lines": 5491,
-      "share": 0.993127,
-      "commits": 16
+      "lines": 5525,
+      "share": 1,
+      "commits": 17
     }
   ],
   "byPath": [
@@ -72,9 +72,9 @@
     {
       "path": "README.md",
       "files": 1,
-      "lines": 447,
-      "counted": 447,
-      "ai": 447,
+      "lines": 443,
+      "counted": 443,
+      "ai": 443,
       "human": 0,
       "bot": 0,
       "share": 1
@@ -95,6 +95,16 @@
       "lines": 103,
       "counted": 103,
       "ai": 103,
+      "human": 0,
+      "bot": 0,
+      "share": 1
+    },
+    {
+      "path": "scripts/",
+      "files": 1,
+      "lines": 82,
+      "counted": 82,
+      "ai": 82,
       "human": 0,
       "bot": 0,
       "share": 1
@@ -158,16 +168,6 @@
       "human": 0,
       "bot": 0,
       "share": 1
-    },
-    {
-      "path": "scripts/",
-      "files": 1,
-      "lines": 82,
-      "counted": 82,
-      "ai": 44,
-      "human": 38,
-      "bot": 0,
-      "share": 0.536585
     }
   ],
   "skipped": {
@@ -180,10 +180,10 @@
       "name": "Quigles1337",
       "email": "adz@alphx.io",
       "kind": "human",
-      "lines": 5491,
-      "ai": 5491,
+      "lines": 5525,
+      "ai": 5525,
       "agents": {
-        "claude": 5491
+        "claude": 5525
       },
       "share": 1
     }
@@ -195,13 +195,13 @@
     "periods": [
       {
         "period": "2026-10",
-        "added": 5558,
-        "ai": 5558,
+        "added": 5629,
+        "ai": 5629,
         "human": 0,
         "bot": 0,
-        "commits": 8,
-        "aiCommits": 8,
-        "counted": 5558,
+        "commits": 9,
+        "aiCommits": 9,
+        "counted": 5629,
         "share": 1
       }
     ]
