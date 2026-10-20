@@ -123,6 +123,9 @@ export async function main(argv, { stdout = process.stdout, stderr = process.std
   }
 
   const quiet = Boolean(values.quiet);
+  if (!quiet && (values.since || values.until) && !values.history && !values.weekly) {
+    stderr.write('agent-blame: note: --since/--until only affect --history; blame always reflects the current state\n');
+  }
   const progressEnabled = !quiet && Boolean(stderr.isTTY);
   let lastProgress = 0;
 

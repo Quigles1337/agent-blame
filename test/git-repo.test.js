@@ -14,7 +14,7 @@ import {
   ZERO_HASH,
 } from '../src/git.js';
 import { createMatcher } from '../src/glob.js';
-import { initRepo, writeFile, commitAll, removeDir, makeTempDir } from './support/temp-repo.js';
+import { initRepo, writeFile, commitAll, removeDir, makeTempDir, run } from './support/temp-repo.js';
 
 const CLAUDE = 'Co-Authored-By: Claude <noreply@anthropic.com>';
 
@@ -162,4 +162,15 @@ test('readNumstat reports added/deleted lines per commit on HEAD, honouring --si
   assert.deepEqual(since.map((c) => c.hash), [h2]);
   const until = await readNumstat(dir, { until: '2026-02-01' });
   assert.deepEqual(until.map((c) => c.hash), [h1]);
+});
+
+test('readCommits leaves stash entries out of the commit set', async (t) => {
+  const dir = initRepo();
+  t.after(() => removeDir(dir));
+  writeFile(dir, 'a.txt', 'one\n');
+  const h1 = commitAll(dir, 'First\n');
+  writeFile(dir, 'a.txt', 'one\ntwo\n');
+  run(dir, ['stash', 'push', '-q', '-m', 'wip']);
+  const commits = await readCommits(dir);
+  assert.deepEqual(commits.map((c) => c.hash), [h1]);
 });

@@ -77,9 +77,13 @@ export function parseLog(text) {
   return commits;
 }
 
-/** Every commit reachable from any ref, as parsed commit objects. */
+/**
+ * Every commit reachable from any ref, as parsed commit objects. Stash
+ * entries and notes are not part of the project's history and are left out.
+ */
 export async function readCommits(root) {
-  const r = await git(['log', '--all', '-z', `--format=${LOG_FORMAT}`], { cwd: root, allowFailure: true });
+  const args = ['log', '--exclude=refs/stash', '--exclude=refs/notes/*', '--all', '-z', `--format=${LOG_FORMAT}`];
+  const r = await git(args, { cwd: root, allowFailure: true });
   if (r.code !== 0) {
     if (/does not have any commits|bad default revision|unknown revision/i.test(r.stderr)) return [];
     throw new Error(`git log failed (exit ${r.code}): ${r.stderr}`);
