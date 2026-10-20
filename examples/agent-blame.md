@@ -1,18 +1,20 @@
 ### AI-assisted code
 
-**100.0%** of 3,553 lines are AI-assisted (3,553 lines across 30 files). 12 of 12 commits carry agent evidence.
+**100.0%** of 5,010 lines are AI-assisted (5,010 lines across 35 files). 7 of 7 commits carry agent evidence.
 
 | Agent | Lines | Share | Commits |
 | --- | ---: | ---: | ---: |
-| Claude Code | 3,553 | 100.0% | 12 |
+| Claude Code | 5,010 | 100.0% | 7 |
 
 | Path | Files | Lines | AI-assisted | Share |
 | --- | ---: | ---: | ---: | ---: |
-| `src/` | 11 | 1,960 | 1,960 | 100.0% |
-| `test/` | 10 | 1,361 | 1,361 | 100.0% |
-| `.github/` | 2 | 76 | 76 | 100.0% |
+| `src/` | 12 | 2,489 | 2,489 | 100.0% |
+| `test/` | 11 | 1,656 | 1,656 | 100.0% |
+| `README.md` | 1 | 413 | 413 | 100.0% |
+| `action.yml` | 1 | 190 | 190 | 100.0% |
+| `.github/` | 3 | 103 | 103 | 100.0% |
+| `scripts/` | 1 | 54 | 54 | 100.0% |
 | `package.json` | 1 | 53 | 53 | 100.0% |
-| `scripts/` | 1 | 51 | 51 | 100.0% |
 | `LICENSE` | 1 | 21 | 21 | 100.0% |
 | `.editorconfig` | 1 | 12 | 12 | 100.0% |
 | `bin/` | 1 | 12 | 12 | 100.0% |

@@ -1,6 +1,7 @@
 name: AI-assisted badge
 
-# Keeps examples/agent-blame.svg current: the same recipe the README
+# Keeps examples/agent-blame.svg (the badge) and examples/agent-blame.json
+# (the shields.io endpoint document) current: the same recipe the README
 # recommends for other repositories. Runs weekly and on demand.
 on:
   schedule:
@@ -24,12 +25,12 @@ jobs:
       - uses: actions/setup-node@v4
         with:
           node-version: 22
-      - name: Measure and write the badge
-        run: node bin/agent-blame.js --quiet --badge examples/agent-blame.svg
+      - name: Measure and write the badge and the shields endpoint
+        run: node bin/agent-blame.js --quiet --exclude 'examples/**' --badge examples/agent-blame.svg --shields examples/agent-blame.json
       - name: Commit the badge if it changed
         run: |
           git config user.name "github-actions[bot]"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
-          git add examples/agent-blame.svg
+          git add examples/agent-blame.svg examples/agent-blame.json
           git diff --cached --quiet || git commit -m "Update AI-assisted badge [skip ci]"
           git push

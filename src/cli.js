@@ -6,7 +6,7 @@ import fs from 'node:fs';
 import path from 'node:path';
 import { parseArgs } from 'node:util';
 import { analyze, TOOL } from './analyze.js';
-import { renderBadge } from './badge.js';
+import { renderBadge, renderShields } from './badge.js';
 import { formatShare, renderMarkdown, renderText, toJSON } from './report.js';
 
 export const USAGE = 'Usage: agent-blame [path] [options]';
@@ -16,15 +16,23 @@ export const HELP = `${USAGE}
 Measure how much of a repository was written with AI coding agents, line by
 line, from the Co-Authored-By trailers and author identities they leave in
 git history. Blame reflects the current working tree; history reflects the
-commits reachable from HEAD.
+commits reachable from HEAD; a range reflects only the commits in it.
 
 Arguments
   path                      Repository, or a directory inside one (default: .)
+
+Pull-request mode
+  --range <base>..<head>    Classify only the commits in the range and report the
+                            share of lines they added (no blame). A single
+                            revision means <rev>..HEAD
+  --base <rev>, --head <rev>
+                            The same as --range <base>..<head> (head defaults to HEAD)
 
 Output
   --json                    Machine-readable report (stable schema, version 1)
   --markdown                GitHub-flavoured Markdown tables
   --badge <file.svg>        Also write a shields-style "AI-assisted | NN%" badge
+  --shields <file.json>     Also write a shields.io endpoint document for a dynamic badge
   --files                   Per-file table instead of per-directory
   --depth <n>               Directory depth for the path table (default: 1)
   --by-author               Per-author table: lines and how many were agent-assisted
@@ -60,6 +68,10 @@ const OPTIONS = {
   json: { type: 'boolean' },
   markdown: { type: 'boolean' },
   badge: { type: 'string' },
+  shields: { type: 'string' },
+  range: { type: 'string' },
+  base: { type: 'string' },
+  head: { type: 'string' },
   files: { type: 'boolean' },
   depth: { type: 'string' },
   'by-author': { type: 'boolean' },
@@ -123,7 +135,7 @@ export async function main(argv, { stdout = process.stdout, stderr = process.std
   }
 
   const quiet = Boolean(values.quiet);
-  if (!quiet && (values.since || values.until) && !values.history && !values.weekly) {
+  if (!quiet && (values.since || values.until) && !values.history && !values.weekly && !values.range && !values.base) {
     stderr.write('agent-blame: note: --since/--until only affect --history; blame always reflects the current state\n');
   }
   const progressEnabled = !quiet && Boolean(stderr.isTTY);
@@ -149,6 +161,9 @@ export async function main(argv, { stdout = process.stdout, stderr = process.std
       until: values.until,
       jobs: intOption('jobs', values.jobs, { min: 1, max: 256 }),
       threshold: intOption('threshold', values.threshold, { min: 0, max: 100, float: true }),
+      range: values.range,
+      base: values.base,
+      head: values.head,
       onProgress: progressEnabled
         ? (done, total) => {
             const now = Date.now();
@@ -184,6 +199,18 @@ export async function main(argv, { stdout = process.stdout, stderr = process.std
       return 1;
     }
     if (!quiet) stderr.write(`badge written to ${out}\n`);
+  }
+
+  if (values.shields) {
+    const out = path.resolve(cwd, values.shields);
+    try {
+      fs.mkdirSync(path.dirname(out), { recursive: true });
+      fs.writeFileSync(out, `${JSON.stringify(renderShields({ share: model.totals.aiShare }), null, 2)}\n`);
+    } catch (err) {
+      stderr.write(`agent-blame: cannot write shields endpoint ${out}: ${err.message}\n`);
+      return 1;
+    }
+    if (!quiet) stderr.write(`shields endpoint written to ${out}\n`);
   }
 
   if (model.threshold !== null && model.threshold !== undefined && model.totals.aiShare * 100 > model.threshold) {

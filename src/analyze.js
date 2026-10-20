@@ -12,6 +12,7 @@ import { createMatcher } from './glob.js';
 import { blameRepo, findIgnoreRevsFile, git, readCommits, readNumstat, repoRoot } from './git.js';
 import { aggregate, SCHEMA_VERSION } from './aggregate.js';
 import { bucketHistory } from './history.js';
+import { collectRange, readRange, resolveRangeSpec, scopedMatcher, shortRev } from './range.js';
 
 const require = createRequire(import.meta.url);
 const pkg = require('../package.json');
@@ -40,9 +41,15 @@ function toPosix(p) {
  * @param {string}  [opts.until]                 history only
  * @param {number}  [opts.jobs=4]
  * @param {number|null} [opts.threshold]         override config.threshold
+ * @param {string}  [opts.range]                 `<base>..<head>`: pull-request mode, see analyzeRange()
+ * @param {string}  [opts.base]                  with opts.head, the same as opts.range
+ * @param {string}  [opts.head]
  * @param {(done: number, total: number, file: string) => void} [opts.onProgress]
  */
 export async function analyze(opts = {}) {
+  const rangeSpec = resolveRangeSpec({ range: opts.range, base: opts.base, head: opts.head });
+  if (rangeSpec) return analyzeRange(opts, rangeSpec);
+
   const target = path.resolve(opts.path ?? '.');
   if (!fs.existsSync(target)) throw new Error(`path does not exist: ${target}`);
   const root = await repoRoot(target);
@@ -123,6 +130,89 @@ export async function analyze(opts = {}) {
     history,
     skipped: { count: skipped.length, byReason, files: skipped },
     ignoreRevsFile: ignoreRevsFile ? toPosix(path.relative(root, ignoreRevsFile)) : null,
+    threshold: threshold ?? null,
+  };
+}
+
+/**
+ * Pull-request mode. Classifies only the non-merge commits in
+ * `<base>..<head>` and reports the share of lines they ADDED (from
+ * `git log --numstat`) that came from agent-assisted commits, per agent and
+ * per path, plus the commits themselves with their evidence. The working
+ * tree is not blamed. Options other than history apply as in analyze().
+ */
+export async function analyzeRange(opts = {}, rangeSpec = resolveRangeSpec(opts)) {
+  if (!rangeSpec) throw new Error('analyzeRange needs a range');
+  if (opts.history || opts.weekly || opts.since || opts.until) {
+    throw new Error('--history, --since and --until cannot be combined with --range; the range already selects the commits');
+  }
+  const target = path.resolve(opts.path ?? '.');
+  if (!fs.existsSync(target)) throw new Error(`path does not exist: ${target}`);
+  const root = await repoRoot(target);
+  if (!root) throw new Error(`not a git repository: ${target}`);
+  const subdir = toPosix(path.relative(root, fs.realpathSync.native(target))).replace(/^\.$/, '');
+
+  const config = loadConfig(root, opts.config);
+  const defaultPatterns = opts.defaultPatterns ?? true;
+  const ignoreBots = opts.ignoreBots ?? config.ignoreBots;
+  const depth = opts.depth ?? config.depth;
+  const include = [...config.include, ...(opts.include ?? [])];
+  const exclude = [...config.exclude, ...(opts.exclude ?? [])];
+  const threshold = opts.threshold !== undefined ? opts.threshold : config.threshold;
+
+  const classify = createClassifier({ config, defaultPatterns });
+  const matcher = scopedMatcher(subdir, createMatcher({ include, exclude }));
+
+  const baseHash = await shortRev(root, rangeSpec.base);
+  const headHash = await shortRev(root, rangeSpec.head);
+  if (!baseHash) throw new Error(`unknown revision ${JSON.stringify(rangeSpec.base)} in range ${rangeSpec.spec}`);
+  if (!headHash) throw new Error(`unknown revision ${JSON.stringify(rangeSpec.head)} in range ${rangeSpec.spec}`);
+  const rangeCommits = await readRange(root, rangeSpec.spec);
+  const { files, commitIndex, commits, skipped } = collectRange(rangeCommits, classify, { matcher });
+  const agg = aggregate({ files, commitIndex, labels: classify.labels, ignoreBots, depth, perFile: Boolean(opts.perFile) });
+
+  const head = await git(['rev-parse', '--short', 'HEAD'], { cwd: root, allowFailure: true });
+  const branch = await git(['rev-parse', '--abbrev-ref', 'HEAD'], { cwd: root, allowFailure: true });
+
+  const byReason = {};
+  for (const s of skipped) byReason[s.reason] = (byReason[s.reason] ?? 0) + 1;
+
+  return {
+    version: SCHEMA_VERSION,
+    generatedAt: new Date().toISOString(),
+    tool: TOOL,
+    mode: 'range',
+    repo: {
+      path: root,
+      head: head.code === 0 ? head.stdout.toString('utf8').trim() : null,
+      branch: branch.code === 0 ? branch.stdout.toString('utf8').trim() : null,
+      subdir: subdir || null,
+    },
+    range: {
+      spec: rangeSpec.spec,
+      base: rangeSpec.base,
+      head: rangeSpec.head,
+      baseHash,
+      headHash,
+    },
+    options: {
+      ignoreBots,
+      defaultPatterns,
+      depth,
+      perFile: Boolean(opts.perFile),
+      include,
+      exclude,
+      maxFileSize: null,
+      config: config.path ? toPosix(path.relative(root, config.path)) : null,
+    },
+    totals: agg.totals,
+    agents: agg.agents,
+    byPath: agg.byPath,
+    byAuthor: opts.byAuthor ? agg.byAuthor : null,
+    commits,
+    history: null,
+    skipped: { count: skipped.length, byReason, files: skipped },
+    ignoreRevsFile: null,
     threshold: threshold ?? null,
   };
 }

@@ -5,8 +5,11 @@
  *
  *   node scripts/examples.js [path/to/sample-repo ...]
  *
- * Absolute repository paths are replaced with "…/<name>" so the files do
- * not depend on the machine they were produced on.
+ * Per sample: <name>.txt, <name>-history.txt, <name>.md, <name>-report.json
+ * (the --json document), <name>.svg (the badge) and <name>.json (the
+ * shields.io endpoint document). Absolute repository paths are replaced
+ * with "…/<name>" so the files do not depend on the machine they were
+ * produced on.
  */
 import { execFileSync } from 'node:child_process';
 import fs from 'node:fs';
@@ -36,11 +39,11 @@ function sample(repoPath, name, extra = []) {
   fs.writeFileSync(path.join(outDir, `${name}.txt`), scrub(run([])));
   fs.writeFileSync(path.join(outDir, `${name}-history.txt`), scrub(run(['--by-author', '--history'])));
   fs.writeFileSync(path.join(outDir, `${name}.md`), scrub(run(['--markdown'])));
-  run(['--badge', path.join(outDir, `${name}.svg`)]);
+  run(['--badge', path.join(outDir, `${name}.svg`), '--shields', path.join(outDir, `${name}.json`)]);
 
   const doc = JSON.parse(run(['--json', '--by-author', '--history']));
   doc.repo.path = `…/${name}`;
-  fs.writeFileSync(path.join(outDir, `${name}.json`), `${JSON.stringify(doc, null, 2)}\n`);
+  fs.writeFileSync(path.join(outDir, `${name}-report.json`), `${JSON.stringify(doc, null, 2)}\n`);
 
   process.stdout.write(`${name}: ${doc.totals.lines} lines, ${(doc.totals.aiShare * 100).toFixed(1)}% AI-assisted, ${doc.totals.commits} commits\n`);
 }
