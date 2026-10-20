@@ -1,0 +1,29 @@
+agent-blame …/G-del @ f0178b9 (main)
+
+Summary                            Lines  Share
+Lines (blame of the working tree)  5,254
+  AI-assisted                      2,429  46.2%  █████████░░░░░░░░░░░
+  Human                            2,825  53.8%
+
+By agent       Lines  Share  Commits
+  Claude Code  2,429  46.2%        3
+
+12 commits across all refs: 3 AI-assisted (25.0%), 9 human, 0 bot
+
+Path (depth 1)      Files  Lines  AI-assisted   Share
+Main.lean               1     82           82  100.0%  ████████████████████
+.github/                1     73           73  100.0%  ████████████████████
+CITATION.cff            1     29           29  100.0%  ████████████████████
+LICENSE                 1     21           21  100.0%  ████████████████████
+.gitignore              1     14           14  100.0%  ████████████████████
+lakefile.toml           1     10           10  100.0%  ████████████████████
+.gitattributes          1      6            6  100.0%  ████████████████████
+lake-manifest.json      1      5            5  100.0%  ████████████████████
+lean-toolchain          1      1            1  100.0%  ████████████████████
+scripts/                3    103           96   93.2%  ███████████████████░
+Godel.lean              1     16           13   81.3%  ████████████████░░░░
+README.md               1    327          205   62.7%  █████████████░░░░░░░
+docs/                   9  1,595          874   54.8%  ███████████░░░░░░░░░
+THEOREMS.md             1    165           86   52.1%  ██████████░░░░░░░░░░
+Godel/                 10  1,616          579   35.8%  ███████░░░░░░░░░░░░░
+standalone/             1  1,191          335   28.1%  ██████░░░░░░░░░░░░░░

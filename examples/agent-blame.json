@@ -1,0 +1,186 @@
+{
+  "version": 1,
+  "generatedAt": "2026-10-20T05:32:14.929Z",
+  "tool": {
+    "name": "agent-blame",
+    "version": "0.1.0"
+  },
+  "repo": {
+    "path": "…/agent-blame",
+    "head": "81374cf",
+    "branch": "feat/dogfood-examples",
+    "subdir": null
+  },
+  "options": {
+    "ignoreBots": true,
+    "defaultPatterns": true,
+    "depth": 1,
+    "perFile": false,
+    "include": [],
+    "exclude": [],
+    "maxFileSize": 2097152,
+    "config": null
+  },
+  "totals": {
+    "files": 29,
+    "lines": 3487,
+    "counted": 3487,
+    "ai": 3487,
+    "human": 0,
+    "bot": 0,
+    "uncommitted": 0,
+    "unknown": 0,
+    "aiShare": 1,
+    "commits": 9,
+    "aiCommits": 9,
+    "humanCommits": 0,
+    "botCommits": 0
+  },
+  "agents": [
+    {
+      "id": "claude",
+      "label": "Claude Code",
+      "lines": 3487,
+      "share": 1,
+      "commits": 9
+    }
+  ],
+  "byPath": [
+    {
+      "path": "src/",
+      "files": 11,
+      "lines": 1953,
+      "counted": 1953,
+      "ai": 1953,
+      "human": 0,
+      "bot": 0,
+      "share": 1
+    },
+    {
+      "path": "test/",
+      "files": 10,
+      "lines": 1339,
+      "counted": 1339,
+      "ai": 1339,
+      "human": 0,
+      "bot": 0,
+      "share": 1
+    },
+    {
+      "path": "package.json",
+      "files": 1,
+      "lines": 53,
+      "counted": 53,
+      "ai": 53,
+      "human": 0,
+      "bot": 0,
+      "share": 1
+    },
+    {
+      "path": "scripts/",
+      "files": 1,
+      "lines": 49,
+      "counted": 49,
+      "ai": 49,
+      "human": 0,
+      "bot": 0,
+      "share": 1
+    },
+    {
+      "path": ".github/",
+      "files": 1,
+      "lines": 41,
+      "counted": 41,
+      "ai": 41,
+      "human": 0,
+      "bot": 0,
+      "share": 1
+    },
+    {
+      "path": "LICENSE",
+      "files": 1,
+      "lines": 21,
+      "counted": 21,
+      "ai": 21,
+      "human": 0,
+      "bot": 0,
+      "share": 1
+    },
+    {
+      "path": ".editorconfig",
+      "files": 1,
+      "lines": 12,
+      "counted": 12,
+      "ai": 12,
+      "human": 0,
+      "bot": 0,
+      "share": 1
+    },
+    {
+      "path": "bin/",
+      "files": 1,
+      "lines": 12,
+      "counted": 12,
+      "ai": 12,
+      "human": 0,
+      "bot": 0,
+      "share": 1
+    },
+    {
+      "path": ".gitignore",
+      "files": 1,
+      "lines": 5,
+      "counted": 5,
+      "ai": 5,
+      "human": 0,
+      "bot": 0,
+      "share": 1
+    },
+    {
+      "path": ".gitattributes",
+      "files": 1,
+      "lines": 2,
+      "counted": 2,
+      "ai": 2,
+      "human": 0,
+      "bot": 0,
+      "share": 1
+    }
+  ],
+  "skipped": {
+    "count": 0,
+    "byReason": {},
+    "files": []
+  },
+  "byAuthor": [
+    {
+      "name": "Quigles1337",
+      "email": "adz@alphx.io",
+      "kind": "human",
+      "lines": 3487,
+      "ai": 3487,
+      "agents": {
+        "claude": 3487
+      },
+      "share": 1
+    }
+  ],
+  "history": {
+    "granularity": "month",
+    "since": null,
+    "until": null,
+    "periods": [
+      {
+        "period": "2026-10",
+        "added": 3490,
+        "ai": 3490,
+        "human": 0,
+        "bot": 0,
+        "commits": 5,
+        "aiCommits": 5,
+        "counted": 3490,
+        "share": 1
+      }
+    ]
+  }
+}
