@@ -50,7 +50,7 @@ inputs:
     required: false
     default: '20'
   token:
-    description: Token used to post the comment; needs `pull-requests: write`.
+    description: "Token used to post the comment; needs `pull-requests: write`."
     required: false
     default: ${{ github.token }}
 
