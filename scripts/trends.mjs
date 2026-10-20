@@ -9,7 +9,7 @@
  *
  *   GITHUB_TOKEN=... node scripts/trends.mjs            # full refresh
  *   TRENDS_MONTHS=6 TRENDS_AGENTS=aider,devin ...       # a subset, for development
- *   TRENDS_RESUME=1 ...                                 # reuse cells already in docs/trends.json
+ *   TRENDS_RESUME=1 ...                                 # continue an interrupted run from the docs/trends.json checkpoint
  *   TRENDS_PACE_MS=30000 ...                            # milliseconds between search requests
  *   TRENDS_INCOMPLETE_RETRIES=1 ...                     # re-run timed-out queries and keep the larger count
  *   TRENDS_CALIBRATE=0 ...                              # skip the weekly split of the latest month
@@ -471,6 +471,7 @@ export async function collect({
   resume = false,
   calibrate = true,
   incompleteRetries = DEFAULTS.incompleteRetries,
+  onCheckpoint = null,
   log = () => {},
 } = {}) {
   const counts = {};
@@ -491,6 +492,7 @@ export async function collect({
       }
       counts[a.id].push({ month: mo, ...cell });
       log(`  ${a.id.padEnd(8)} ${mo}  ${cell.count === null ? 'failed' : formatInt(cell.count)}${cell.incomplete ? ' (partial)' : ''}`);
+      if (onCheckpoint) onCheckpoint(counts);
     }
   }
 
@@ -572,9 +574,15 @@ async function main() {
   }
 
   const client = createSearchClient({ token, paceMs, log });
-  log(`trends: ${agents.length} agents x ${months.length} months (${months[0]}..${months[months.length - 1]}), pace ${paceMs / 1000} s`);
+  log(`trends: ${agents.length} agents x ${months.length} months (${months[0]}..${months[months.length - 1]}), pace ${paceMs / 1000} s${resume ? ', resuming' : ''}`);
   const started = Date.now();
-  const { counts, calibration } = await collect({ client, months, agents, previous, resume, calibrate, incompleteRetries, log });
+  fs.mkdirSync(DOCS, { recursive: true });
+  // After every cell the counts so far go to docs/trends.json (marked partial), so an interrupted run can resume.
+  const onCheckpoint = (counts) => {
+    const checkpoint = { ...(previous ?? {}), version: 1, partial: true, checkpointAt: new Date().toISOString(), months, agents, counts };
+    fs.writeFileSync(jsonPath, `${JSON.stringify(checkpoint, null, 2)}\n`);
+  };
+  const { counts, calibration } = await collect({ client, months, agents, previous, resume, calibrate, incompleteRetries, onCheckpoint, log });
 
   const data = {
     version: 1,
@@ -597,7 +605,6 @@ async function main() {
     stats: { ...client.stats, paceMs: client.pace, durationSeconds: Math.round((Date.now() - started) / 1000) },
   };
 
-  fs.mkdirSync(DOCS, { recursive: true });
   fs.writeFileSync(jsonPath, `${JSON.stringify(data, null, 2)}\n`);
   writeOutputs(data);
   log(`trends: wrote docs/trends.{json,md,svg} in ${data.stats.durationSeconds} s (${client.stats.requests} requests)`);

@@ -282,7 +282,10 @@ test('collect fills every month x agent cell, reuses cells on resume, keeps stal
   const client = createSearchClient({ token: 't', paceMs: 0, fetchImpl, sleepImpl: async () => {} });
   const agents = AGENT_QUERIES.filter((a) => a.id === 'aider' || a.id === 'devin');
   const months = ['2026-08', '2026-09'];
-  const { counts, calibration } = await collect({ client, months, agents });
+  const checkpoints = [];
+  const { counts, calibration } = await collect({ client, months, agents, onCheckpoint: (c) => checkpoints.push(JSON.stringify(c)) });
+  assert.equal(checkpoints.length, 4, 'one checkpoint per fetched cell');
+  assert.deepEqual(JSON.parse(checkpoints[0]), { aider: [{ month: '2026-08', count: 31000, incomplete: false, attempts: 1 }] });
   assert.deepEqual(counts.aider.map((c) => [c.month, c.count, c.incomplete]), [['2026-08', 31000, false], ['2026-09', 34110, false]]);
   assert.deepEqual(counts.devin.map((c) => [c.month, c.count, c.incomplete]), [['2026-08', 400, true], ['2026-09', 519, true]]);
   assert.deepEqual(calibration, { month: '2026-09', cells: [{ id: 'devin', label: 'Devin', monthly: 519, monthlyIncomplete: true, weeklySum: 510, weeks: 5, weeksIncomplete: 1 }] });
