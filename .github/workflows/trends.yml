@@ -1,0 +1,43 @@
+name: Trends
+
+# Regenerates docs/trends.{json,md,svg} and the generated block in the README
+# from the GitHub commit search API. Weekly and on demand. The commit search
+# endpoint is heavily throttled (see scripts/trends.mjs), so a full refresh
+# takes about an hour and a half.
+on:
+  schedule:
+    - cron: '0 6 * * 1'
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+concurrency:
+  group: trends
+  cancel-in-progress: false
+
+jobs:
+  trends:
+    runs-on: ubuntu-latest
+    timeout-minutes: 300
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22
+      - name: Collect the counts and render the chart
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        run: node scripts/trends.mjs
+      - name: Commit the results if they changed
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add docs/trends.json docs/trends.md docs/trends.svg README.md
+          if git diff --cached --quiet; then
+            echo "no change"
+            exit 0
+          fi
+          git commit -m "Update trends [skip ci]"
+          git pull --rebase origin "${GITHUB_REF_NAME}"
+          git push
