@@ -217,10 +217,10 @@ test('createSearchClient paces requests, honours Retry-After, backs off on secon
     assert.equal(client.stats.retries, 4);
     assert.equal(client.stats.secondaryLimits, 1);
     assert.equal(client.pace, 40000, 'pace grows by 10 s after a secondary limit');
-    // 29 s pace wait, 60 s secondary back-off, 40 s pace, 7 s Retry-After, 40 s pace, 60 s on 5xx, 40 s pace, 30 s on a network error, 40 s pace, then ~601 s for the exhausted quota
-    assert.deepEqual(sleeps.slice(0, 9), [29000, 60000, 40000, 7000, 40000, 60000, 40000, 30000, 40000]);
-    assert.ok(sleeps[9] > 590000 && sleeps[9] <= 601000, `quota sleep ${sleeps[9]}`);
-    assert.equal(sleeps.length, 10);
+    // 29 s to honour the 30 s pace, 60 s secondary back-off (longer than the new 40 s pace, so no extra pace wait),
+    // 7 s Retry-After then 33 s to complete the 40 s pace, 60 s on 5xx, 30 s on a network error then 10 s to
+    // complete the pace, and finally the sleep until the quota reset (header issued at t=1,000 s + 600 s).
+    assert.deepEqual(sleeps, [29000, 60000, 7000, 33000, 60000, 30000, 10000, 371000]);
     assert.ok(logs.some((l) => /secondary rate limit/.test(l)));
   } finally {
     Date.now = realNow;
