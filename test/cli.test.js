@@ -221,3 +221,14 @@ test('colour is used only on a TTY without NO_COLOR, and FORCE_COLOR overrides',
   const forced = await cli([dir], { env: { NO_COLOR: '', FORCE_COLOR: '1' } });
   assert.ok(forced.stdout.includes('\x1b[1m'), 'FORCE_COLOR enables ANSI on a pipe');
 });
+
+test('--since without --history prints a note on stderr but still succeeds', async (t) => {
+  const dir = fixtureRepo();
+  t.after(() => removeDir(dir));
+  const r = await cli([dir, '--since', '2026-01-01', '--json']);
+  assert.equal(r.code, 0);
+  assert.match(r.stderr, /--since\/--until only affect --history/);
+  assert.ok(!('history' in JSON.parse(r.stdout)));
+  const quiet = await cli([dir, '--since', '2026-01-01', '--json', '--quiet']);
+  assert.equal(quiet.stderr, '');
+});

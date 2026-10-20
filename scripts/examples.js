@@ -26,18 +26,19 @@ function cli(args, cwd) {
   });
 }
 
-function sample(repoPath, name) {
+function sample(repoPath, name, extra = []) {
   const abs = path.resolve(repoPath);
   const posixRoot = execFileSync('git', ['rev-parse', '--show-toplevel'], { cwd: abs, encoding: 'utf8' }).trim();
   const nativeRoot = posixRoot.split('/').join(path.sep);
   const scrub = (text) => text.split(nativeRoot).join(`…/${name}`).split(posixRoot).join(`…/${name}`);
+  const run = (args) => cli(['--quiet', ...extra, ...args], abs);
 
-  fs.writeFileSync(path.join(outDir, `${name}.txt`), scrub(cli(['--quiet'], abs)));
-  fs.writeFileSync(path.join(outDir, `${name}-history.txt`), scrub(cli(['--quiet', '--by-author', '--history'], abs)));
-  fs.writeFileSync(path.join(outDir, `${name}.md`), scrub(cli(['--quiet', '--markdown'], abs)));
-  cli(['--quiet', '--badge', path.join(outDir, `${name}.svg`)], abs);
+  fs.writeFileSync(path.join(outDir, `${name}.txt`), scrub(run([])));
+  fs.writeFileSync(path.join(outDir, `${name}-history.txt`), scrub(run(['--by-author', '--history'])));
+  fs.writeFileSync(path.join(outDir, `${name}.md`), scrub(run(['--markdown'])));
+  run(['--badge', path.join(outDir, `${name}.svg`)]);
 
-  const doc = JSON.parse(cli(['--quiet', '--json', '--by-author', '--history'], abs));
+  const doc = JSON.parse(run(['--json', '--by-author', '--history']));
   doc.repo.path = `…/${name}`;
   fs.writeFileSync(path.join(outDir, `${name}.json`), `${JSON.stringify(doc, null, 2)}\n`);
 
@@ -45,5 +46,6 @@ function sample(repoPath, name) {
 }
 
 fs.mkdirSync(outDir, { recursive: true });
-sample(root, 'agent-blame');
+// The self-sample leaves examples/ out: those files are this very output.
+sample(root, 'agent-blame', ['--exclude', 'examples/**']);
 for (const p of process.argv.slice(2)) sample(p, path.basename(path.resolve(p)));

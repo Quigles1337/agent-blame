@@ -1,0 +1,35 @@
+name: AI-assisted badge
+
+# Keeps examples/agent-blame.svg current: the same recipe the README
+# recommends for other repositories. Runs weekly and on demand.
+on:
+  schedule:
+    - cron: '0 6 * * 1'
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+concurrency:
+  group: badge
+  cancel-in-progress: true
+
+jobs:
+  badge:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22
+      - name: Measure and write the badge
+        run: node bin/agent-blame.js --quiet --badge examples/agent-blame.svg
+      - name: Commit the badge if it changed
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add examples/agent-blame.svg
+          git diff --cached --quiet || git commit -m "Update AI-assisted badge [skip ci]"
+          git push
