@@ -208,7 +208,7 @@ test('createSearchClient paces requests, honours Retry-After, backs off on secon
     const first = await client.search('"(aider)" committer-date:2026-09-01..2026-09-30');
     assert.deepEqual(first, { totalCount: 5, incomplete: false });
     assert.deepEqual(sleeps, [], 'the first request goes out immediately');
-    assert.match(calls[0], /^https:\/\/api\.github\.com\/search\/commits\?q=%22%28aider%29%22%20committer-date%3A2026-09-01\.\.2026-09-30&per_page=1$/);
+    assert.equal(calls[0], 'https://api.github.com/search/commits?q=%22(aider)%22%20committer-date%3A2026-09-01..2026-09-30&per_page=1');
 
     now += 1000; // 1 s later: the pace demands a 29 s wait before the next request
     const second = await client.search('q2');
