@@ -1,14 +1,14 @@
 # agent-blame
 
 [![CI](https://github.com/Quigles1337/agent-blame/actions/workflows/ci.yml/badge.svg)](https://github.com/Quigles1337/agent-blame/actions/workflows/ci.yml)
-![AI-assisted](examples/agent-blame.svg)
+![AI-assisted](https://img.shields.io/endpoint?url=https%3A%2F%2Fraw.githubusercontent.com%2FQuigles1337%2Fagent-blame%2Fmain%2Fexamples%2Fagent-blame.json)
 ![Node 20+](https://img.shields.io/badge/node-%3E%3D20-brightgreen)
 ![Zero dependencies](https://img.shields.io/badge/dependencies-0-blue)
 [![License: MIT](https://img.shields.io/badge/license-MIT-lightgrey)](LICENSE)
 
 Measure how much of a codebase was written with AI coding agents, line by line, from the `Co-Authored-By` trailers and author identities those agents already leave in git history. Retroactive, local, zero runtime dependencies.
 
-AI coding agents sign their work: Claude Code, GitHub Copilot, Cursor, Codex, Aider, Devin and others add a `Co-Authored-By` trailer or commit under their own identity. `agent-blame` runs `git blame` over every tracked file, classifies each commit by that evidence, and reports the share of surviving lines that were agent-assisted, broken down by directory, file, author, agent and month. It answers the questions engineering managers, reviewers and compliance teams are starting to ask: where did this code come from, which parts deserve closer review, what can we say about provenance, and how is adoption changing over time.
+AI coding agents sign their work: Claude Code, GitHub Copilot, Cursor, Codex, Aider, Devin and others add a `Co-Authored-By` trailer or commit under their own identity. `agent-blame` runs `git blame` over every tracked file, classifies each commit by that evidence, and reports the share of surviving lines that were agent-assisted, broken down by directory, file, author, agent and month. In pull-request mode it classifies only the commits of a branch and reports the share of the lines they added, and the [GitHub Action](#github-action) posts that as a sticky comment on every pull request. It answers the questions engineering managers, reviewers and compliance teams are starting to ask: where did this code come from, which parts deserve closer review, what can we say about provenance, and how is adoption changing over time.
 
 ## Quick start
 
@@ -18,6 +18,7 @@ npx agent-blame path/to/repo --files  # per-file instead of per-directory
 npx agent-blame --by-author --history # who, and how it changed month by month
 npx agent-blame --json > ai.json      # stable schema for tooling
 npx agent-blame --badge ai.svg        # shields-style badge
+npx agent-blame --range main..HEAD    # only the commits of this branch (pull-request mode)
 ```
 
 Requires Node 20 or later and `git` on `PATH`. Nothing is installed globally and nothing leaves your machine. Until the first npm release, run it straight from this repository:
@@ -118,6 +119,9 @@ agent-blame [path] [options]
 | `--json` | Machine-readable report with a stable schema (see below) |
 | `--markdown` | GitHub-flavoured Markdown tables, for PR comments, READMEs or `$GITHUB_STEP_SUMMARY` |
 | `--badge <file.svg>` | Also write a shields-style "AI-assisted \| NN%" badge (self-contained SVG) |
+| `--shields <file.json>` | Also write a [shields.io endpoint](#put-the-badge-in-your-readme) document for a dynamic badge |
+| `--range <base>..<head>` | [Pull-request mode](#pull-request-mode): classify only the commits in the range and report the share of the lines they added. A single revision means `<rev>..HEAD` |
+| `--base <rev>`, `--head <rev>` | The same as `--range <base>..<head>`; `--head` defaults to `HEAD` |
 | `--files` | Per-file table instead of per-directory |
 | `--depth <n>` | Directory depth of the path table (default `1`; `0` collapses everything) |
 | `--by-author` | Per-author table: lines credited to each author and how many were agent-assisted |
@@ -137,6 +141,37 @@ agent-blame [path] [options]
 | `-h, --help`, `-v, --version` | |
 
 Exit codes: `0` success, `1` error (not a repository, bad option, unreadable config), `2` threshold exceeded.
+
+## Pull-request mode
+
+`--range <base>..<head>` (or `--base`/`--head`) looks at the commits of one branch instead of the whole working tree: it classifies each non-merge commit in the range and reports the share of the lines they **added** (from `git log --numstat`) that came from agent-assisted commits, per agent and per path, and lists every commit with the evidence behind its classification. Nothing is blamed, so it is fast enough for every pull request, and the result is the question a reviewer actually asks: how much of *this change* came from an agent?
+
+```
+agent-blame …/agent-blame range 5a0af37..1d3c04a
+
+Summary                                  Lines   Share
+Lines added by the commits in the range    468
+  AI-assisted                              468  100.0%  ████████████████████
+  Human                                      0    0.0%
+
+By agent       Lines   Share  Commits
+  Claude Code    468  100.0%        1
+
+1 commits in the range: 1 AI-assisted (100.0%), 0 human, 0 bot
+
+Path (depth 1)  Files  Added  AI-assisted   Share
+README.md           1    324          324  100.0%  ████████████████████
+examples/           5     68           68  100.0%  ████████████████████
+.github/            1     35           35  100.0%  ████████████████████
+test/               2     23           23  100.0%  ████████████████████
+scripts/            1      9            9  100.0%  ████████████████████
+src/                2      9            9  100.0%  ████████████████████
+
+Commit   Date        Author       Class        Added  Subject                                                                Evidence
+1d3c04a  2026-10-20  Quigles1337  AI-assisted   +468  Add README, refresh examples, exclude stash refs, badge workflow (#5)  Claude Code via trailer
+```
+
+`--json`, `--markdown`, `--files`, `--depth`, `--by-author`, `--include`/`--exclude`, a subdirectory scope, `--threshold`, `--badge` and `--shields` all work in this mode; `--history` does not, because the range already selects the commits. Binary files are listed but add no lines; merge commits are left out (they add no lines of their own); an empty range reports zero commits and a 0% share. In the JSON document the mode is marked with `"mode": "range"`, `range` holds the resolved endpoints and `commits` holds every commit with its `kind`, `agents`, `added` lines and `evidence` (see [JSON schema](#json-schema)).
 
 ## Configuration file
 
@@ -208,6 +243,7 @@ Names that are also ordinary human names (Claude, Devin, Gemini, Jules, Amp, Cod
 - `git blame --porcelain` runs per file, `--jobs` at a time. Only the `<hash> <orig> <final>` header lines are read; every blamed line has one, so counting headers counts lines. `.git-blame-ignore-revs` in the repository root is honoured automatically (formatting commits are blamed through to the original authors); if git rejects the file, blame is retried without it.
 - Blame reflects the working tree, so uncommitted edits appear as `Uncommitted` and are counted as human. Lines whose commit is not in the log (for example beyond a shallow-clone boundary) are `unknown` and also counted as human.
 - `--history` runs `git log HEAD --no-merges --numstat` (with `--since`/`--until`) and buckets *added* lines by the committer date, per month or ISO week; renames and binary entries are handled; months with no activity are filled in so the sparkline is continuous.
+- `--range` runs one `git log --no-merges --numstat <base>..<head>` and classifies exactly those commits; a path's lines are the lines each commit added to it, so the per-path and per-agent tables have the same shape as in blame mode but measure added rather than surviving lines.
 
 ### JSON schema
 
@@ -232,6 +268,19 @@ Names that are also ordinary human names (Claude, Devin, Gemini, Jules, Amp, Cod
 
 `counted` is the denominator of every share: lines minus bot lines when bots are ignored. Shares are fractions in `[0, 1]`, rounded to six decimals.
 
+In pull-request mode the same document carries three more keys, `lines` means *added* lines, and `options.maxFileSize` is `null` because nothing is blamed:
+
+```jsonc
+{
+  "mode": "range",
+  "range": { "spec": "main..HEAD", "base": "main", "head": "HEAD", "baseHash": "1d3c04a", "headHash": "9e2f0c1" },
+  "commits": [ { "hash": "...", "short": "9e2f0c1", "subject": "...", "authorName": "...", "authorEmail": "...", "date": "2026-10-20T06:01:02+00:00", "kind": "agent", "agents": ["claude"], "added": 120, "files": 3,
+                 "evidence": [ { "agent": "claude", "source": "trailer", "value": "Co-Authored-By: Claude <noreply@anthropic.com>" } ] } ]
+}
+```
+
+`evidence[].source` is one of `trailer`, `author`, `committer` or `message`.
+
 ## Limitations
 
 Be honest about what this measures before putting a number in a report.
@@ -242,22 +291,53 @@ Be honest about what this measures before putting a number in a report.
 - **Whole-commit granularity.** A human-authored commit with an agent trailer counts as AI-assisted in full, even if the agent contributed one function. The reverse is also true: nothing inside a commit without evidence is attributed to an agent.
 - **Shallow clones.** In a clone with limited depth, blame attributes everything to the boundary commit. Use `fetch-depth: 0` in CI (see below).
 - **Identity patterns are heuristics.** They are deliberately conservative for names that are also human names, so some agent commits under unusual identities will be missed. Add your own patterns in `.agent-blame.json`, and open a Discussion if a widely used agent is missing.
-- **History and blame answer different questions.** `--history` counts lines *added* over time (including lines since deleted); the main report counts lines that *survive* today.
+- **History and blame answer different questions.** `--history` counts lines *added* over time (including lines since deleted); the main report counts lines that *survive* today. `--range` counts the lines *added* by the commits in a range; a line added and deleted again inside the same pull request still counts, and lines a merge commit adds while resolving conflicts do not.
 
 ## CI
 
-### Fail a build above a threshold, and show the table in the job summary
+### GitHub Action
+
+The repository doubles as a composite action. On pull requests it runs in pull-request mode and posts **one** sticky comment (identified by a hidden `<!-- agent-blame -->` marker) that is updated in place on every push; on other events it measures the whole working tree. The report also goes to the job summary.
 
 ```yaml
 name: AI attribution
-on: [pull_request]
+on:
+  pull_request:
+permissions:
+  contents: read
+  pull-requests: write          # to post and update the comment
 jobs:
   agent-blame:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
         with:
-          fetch-depth: 0          # blame needs the full history
+          fetch-depth: 0          # the base and head of the pull request must both be present
+      - uses: Quigles1337/agent-blame@main
+        with:
+          threshold: 60           # optional: fail the job above this share
+```
+
+The action runs the CLI from its own checkout, so it needs no npm release and no network access beyond posting the comment. Pull requests from forks get a read-only `GITHUB_TOKEN`; the action then prints a warning instead of a comment and still produces the report and the exit code. This repository runs the action on its own pull requests ([`.github/workflows/pr-report.yml`](.github/workflows/pr-report.yml)).
+
+| Input | Default | Description |
+| --- | --- | --- |
+| `path` | `.` | Repository, or a directory inside one |
+| `mode` | `auto` | `pr` (the commits of the pull request, `base..head`), `repo` (blame of the working tree), or `auto`: `pr` on `pull_request` events, `repo` otherwise |
+| `range` | | Explicit `<base>..<head>` for `pr` mode on other events |
+| `threshold` | | Fail the job with exit code 2 when the AI-assisted share exceeds this percentage. The comment is posted first |
+| `comment` | `true` | Post or update the sticky comment on pull requests |
+| `badge` | | Write the SVG badge to this path |
+| `shields` | | Write the shields.io endpoint document to this path |
+| `args` | | Extra CLI arguments, for example `--exclude vendor/** --depth 2` |
+| `node-version` | `20` | Node.js version to set up |
+| `token` | `github.token` | Token used to post the comment |
+
+Outputs: `share` (for example `46%`), `exceeded` (`true`/`false`), `mode` and `report` (path of the Markdown file).
+
+### Without the action
+
+```yaml
       - uses: actions/setup-node@v4
         with:
           node-version: 22
@@ -265,11 +345,17 @@ jobs:
       - run: npx agent-blame --threshold 60 --markdown >> "$GITHUB_STEP_SUMMARY"
 ```
 
-The step fails with exit code 2 when more than 60% of the counted lines are AI-assisted, and the Markdown tables appear in the workflow summary either way.
+The step fails with exit code 2 when more than 60% of the counted lines are AI-assisted, and the Markdown tables appear in the workflow summary either way. Add `--range "${{ github.event.pull_request.base.sha }}..${{ github.event.pull_request.head.sha }}"` on pull requests to measure only their commits.
 
 ### Put the badge in your README
 
-Commit the SVG from a scheduled workflow (or on every push to `main`) and reference it from the README as `![AI-assisted](.github/badges/ai-assisted.svg)`.
+Two forms. `--badge` writes a self-contained SVG you commit and reference directly, `![AI-assisted](.github/badges/ai-assisted.svg)`. `--shields` writes a [shields.io endpoint](https://shields.io/badges/endpoint-badge) document, `{"schemaVersion": 1, "label": "AI-assisted", "message": "46%", "color": "3088ba"}`, that shields.io renders in its own style, with the same label, colour band and rounding, from wherever you serve it:
+
+```markdown
+![AI-assisted](https://img.shields.io/endpoint?url=https://raw.githubusercontent.com/OWNER/REPO/main/.github/badges/ai-assisted.json)
+```
+
+Commit either file from a scheduled workflow (or on every push to `main`):
 
 ```yaml
 name: AI-assisted badge
@@ -290,17 +376,17 @@ jobs:
       - uses: actions/setup-node@v4
         with:
           node-version: 22
-      - run: npx agent-blame --quiet --badge .github/badges/ai-assisted.svg
+      - run: npx agent-blame --quiet --badge .github/badges/ai-assisted.svg --shields .github/badges/ai-assisted.json
       - name: Commit the badge if it changed
         run: |
           git config user.name "github-actions[bot]"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
-          git add .github/badges/ai-assisted.svg
+          git add .github/badges/ai-assisted.svg .github/badges/ai-assisted.json
           git diff --cached --quiet || git commit -m "Update AI-assisted badge [skip ci]"
           git push
 ```
 
-That badge commit is authored by `github-actions[bot]`, so `agent-blame` itself classifies it as a bot and leaves it out of the share.
+That badge commit is authored by `github-actions[bot]`, so `agent-blame` itself classifies it as a bot and leaves it out of the share. The badge at the top of this README is the shields.io form, served from [`examples/agent-blame.json`](examples/agent-blame.json), which [`badge.yml`](.github/workflows/badge.yml) refreshes weekly.
 
 ## Programmatic use
 
@@ -311,6 +397,9 @@ const model = await analyze({ path: '.', byAuthor: true, history: true });
 console.log(model.totals.aiShare);       // 0.4623...
 console.log(renderMarkdown(model));
 const doc = toJSON(model);               // the --json document
+
+const pr = await analyze({ path: '.', range: 'main..HEAD' });   // pull-request mode
+console.log(pr.totals.aiShare, pr.commits.length);
 ```
 
 The classifier is also exported on its own (`createClassifier`, `classify`, `DEFAULT_AGENTS`, `DEFAULT_BOTS`) for tooling that already has commit objects.

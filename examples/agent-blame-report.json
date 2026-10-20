@@ -1,0 +1,198 @@
+{
+  "version": 1,
+  "generatedAt": "2026-10-20T06:09:20.315Z",
+  "tool": {
+    "name": "agent-blame",
+    "version": "0.1.0"
+  },
+  "repo": {
+    "path": "…/agent-blame",
+    "head": "1d3c04a",
+    "branch": "feat/pr-mode-action",
+    "subdir": null
+  },
+  "options": {
+    "ignoreBots": true,
+    "defaultPatterns": true,
+    "depth": 1,
+    "perFile": false,
+    "include": [],
+    "exclude": [
+      "examples/**"
+    ],
+    "maxFileSize": 2097152,
+    "config": null
+  },
+  "totals": {
+    "files": 31,
+    "lines": 4355,
+    "counted": 4355,
+    "ai": 3851,
+    "human": 504,
+    "bot": 0,
+    "uncommitted": 504,
+    "unknown": 0,
+    "aiShare": 0.884271,
+    "commits": 15,
+    "aiCommits": 15,
+    "humanCommits": 0,
+    "botCommits": 0
+  },
+  "agents": [
+    {
+      "id": "claude",
+      "label": "Claude Code",
+      "lines": 3851,
+      "share": 0.884271,
+      "commits": 15
+    }
+  ],
+  "byPath": [
+    {
+      "path": "package.json",
+      "files": 1,
+      "lines": 53,
+      "counted": 53,
+      "ai": 53,
+      "human": 0,
+      "bot": 0,
+      "share": 1
+    },
+    {
+      "path": "LICENSE",
+      "files": 1,
+      "lines": 21,
+      "counted": 21,
+      "ai": 21,
+      "human": 0,
+      "bot": 0,
+      "share": 1
+    },
+    {
+      "path": ".editorconfig",
+      "files": 1,
+      "lines": 12,
+      "counted": 12,
+      "ai": 12,
+      "human": 0,
+      "bot": 0,
+      "share": 1
+    },
+    {
+      "path": "bin/",
+      "files": 1,
+      "lines": 12,
+      "counted": 12,
+      "ai": 12,
+      "human": 0,
+      "bot": 0,
+      "share": 1
+    },
+    {
+      "path": ".gitignore",
+      "files": 1,
+      "lines": 5,
+      "counted": 5,
+      "ai": 5,
+      "human": 0,
+      "bot": 0,
+      "share": 1
+    },
+    {
+      "path": ".gitattributes",
+      "files": 1,
+      "lines": 2,
+      "counted": 2,
+      "ai": 2,
+      "human": 0,
+      "bot": 0,
+      "share": 1
+    },
+    {
+      "path": "test/",
+      "files": 10,
+      "lines": 1370,
+      "counted": 1370,
+      "ai": 1360,
+      "human": 10,
+      "bot": 0,
+      "share": 0.992701
+    },
+    {
+      "path": ".github/",
+      "files": 2,
+      "lines": 77,
+      "counted": 77,
+      "ai": 72,
+      "human": 5,
+      "bot": 0,
+      "share": 0.935065
+    },
+    {
+      "path": "scripts/",
+      "files": 1,
+      "lines": 54,
+      "counted": 54,
+      "ai": 47,
+      "human": 7,
+      "bot": 0,
+      "share": 0.87037
+    },
+    {
+      "path": "src/",
+      "files": 11,
+      "lines": 2336,
+      "counted": 2336,
+      "ai": 1954,
+      "human": 382,
+      "bot": 0,
+      "share": 0.836473
+    },
+    {
+      "path": "README.md",
+      "files": 1,
+      "lines": 413,
+      "counted": 413,
+      "ai": 313,
+      "human": 100,
+      "bot": 0,
+      "share": 0.757869
+    }
+  ],
+  "skipped": {
+    "count": 0,
+    "byReason": {},
+    "files": []
+  },
+  "byAuthor": [
+    {
+      "name": "Quigles1337",
+      "email": "adz@alphx.io",
+      "kind": "human",
+      "lines": 3851,
+      "ai": 3851,
+      "agents": {
+        "claude": 3851
+      },
+      "share": 1
+    }
+  ],
+  "history": {
+    "granularity": "month",
+    "since": null,
+    "until": null,
+    "periods": [
+      {
+        "period": "2026-10",
+        "added": 3890,
+        "ai": 3890,
+        "human": 0,
+        "bot": 0,
+        "commits": 6,
+        "aiCommits": 6,
+        "counted": 3890,
+        "share": 1
+      }
+    ]
+  }
+}

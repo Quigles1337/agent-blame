@@ -1,0 +1,246 @@
+{
+  "version": 1,
+  "generatedAt": "2026-10-20T06:09:23.380Z",
+  "tool": {
+    "name": "agent-blame",
+    "version": "0.1.0"
+  },
+  "repo": {
+    "path": "…/G-del",
+    "head": "f0178b9",
+    "branch": "main",
+    "subdir": null
+  },
+  "options": {
+    "ignoreBots": true,
+    "defaultPatterns": true,
+    "depth": 1,
+    "perFile": false,
+    "include": [],
+    "exclude": [],
+    "maxFileSize": 2097152,
+    "config": null
+  },
+  "totals": {
+    "files": 35,
+    "lines": 5254,
+    "counted": 5254,
+    "ai": 2429,
+    "human": 2825,
+    "bot": 0,
+    "uncommitted": 0,
+    "unknown": 0,
+    "aiShare": 0.462314,
+    "commits": 12,
+    "aiCommits": 3,
+    "humanCommits": 9,
+    "botCommits": 0
+  },
+  "agents": [
+    {
+      "id": "claude",
+      "label": "Claude Code",
+      "lines": 2429,
+      "share": 0.462314,
+      "commits": 3
+    }
+  ],
+  "byPath": [
+    {
+      "path": "Main.lean",
+      "files": 1,
+      "lines": 82,
+      "counted": 82,
+      "ai": 82,
+      "human": 0,
+      "bot": 0,
+      "share": 1
+    },
+    {
+      "path": ".github/",
+      "files": 1,
+      "lines": 73,
+      "counted": 73,
+      "ai": 73,
+      "human": 0,
+      "bot": 0,
+      "share": 1
+    },
+    {
+      "path": "CITATION.cff",
+      "files": 1,
+      "lines": 29,
+      "counted": 29,
+      "ai": 29,
+      "human": 0,
+      "bot": 0,
+      "share": 1
+    },
+    {
+      "path": "LICENSE",
+      "files": 1,
+      "lines": 21,
+      "counted": 21,
+      "ai": 21,
+      "human": 0,
+      "bot": 0,
+      "share": 1
+    },
+    {
+      "path": ".gitignore",
+      "files": 1,
+      "lines": 14,
+      "counted": 14,
+      "ai": 14,
+      "human": 0,
+      "bot": 0,
+      "share": 1
+    },
+    {
+      "path": "lakefile.toml",
+      "files": 1,
+      "lines": 10,
+      "counted": 10,
+      "ai": 10,
+      "human": 0,
+      "bot": 0,
+      "share": 1
+    },
+    {
+      "path": ".gitattributes",
+      "files": 1,
+      "lines": 6,
+      "counted": 6,
+      "ai": 6,
+      "human": 0,
+      "bot": 0,
+      "share": 1
+    },
+    {
+      "path": "lake-manifest.json",
+      "files": 1,
+      "lines": 5,
+      "counted": 5,
+      "ai": 5,
+      "human": 0,
+      "bot": 0,
+      "share": 1
+    },
+    {
+      "path": "lean-toolchain",
+      "files": 1,
+      "lines": 1,
+      "counted": 1,
+      "ai": 1,
+      "human": 0,
+      "bot": 0,
+      "share": 1
+    },
+    {
+      "path": "scripts/",
+      "files": 3,
+      "lines": 103,
+      "counted": 103,
+      "ai": 96,
+      "human": 7,
+      "bot": 0,
+      "share": 0.932039
+    },
+    {
+      "path": "Godel.lean",
+      "files": 1,
+      "lines": 16,
+      "counted": 16,
+      "ai": 13,
+      "human": 3,
+      "bot": 0,
+      "share": 0.8125
+    },
+    {
+      "path": "README.md",
+      "files": 1,
+      "lines": 327,
+      "counted": 327,
+      "ai": 205,
+      "human": 122,
+      "bot": 0,
+      "share": 0.626911
+    },
+    {
+      "path": "docs/",
+      "files": 9,
+      "lines": 1595,
+      "counted": 1595,
+      "ai": 874,
+      "human": 721,
+      "bot": 0,
+      "share": 0.547962
+    },
+    {
+      "path": "THEOREMS.md",
+      "files": 1,
+      "lines": 165,
+      "counted": 165,
+      "ai": 86,
+      "human": 79,
+      "bot": 0,
+      "share": 0.521212
+    },
+    {
+      "path": "Godel/",
+      "files": 10,
+      "lines": 1616,
+      "counted": 1616,
+      "ai": 579,
+      "human": 1037,
+      "bot": 0,
+      "share": 0.358292
+    },
+    {
+      "path": "standalone/",
+      "files": 1,
+      "lines": 1191,
+      "counted": 1191,
+      "ai": 335,
+      "human": 856,
+      "bot": 0,
+      "share": 0.281276
+    }
+  ],
+  "skipped": {
+    "count": 0,
+    "byReason": {},
+    "files": []
+  },
+  "byAuthor": [
+    {
+      "name": "Quigles1337",
+      "email": "adz@alphx.io",
+      "kind": "human",
+      "lines": 5254,
+      "ai": 2429,
+      "agents": {
+        "claude": 2429
+      },
+      "share": 0.462314
+    }
+  ],
+  "history": {
+    "granularity": "month",
+    "since": null,
+    "until": null,
+    "periods": [
+      {
+        "period": "2026-08",
+        "added": 5374,
+        "ai": 2529,
+        "human": 2845,
+        "bot": 0,
+        "commits": 10,
+        "aiCommits": 3,
+        "counted": 5374,
+        "share": 0.470599
+      }
+    ]
+  }
+}

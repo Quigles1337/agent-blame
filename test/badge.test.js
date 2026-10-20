@@ -1,6 +1,6 @@
 import test from 'node:test';
 import assert from 'node:assert/strict';
-import { renderBadge, formatBadgePercent, bandColor, CHAR_WIDTH, PADDING } from '../src/badge.js';
+import { renderBadge, renderShields, formatBadgePercent, bandColor, CHAR_WIDTH, PADDING } from '../src/badge.js';
 
 /** Minimal tag-balance check: every opening tag is closed in order; self-closing tags are ignored. */
 function assertBalanced(svg) {
@@ -64,4 +64,13 @@ test('badge escapes XML in custom label and value', () => {
   assert.match(svg, /AI &lt;code&gt; &amp; &quot;stuff&quot;/);
   assert.match(svg, /1&apos;/);
   assert.ok(!svg.includes('<code>'));
+});
+
+test('renderShields emits a schemaVersion 1 endpoint document with the badge text and colour', () => {
+  assert.deepEqual(renderShields({ share: 0.462 }), { schemaVersion: 1, label: 'AI-assisted', message: '46%', color: bandColor(0.462).slice(1) });
+  assert.deepEqual(renderShields({ share: 0 }), { schemaVersion: 1, label: 'AI-assisted', message: '0%', color: '9f9f9f' });
+  assert.deepEqual(renderShields({ share: 1 }), { schemaVersion: 1, label: 'AI-assisted', message: '100%', color: '007ec6' });
+  assert.deepEqual(renderShields({ share: 0.001 }), { schemaVersion: 1, label: 'AI-assisted', message: '<1%', color: bandColor(0.001).slice(1) });
+  assert.deepEqual(renderShields({ share: 0.5, label: 'agents', value: 'half', color: '#ff0000' }), { schemaVersion: 1, label: 'agents', message: 'half', color: 'ff0000' });
+  assert.ok(!JSON.stringify(renderShields({ share: 0.5 })).includes('#'), 'colour is a bare hex string');
 });

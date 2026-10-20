@@ -1,0 +1,190 @@
+name: agent-blame
+description: >-
+  Measure how much of a repository or of a pull request was written with AI
+  coding agents, from the Co-Authored-By trailers and author identities they
+  leave in git history. Posts a sticky comment on pull requests and can fail
+  the job above a threshold.
+author: Quigles1337
+branding:
+  icon: git-commit
+  color: blue
+
+inputs:
+  path:
+    description: Repository, or a directory inside one, to measure (relative to the workspace).
+    required: false
+    default: '.'
+  mode:
+    description: >-
+      `repo` blames the working tree; `pr` classifies only the commits of the
+      pull request (base..head) and reports the share of added lines; `auto`
+      picks `pr` on pull_request events and `repo` otherwise.
+    required: false
+    default: auto
+  range:
+    description: Explicit `<base>..<head>` range for `pr` mode. Defaults to the pull request of the event.
+    required: false
+    default: ''
+  threshold:
+    description: Fail the job (exit code 2) when the AI-assisted share exceeds this percentage.
+    required: false
+    default: ''
+  comment:
+    description: On pull requests, post one sticky comment with the report and update it on later runs.
+    required: false
+    default: 'true'
+  badge:
+    description: Also write a shields-style SVG badge to this path.
+    required: false
+    default: ''
+  shields:
+    description: Also write a shields.io endpoint JSON document to this path.
+    required: false
+    default: ''
+  args:
+    description: Extra command-line arguments, for example `--exclude vendor/** --depth 2`.
+    required: false
+    default: ''
+  node-version:
+    description: Node.js version to set up (20 or later).
+    required: false
+    default: '20'
+  token:
+    description: Token used to post the comment; needs `pull-requests: write`.
+    required: false
+    default: ${{ github.token }}
+
+outputs:
+  share:
+    description: The AI-assisted share as a percentage string, for example `46%`.
+    value: ${{ steps.measure.outputs.share }}
+  exceeded:
+    description: '`true` when a threshold was given and exceeded.'
+    value: ${{ steps.measure.outputs.exceeded }}
+  mode:
+    description: The mode that ran, `repo` or `pr`.
+    value: ${{ steps.measure.outputs.mode }}
+  report:
+    description: Path of the Markdown report.
+    value: ${{ steps.measure.outputs.report }}
+
+runs:
+  using: composite
+  steps:
+    - uses: actions/setup-node@v4
+      with:
+        node-version: ${{ inputs.node-version }}
+
+    - id: measure
+      shell: bash
+      env:
+        INPUT_PATH: ${{ inputs.path }}
+        INPUT_MODE: ${{ inputs.mode }}
+        INPUT_RANGE: ${{ inputs.range }}
+        INPUT_THRESHOLD: ${{ inputs.threshold }}
+        INPUT_BADGE: ${{ inputs.badge }}
+        INPUT_SHIELDS: ${{ inputs.shields }}
+        INPUT_ARGS: ${{ inputs.args }}
+        PR_BASE_SHA: ${{ github.event.pull_request.base.sha }}
+        PR_HEAD_SHA: ${{ github.event.pull_request.head.sha }}
+      run: |
+        set -euo pipefail
+        cli="$GITHUB_ACTION_PATH/bin/agent-blame.js"
+        out="${RUNNER_TEMP:-/tmp}/agent-blame"
+        mkdir -p "$out"
+
+        mode="$INPUT_MODE"
+        if [ "$mode" = auto ]; then
+          case "$GITHUB_EVENT_NAME" in
+            pull_request|pull_request_target) mode=pr ;;
+            *) mode=repo ;;
+          esac
+        fi
+
+        args=()
+        if [ "$mode" = pr ]; then
+          range="$INPUT_RANGE"
+          if [ -z "$range" ]; then
+            if [ -z "$PR_BASE_SHA" ] || [ -z "$PR_HEAD_SHA" ]; then
+              echo "::error::mode 'pr' needs a pull_request event or an explicit 'range' input"
+              exit 1
+            fi
+            for sha in "$PR_BASE_SHA" "$PR_HEAD_SHA"; do
+              if ! git -C "$INPUT_PATH" rev-parse -q --verify "$sha^{commit}" >/dev/null 2>&1; then
+                echo "fetching $sha (use fetch-depth: 0 in actions/checkout to avoid this)"
+                git -C "$INPUT_PATH" fetch -q --no-tags origin "$sha" || true
+              fi
+            done
+            range="$PR_BASE_SHA..$PR_HEAD_SHA"
+          fi
+          args+=(--range "$range")
+        elif [ "$mode" != repo ]; then
+          echo "::error::mode must be 'repo', 'pr' or 'auto', got '$mode'"
+          exit 1
+        fi
+        if [ -n "$INPUT_THRESHOLD" ]; then args+=(--threshold "$INPUT_THRESHOLD"); fi
+        if [ -n "$INPUT_BADGE" ]; then args+=(--badge "$INPUT_BADGE"); fi
+
+        set +e
+        set -f   # INPUT_ARGS is word-split on purpose; globs in it must reach the CLI unexpanded
+        # shellcheck disable=SC2086
+        node "$cli" "$INPUT_PATH" --markdown --quiet --shields "$out/shields.json" "${args[@]}" $INPUT_ARGS > "$out/report.md"
+        code=$?
+        set -e
+        if [ "$code" -ne 0 ] && [ "$code" -ne 2 ]; then
+          cat "$out/report.md" || true
+          exit "$code"
+        fi
+        if [ -n "$INPUT_SHIELDS" ]; then
+          mkdir -p "$(dirname "$INPUT_SHIELDS")"
+          cp "$out/shields.json" "$INPUT_SHIELDS"
+        fi
+
+        share=$(node -e 'process.stdout.write(JSON.parse(require("fs").readFileSync(process.argv[1], "utf8")).message)' "$out/shields.json")
+        exceeded=false
+        if [ "$code" -eq 2 ]; then exceeded=true; fi
+        {
+          echo "share=$share"
+          echo "exceeded=$exceeded"
+          echo "mode=$mode"
+          echo "report=$out/report.md"
+        } >> "$GITHUB_OUTPUT"
+        cat "$out/report.md" >> "$GITHUB_STEP_SUMMARY"
+        cat "$out/report.md"
+        echo "agent-blame: AI-assisted share $share (mode $mode)"
+
+    - id: comment
+      if: ${{ inputs.comment == 'true' && (github.event_name == 'pull_request' || github.event_name == 'pull_request_target') }}
+      shell: bash
+      env:
+        GH_TOKEN: ${{ inputs.token }}
+        PR_NUMBER: ${{ github.event.pull_request.number }}
+        REPORT: ${{ steps.measure.outputs.report }}
+      run: |
+        set -euo pipefail
+        marker='<!-- agent-blame -->'
+        body="$(dirname "$REPORT")/comment.md"
+        { echo "$marker"; cat "$REPORT"; } > "$body"
+        existing=$(gh api --paginate "repos/$GITHUB_REPOSITORY/issues/$PR_NUMBER/comments?per_page=100" \
+          --jq ".[] | select(.body | startswith(\"$marker\")) | .id" 2>/dev/null | head -n 1 || true)
+        if [ -n "$existing" ]; then
+          if gh api --silent -X PATCH "repos/$GITHUB_REPOSITORY/issues/comments/$existing" -F "body=@$body"; then
+            echo "updated comment $existing on #$PR_NUMBER"
+          else
+            echo "::warning::agent-blame could not update its comment on #$PR_NUMBER (does the token have pull-requests: write?)"
+          fi
+        elif gh api --silent -X POST "repos/$GITHUB_REPOSITORY/issues/$PR_NUMBER/comments" -F "body=@$body"; then
+          echo "posted a comment on #$PR_NUMBER"
+        else
+          echo "::warning::agent-blame could not comment on #$PR_NUMBER (does the token have pull-requests: write? Pull requests from forks get a read-only token)"
+        fi
+
+    - name: Enforce the threshold
+      if: ${{ steps.measure.outputs.exceeded == 'true' }}
+      shell: bash
+      env:
+        SHARE: ${{ steps.measure.outputs.share }}
+        THRESHOLD: ${{ inputs.threshold }}
+      run: |
+        echo "::error::AI-assisted share $SHARE exceeds the threshold of $THRESHOLD%"
+        exit 2

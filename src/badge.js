@@ -71,3 +71,17 @@ export function renderBadge({ share, label = 'AI-assisted', value, color } = {})
     '',
   ].join('\n');
 }
+
+/**
+ * shields.io endpoint document (https://shields.io/badges/endpoint-badge):
+ * serve it over HTTPS and point `https://img.shields.io/endpoint?url=...`
+ * at it for a dynamic badge.
+ */
+export function renderShields({ share, label = 'AI-assisted', value, color } = {}) {
+  return {
+    schemaVersion: 1,
+    label,
+    message: value ?? formatBadgePercent(share),
+    color: (color ?? bandColor(share)).replace(/^#/, ''),
+  };
+}
