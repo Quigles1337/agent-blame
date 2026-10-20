@@ -1,0 +1,33 @@
+agent-blame …/FR13DMAN @ 7c3e5dd (main)
+
+Summary                            Lines  Share
+Lines (blame of the working tree)  3,070
+  AI-assisted                        615  20.0%  ████░░░░░░░░░░░░░░░░
+  Human                            2,455  80.0%
+
+By agent       Lines  Share  Commits
+  Claude Code    615  20.0%        4
+
+15 commits across all refs: 4 AI-assisted (26.7%), 11 human, 0 bot
+
+Path (depth 1)       Files  Lines  AI-assisted   Share
+README.md                1     15           15  100.0%  ████████████████████
+.gitattributes           1      9            9  100.0%  ████████████████████
+PROGRAM/                11  1,684          591   35.1%  ███████░░░░░░░░░░░░░
+engine/                  5  1,083            0    0.0%  ░░░░░░░░░░░░░░░░░░░░
+lab/                     1    152            0    0.0%  ░░░░░░░░░░░░░░░░░░░░
+.github/                 1     33            0    0.0%  ░░░░░░░░░░░░░░░░░░░░
+quarantine/              1     28            0    0.0%  ░░░░░░░░░░░░░░░░░░░░
+corpora/                 1     21            0    0.0%  ░░░░░░░░░░░░░░░░░░░░
+scripts/                 1     20            0    0.0%  ░░░░░░░░░░░░░░░░░░░░
+gallery/                 1     12            0    0.0%  ░░░░░░░░░░░░░░░░░░░░
+.gitignore               1     10            0    0.0%  ░░░░░░░░░░░░░░░░░░░░
+rust-toolchain.toml      1      3            0    0.0%  ░░░░░░░░░░░░░░░░░░░░
+
+Author                        Lines  AI-assisted  Share
+Quigles1337 <adz@alphx.io>    3,070          615  20.0%  ████░░░░░░░░░░░░░░░░
+  Lines are credited to the commit author; the share is how many of them were agent-assisted.
+
+Month (added lines, HEAD history)  Added  AI-assisted  Share     Commits
+2026-08                            3,236          656  20.3%  ▂       15
+  Trend: ▂

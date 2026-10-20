@@ -31,53 +31,49 @@ npx github:Quigles1337/agent-blame
 
 ## Example output
 
-Run against [Quigles1337/G-del](https://github.com/Quigles1337/G-del), a Lean 4 project with a mix of human and Claude Code commits (repository path shortened):
+Run against [Quigles1337/FR13DMAN](https://github.com/Quigles1337/FR13DMAN), a Rust and Markdown research repository with a mix of human and Claude Code commits (repository path shortened):
 
 ```
-agent-blame …/G-del @ f0178b9 (main)
+agent-blame …/FR13DMAN @ 7c3e5dd (main)
 
 Summary                            Lines  Share
-Lines (blame of the working tree)  5,254
-  AI-assisted                      2,429  46.2%  █████████░░░░░░░░░░░
-  Human                            2,825  53.8%
+Lines (blame of the working tree)  3,070
+  AI-assisted                        615  20.0%  ████░░░░░░░░░░░░░░░░
+  Human                            2,455  80.0%
 
 By agent       Lines  Share  Commits
-  Claude Code  2,429  46.2%        3
+  Claude Code    615  20.0%        4
 
-12 commits across all refs: 3 AI-assisted (25.0%), 9 human, 0 bot
+15 commits across all refs: 4 AI-assisted (26.7%), 11 human, 0 bot
 
-Path (depth 1)      Files  Lines  AI-assisted   Share
-Main.lean               1     82           82  100.0%  ████████████████████
-.github/                1     73           73  100.0%  ████████████████████
-CITATION.cff            1     29           29  100.0%  ████████████████████
-LICENSE                 1     21           21  100.0%  ████████████████████
-.gitignore              1     14           14  100.0%  ████████████████████
-lakefile.toml           1     10           10  100.0%  ████████████████████
-.gitattributes          1      6            6  100.0%  ████████████████████
-lake-manifest.json      1      5            5  100.0%  ████████████████████
-lean-toolchain          1      1            1  100.0%  ████████████████████
-scripts/                3    103           96   93.2%  ███████████████████░
-Godel.lean              1     16           13   81.3%  ████████████████░░░░
-README.md               1    327          205   62.7%  █████████████░░░░░░░
-docs/                   9  1,595          874   54.8%  ███████████░░░░░░░░░
-THEOREMS.md             1    165           86   52.1%  ██████████░░░░░░░░░░
-Godel/                 10  1,616          579   35.8%  ███████░░░░░░░░░░░░░
-standalone/             1  1,191          335   28.1%  ██████░░░░░░░░░░░░░░
+Path (depth 1)       Files  Lines  AI-assisted   Share
+README.md                1     15           15  100.0%  ████████████████████
+.gitattributes           1      9            9  100.0%  ████████████████████
+PROGRAM/                11  1,684          591   35.1%  ███████░░░░░░░░░░░░░
+engine/                  5  1,083            0    0.0%  ░░░░░░░░░░░░░░░░░░░░
+lab/                     1    152            0    0.0%  ░░░░░░░░░░░░░░░░░░░░
+.github/                 1     33            0    0.0%  ░░░░░░░░░░░░░░░░░░░░
+quarantine/              1     28            0    0.0%  ░░░░░░░░░░░░░░░░░░░░
+corpora/                 1     21            0    0.0%  ░░░░░░░░░░░░░░░░░░░░
+scripts/                 1     20            0    0.0%  ░░░░░░░░░░░░░░░░░░░░
+gallery/                 1     12            0    0.0%  ░░░░░░░░░░░░░░░░░░░░
+.gitignore               1     10            0    0.0%  ░░░░░░░░░░░░░░░░░░░░
+rust-toolchain.toml      1      3            0    0.0%  ░░░░░░░░░░░░░░░░░░░░
 ```
 
 With `--by-author --history`:
 
 ```
 Author                        Lines  AI-assisted  Share
-Quigles1337 <adz@alphx.io>    5,254        2,429  46.2%  █████████░░░░░░░░░░░
+Quigles1337 <adz@alphx.io>    3,070          615  20.0%  ████░░░░░░░░░░░░░░░░
   Lines are credited to the commit author; the share is how many of them were agent-assisted.
 
 Month (added lines, HEAD history)  Added  AI-assisted  Share     Commits
-2026-08                            5,374        2,529  47.1%  ▄       10
-  Trend: ▄
+2026-08                            3,236          656  20.3%  ▂       15
+  Trend: ▂
 ```
 
-The badge written by `--badge`: ![AI-assisted 46%](examples/G-del.svg)
+The badge written by `--badge`: ![AI-assisted 20%](examples/FR13DMAN.svg)
 
 And this repository measuring itself (`examples/agent-blame.txt`, regenerated with `npm run examples`; the self-sample excludes `examples/`, which is this very output):
 
@@ -283,14 +279,14 @@ Names that are also ordinary human names (Claude, Devin, Gemini, Jules, Amp, Cod
   "version": 1,
   "generatedAt": "2026-10-20T05:26:42.539Z",
   "tool": { "name": "agent-blame", "version": "0.1.0" },
-  "repo": { "path": "...", "head": "f0178b9", "branch": "main", "subdir": null },
+  "repo": { "path": "...", "head": "7c3e5dd", "branch": "main", "subdir": null },
   "options": { "ignoreBots": true, "defaultPatterns": true, "depth": 1, "perFile": false, "include": [], "exclude": [], "maxFileSize": 2097152, "config": null },
-  "totals": { "files": 35, "lines": 5254, "counted": 5254, "ai": 2429, "human": 2825, "bot": 0, "uncommitted": 0, "unknown": 0, "aiShare": 0.462314, "commits": 12, "aiCommits": 3, "humanCommits": 9, "botCommits": 0 },
-  "agents": [ { "id": "claude", "label": "Claude Code", "lines": 2429, "share": 0.462314, "commits": 3 } ],
-  "byPath": [ { "path": "docs/", "files": 9, "lines": 1595, "counted": 1595, "ai": 874, "human": 721, "bot": 0, "share": 0.547962 } ],
+  "totals": { "files": 26, "lines": 3070, "counted": 3070, "ai": 615, "human": 2455, "bot": 0, "uncommitted": 0, "unknown": 0, "aiShare": 0.200326, "commits": 15, "aiCommits": 4, "humanCommits": 11, "botCommits": 0 },
+  "agents": [ { "id": "claude", "label": "Claude Code", "lines": 615, "share": 0.200326, "commits": 4 } ],
+  "byPath": [ { "path": "PROGRAM/", "files": 11, "lines": 1684, "counted": 1684, "ai": 591, "human": 1093, "bot": 0, "share": 0.35095 } ],
   "skipped": { "count": 0, "byReason": {}, "files": [] },
-  "byAuthor": [ { "name": "...", "email": "...", "kind": "human", "lines": 5254, "ai": 2429, "agents": { "claude": 2429 }, "share": 0.462314 } ],   // with --by-author
-  "history": { "granularity": "month", "since": null, "until": null, "periods": [ { "period": "2026-08", "added": 5374, "ai": 2529, "human": 2845, "bot": 0, "counted": 5374, "commits": 10, "aiCommits": 3, "share": 0.470599 } ] },   // with --history
+  "byAuthor": [ { "name": "...", "email": "...", "kind": "human", "lines": 3070, "ai": 615, "agents": { "claude": 615 }, "share": 0.200326 } ],   // with --by-author
+  "history": { "granularity": "month", "since": null, "until": null, "periods": [ { "period": "2026-08", "added": 3236, "ai": 656, "human": 2580, "bot": 0, "counted": 3236, "commits": 15, "aiCommits": 4, "share": 0.202719 } ] },   // with --history
   "threshold": { "limit": 60, "exceeded": false }   // with --threshold
 }
 ```
@@ -423,7 +419,7 @@ That badge commit is authored by `github-actions[bot]`, so `agent-blame` itself 
 import { analyze, renderMarkdown, toJSON } from 'agent-blame';
 
 const model = await analyze({ path: '.', byAuthor: true, history: true });
-console.log(model.totals.aiShare);       // 0.4623...
+console.log(model.totals.aiShare);       // 0.2003...
 console.log(renderMarkdown(model));
 const doc = toJSON(model);               // the --json document
 
