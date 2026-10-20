@@ -18,7 +18,11 @@ import {
   renderTrendsSvg,
   updateReadme,
   weekWindows,
+  writeOutputs,
 } from '../scripts/trends.mjs';
+import fs from 'node:fs';
+import os from 'node:os';
+import path from 'node:path';
 
 test('AGENT_QUERIES is one phrase query per agent, with ids from the classifier', () => {
   assert.equal(AGENT_QUERIES.length, 8);
@@ -121,7 +125,7 @@ test('renderTrendsSvg draws one line per agent on a log scale with hollow marker
   assert.match(svg, /<text[^>]*>1M<\/text>/);
   const hollow = (svg.match(/<circle [^>]*r="3" fill="none"/g) ?? []).length;
   assert.equal(hollow, 7, 'three Claude, two Copilot and two Codex partial counts are hollow');
-  assert.match(svg, /Claude Code, 2026-09: 11,826,968 \(partial: search timed out\)/);
+  assert.match(svg, /<circle [^>]*><title>Claude Code, 2026-09: 11,826,968 \(partial: search timed out\)<\/title><\/circle>/, 'tooltips are children of their markers');
   assert.match(svg, /Aider, 2026-09: 34,110<\/title>/);
   for (const a of sampleData().agents) assert.ok(svg.includes(`>${a.label}</text>`), `legend entry for ${a.label}`);
   assert.match(svg, /Jul 26/);
@@ -148,6 +152,21 @@ test('renderTrendsMarkdown has the month x agent table, dagger marks, the growth
   assert.match(md, /^\| Claude Code \| 11,826,968† \| 25,000,000 \| 5 of 5 \|$/m);
   assert.match(md, /12 search requests, 1 retries, 1 secondary-limit pauses; pace 30 s/);
   assert.match(md, /not capped at 1,000/);
+});
+
+test('writeOutputs renders the Markdown, the SVG and the README block into a directory', () => {
+  const dir = fs.mkdtempSync(path.join(os.tmpdir(), 'agent-blame-trends-'));
+  try {
+    const readme = path.join(dir, 'README.md');
+    fs.writeFileSync(readme, `# x\n\n${README_MARKERS[0]}\nold\n${README_MARKERS[1]}\n`);
+    writeOutputs(sampleData(), { docs: path.join(dir, 'docs'), readme });
+    assert.ok(fs.readFileSync(path.join(dir, 'docs', 'trends.svg'), 'utf8').startsWith('<svg '));
+    assert.match(fs.readFileSync(path.join(dir, 'docs', 'trends.md'), 'utf8'), /^# AI co-authorship on GitHub over time/);
+    assert.match(fs.readFileSync(readme, 'utf8'), /\*\*2026-09\*\* /);
+    assert.ok(!fs.readFileSync(readme, 'utf8').includes('\nold\n'));
+  } finally {
+    fs.rmSync(dir, { recursive: true, force: true });
+  }
 });
 
 test('renderReadmeBlock and updateReadme replace only the marked block', () => {

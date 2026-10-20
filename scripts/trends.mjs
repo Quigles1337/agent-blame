@@ -13,6 +13,7 @@
  *   TRENDS_PACE_MS=30000 ...                            # milliseconds between search requests
  *   TRENDS_INCOMPLETE_RETRIES=1 ...                     # re-run timed-out queries and keep the larger count
  *   TRENDS_CALIBRATE=0 ...                              # skip the weekly split of the latest month
+ *   TRENDS_RENDER_ONLY=1 node scripts/trends.mjs         # re-render .md/.svg/README from docs/trends.json, no requests
  *
  * The commit search endpoint is the most expensive one GitHub exposes: the
  * documented limit is 30 requests per minute, but a secondary limit cuts in
@@ -329,9 +330,9 @@ export function renderTrendsSvg(data, { width = 960, height = 520 } = {}) {
     pts.forEach((p) => {
       if (!p) return;
       const fill = p.c.incomplete ? PALETTE.surface : color;
-      out.push(`<circle cx="${p.x}" cy="${p.y}" r="4" fill="${fill}" stroke="${PALETTE.surface}" stroke-width="2"/>`);
-      if (p.c.incomplete) out.push(`<circle cx="${p.x}" cy="${p.y}" r="3" fill="none" stroke="${color}" stroke-width="2"/>`);
-      out.push(`<title>${esc(`${a.label}, ${p.c.month}: ${formatInt(p.c.count)}${p.c.incomplete ? ' (partial: search timed out)' : ''}`)}</title>`);
+      const tip = `<title>${esc(`${a.label}, ${p.c.month}: ${formatInt(p.c.count)}${p.c.incomplete ? ' (partial: search timed out)' : ''}`)}</title>`;
+      out.push(`<circle cx="${p.x}" cy="${p.y}" r="4" fill="${fill}" stroke="${PALETTE.surface}" stroke-width="2">${tip}</circle>`);
+      if (p.c.incomplete) out.push(`<circle cx="${p.x}" cy="${p.y}" r="3" fill="none" stroke="${color}" stroke-width="2">${tip}</circle>`);
     });
   });
 
@@ -527,7 +528,25 @@ export function methodologyNotes() {
   ];
 }
 
+/** Write docs/trends.md, docs/trends.svg and the README block from a data document. */
+export function writeOutputs(data, { docs = DOCS, readme = README } = {}) {
+  fs.mkdirSync(docs, { recursive: true });
+  fs.writeFileSync(path.join(docs, 'trends.md'), renderTrendsMarkdown(data));
+  fs.writeFileSync(path.join(docs, 'trends.svg'), renderTrendsSvg(data));
+  if (fs.existsSync(readme)) {
+    const text = fs.readFileSync(readme, 'utf8');
+    if (text.includes(README_MARKERS[0])) fs.writeFileSync(readme, updateReadme(text, renderReadmeBlock(data)));
+  }
+}
+
 async function main() {
+  const jsonPath = path.join(DOCS, 'trends.json');
+  if (process.env.TRENDS_RENDER_ONLY === '1') {
+    const data = JSON.parse(fs.readFileSync(jsonPath, 'utf8'));
+    writeOutputs(data);
+    process.stderr.write('trends: re-rendered docs/trends.{md,svg} and the README block from docs/trends.json\n');
+    return;
+  }
   const token = process.env.GITHUB_TOKEN || process.env.GH_TOKEN;
   if (!token) {
     process.stderr.write('trends: set GITHUB_TOKEN or GH_TOKEN (commit search needs authentication)\n');
@@ -544,7 +563,6 @@ async function main() {
   const log = (s) => process.stderr.write(`${s}\n`);
 
   let previous = null;
-  const jsonPath = path.join(DOCS, 'trends.json');
   if (fs.existsSync(jsonPath)) {
     try {
       previous = JSON.parse(fs.readFileSync(jsonPath, 'utf8'));
@@ -581,12 +599,7 @@ async function main() {
 
   fs.mkdirSync(DOCS, { recursive: true });
   fs.writeFileSync(jsonPath, `${JSON.stringify(data, null, 2)}\n`);
-  fs.writeFileSync(path.join(DOCS, 'trends.md'), renderTrendsMarkdown(data));
-  fs.writeFileSync(path.join(DOCS, 'trends.svg'), renderTrendsSvg(data));
-  if (fs.existsSync(README)) {
-    const readme = fs.readFileSync(README, 'utf8');
-    if (readme.includes(README_MARKERS[0])) fs.writeFileSync(README, updateReadme(readme, renderReadmeBlock(data)));
-  }
+  writeOutputs(data);
   log(`trends: wrote docs/trends.{json,md,svg} in ${data.stats.durationSeconds} s (${client.stats.requests} requests)`);
 }
 
