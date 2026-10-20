@@ -76,6 +76,7 @@ function skippedSummary(skipped) {
 /** The default human-readable report. */
 export function renderText(model, { color = false } = {}) {
   if (model.mode === 'range') return renderRangeText(model, { color });
+  if (model.mode === 'explain') return renderExplainText(model, { color });
   const c = makeColors(color);
   const t = model.totals;
   const out = [];
@@ -123,7 +124,7 @@ export function renderText(model, { color = false } = {}) {
   out.push('');
 
   if (model.byPath.length > 0) {
-    const pathTitle = model.options?.perFile ? 'File' : `Path (depth ${model.options?.depth ?? 1})`;
+    const pathTitle = model.options?.top ? `Top ${model.options.top} files by AI-assisted share` : model.options?.perFile ? 'File' : `Path (depth ${model.options?.depth ?? 1})`;
     out.push(
       table(
         model.byPath.map((p) => ({
@@ -303,7 +304,7 @@ export function renderRangeText(model, { color = false } = {}) {
   out.push('');
 
   if (model.byPath.length > 0) {
-    const pathTitle = model.options?.perFile ? 'File' : `Path (depth ${model.options?.depth ?? 1})`;
+    const pathTitle = model.options?.top ? `Top ${model.options.top} files by AI-assisted share` : model.options?.perFile ? 'File' : `Path (depth ${model.options?.depth ?? 1})`;
     out.push(
       table(
         model.byPath.map((p) => ({
@@ -415,6 +416,7 @@ export function renderRangeMarkdown(model) {
       out.push('');
     }
     if (model.byPath.length > 0) {
+      if (model.options?.top) out.push(`Top ${model.options.top} files by AI-assisted share:`, '');
       const headers = model.options?.perFile ? ['File', 'Added', 'AI-assisted', 'Share'] : ['Path', 'Files', 'Added', 'AI-assisted', 'Share'];
       const aligns = model.options?.perFile ? ['l', 'r', 'r', 'r'] : ['l', 'r', 'r', 'r', 'r'];
       out.push(
@@ -465,6 +467,77 @@ export function renderRangeMarkdown(model) {
   return out.join('\n');
 }
 
+/** Text report for `--explain <file>`: the file's commits with the evidence behind each classification. */
+export function renderExplainText(model, { color = false } = {}) {
+  const c = makeColors(color);
+  const t = model.totals;
+  const out = [];
+  const where = [model.repo?.path, model.repo?.head ? `@ ${model.repo.head}` : null, model.repo?.branch && model.repo.branch !== 'HEAD' ? `(${model.repo.branch})` : null].filter(Boolean).join(' ');
+  out.push(`${c.bold('agent-blame')} ${c.bold(model.file)} ${c.dim(where)}`);
+  out.push('');
+  const parts = [`${formatInt(t.ai)} AI-assisted (${formatShare(t.share)})`, `${formatInt(t.human - t.uncommitted - t.unknown)} human`];
+  if (t.bot > 0) parts.push(`${formatInt(t.bot)} bot${model.options?.ignoreBots ? ', excluded from the share' : ''}`);
+  if (t.uncommitted > 0) parts.push(`${formatInt(t.uncommitted)} uncommitted`);
+  if (t.unknown > 0) parts.push(`${formatInt(t.unknown)} from commits outside HEAD's history of this file`);
+  out.push(`${formatInt(t.lines)} surviving lines: ${parts.join(', ')}`);
+  if (model.blameError) out.push(c.yellow(`blame failed: ${model.blameError}`));
+  if (model.ignoreRevsFile) out.push(c.dim(`using ${model.ignoreRevsFile}`));
+  out.push(c.dim(`${formatInt(model.commits.length)} commit${model.commits.length === 1 ? '' : 's'} touched this file (HEAD history, renames followed)`));
+  out.push('');
+  if (model.commits.length === 0) return out.join('\n');
+  const rows = model.commits.map((cm) => ({
+    hash: cm.short,
+    date: String(cm.date ?? '').slice(0, 10),
+    author: cm.authorName,
+    kind: cm.kind === 'agent' ? c.blue(kindLabel(cm.kind)) : c.dim(kindLabel(cm.kind)),
+    added: `+${formatInt(cm.added)}`,
+    deleted: `-${formatInt(cm.deleted)}`,
+    surviving: formatInt(cm.surviving),
+    subject: cm.subject,
+  }));
+  const columns = [
+    { key: 'hash', title: 'Commit' },
+    { key: 'date', title: 'Date' },
+    { key: 'author', title: 'Author' },
+    { key: 'kind', title: 'Class' },
+    { key: 'added', title: 'Added', align: 'r' },
+    { key: 'deleted', title: 'Deleted', align: 'r' },
+    { key: 'surviving', title: 'Surviving', align: 'r' },
+    { key: 'subject', title: 'Subject' },
+  ];
+  const lines = table(rows, columns, { color: c }).split('\n');
+  out.push(lines[0]);
+  model.commits.forEach((cm, i) => {
+    out.push(lines[i + 1]);
+    for (const reason of cm.reasons) out.push(c.dim(`         ${cm.kind === 'agent' ? 'evidence' : 'because'}: ${reason}`));
+  });
+  out.push('');
+  return out.join('\n');
+}
+
+/** Markdown report for `--explain <file>`. */
+export function renderExplainMarkdown(model) {
+  const t = model.totals;
+  const out = [];
+  out.push(`### \`${model.file}\``);
+  out.push('');
+  out.push(`**${formatShare(t.share)}** of ${formatInt(t.counted)} surviving lines are AI-assisted (${formatInt(t.ai)} lines); ${formatInt(model.commits.length)} commits touched the file.`);
+  out.push('');
+  if (model.commits.length > 0) {
+    out.push(
+      mdTable(
+        ['Commit', 'Date', 'Author', 'Class', 'Added', 'Deleted', 'Surviving', 'Subject', 'Evidence'],
+        ['l', 'l', 'l', 'l', 'r', 'r', 'r', 'l', 'l'],
+        model.commits.map((cm) => [`\`${cm.short}\``, String(cm.date ?? '').slice(0, 10), cm.authorName, kindLabel(cm.kind), `+${formatInt(cm.added)}`, `-${formatInt(cm.deleted)}`, formatInt(cm.surviving), cm.subject, cm.reasons.join('; ')]),
+      ),
+    );
+    out.push('');
+  }
+  out.push(`<sub>Generated by agent-blame${model.generatedAt ? ` on ${model.generatedAt.slice(0, 10)}` : ''}</sub>`);
+  out.push('');
+  return out.join('\n');
+}
+
 function mdCell(s) {
   return String(s).replace(/\|/g, '\\|').replace(/\n/g, ' ');
 }
@@ -478,6 +551,7 @@ function mdTable(headers, aligns, rows) {
 /** GitHub-flavoured Markdown suitable for a PR comment, a README or $GITHUB_STEP_SUMMARY. */
 export function renderMarkdown(model) {
   if (model.mode === 'range') return renderRangeMarkdown(model);
+  if (model.mode === 'explain') return renderExplainMarkdown(model);
   const t = model.totals;
   const out = [];
   out.push('### AI-assisted code');
@@ -493,6 +567,7 @@ export function renderMarkdown(model) {
     out.push('');
   }
   if (model.byPath.length > 0) {
+    if (model.options?.top) out.push(`Top ${model.options.top} files by AI-assisted share:`, '');
     const headers = model.options?.perFile ? ['File', 'Lines', 'AI-assisted', 'Share'] : ['Path', 'Files', 'Lines', 'AI-assisted', 'Share'];
     const aligns = model.options?.perFile ? ['l', 'r', 'r', 'r'] : ['l', 'r', 'r', 'r', 'r'];
     out.push(
@@ -542,6 +617,20 @@ const round = (x) => (x === null || x === undefined ? null : Math.round(x * 1e6)
 
 /** The stable JSON document (schema version SCHEMA_VERSION). */
 export function toJSON(model) {
+  if (model.mode === 'explain') {
+    return {
+      version: SCHEMA_VERSION,
+      generatedAt: model.generatedAt,
+      tool: model.tool,
+      mode: 'explain',
+      repo: model.repo,
+      file: model.file,
+      options: model.options,
+      totals: { ...model.totals, share: round(model.totals.share) },
+      commits: model.commits,
+      ignoreRevsFile: model.ignoreRevsFile,
+    };
+  }
   const doc = {
     version: SCHEMA_VERSION,
     generatedAt: model.generatedAt,

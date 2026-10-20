@@ -34,6 +34,7 @@ function toPosix(p) {
  * @param {number|string} [opts.maxFileSize]     override config.maxFileSize
  * @param {number}  [opts.depth]                 override config.depth
  * @param {boolean} [opts.perFile=false]
+ * @param {number}  [opts.top]                   only the N files with the highest AI-assisted share (implies perFile)
  * @param {boolean} [opts.byAuthor=false]
  * @param {boolean} [opts.history=false]
  * @param {boolean} [opts.weekly=false]
@@ -83,7 +84,9 @@ export async function analyze(opts = {}) {
     onProgress: opts.onProgress ?? null,
   });
 
-  const agg = aggregate({ files, commitIndex, labels: classify.labels, ignoreBots, depth, perFile: Boolean(opts.perFile) });
+  const perFile = Boolean(opts.perFile) || Boolean(opts.top);
+  const agg = aggregate({ files, commitIndex, labels: classify.labels, ignoreBots, depth, perFile });
+  const byPath = opts.top ? agg.byPath.slice(0, opts.top) : agg.byPath;
 
   let history = null;
   if (opts.history) {
@@ -117,7 +120,8 @@ export async function analyze(opts = {}) {
       ignoreBots,
       defaultPatterns,
       depth,
-      perFile: Boolean(opts.perFile),
+      perFile,
+      top: opts.top ?? null,
       include,
       exclude,
       maxFileSize,
@@ -125,7 +129,7 @@ export async function analyze(opts = {}) {
     },
     totals: agg.totals,
     agents: agg.agents,
-    byPath: agg.byPath,
+    byPath,
     byAuthor: opts.byAuthor ? agg.byAuthor : null,
     history,
     skipped: { count: skipped.length, byReason, files: skipped },
@@ -169,7 +173,8 @@ export async function analyzeRange(opts = {}, rangeSpec = resolveRangeSpec(opts)
   if (!headHash) throw new Error(`unknown revision ${JSON.stringify(rangeSpec.head)} in range ${rangeSpec.spec}`);
   const rangeCommits = await readRange(root, rangeSpec.spec);
   const { files, commitIndex, commits, skipped } = collectRange(rangeCommits, classify, { matcher });
-  const agg = aggregate({ files, commitIndex, labels: classify.labels, ignoreBots, depth, perFile: Boolean(opts.perFile) });
+  const perFile = Boolean(opts.perFile) || Boolean(opts.top);
+  const agg = aggregate({ files, commitIndex, labels: classify.labels, ignoreBots, depth, perFile });
 
   const head = await git(['rev-parse', '--short', 'HEAD'], { cwd: root, allowFailure: true });
   const branch = await git(['rev-parse', '--abbrev-ref', 'HEAD'], { cwd: root, allowFailure: true });
@@ -199,7 +204,8 @@ export async function analyzeRange(opts = {}, rangeSpec = resolveRangeSpec(opts)
       ignoreBots,
       defaultPatterns,
       depth,
-      perFile: Boolean(opts.perFile),
+      perFile,
+      top: opts.top ?? null,
       include,
       exclude,
       maxFileSize: null,
@@ -207,7 +213,7 @@ export async function analyzeRange(opts = {}, rangeSpec = resolveRangeSpec(opts)
     },
     totals: agg.totals,
     agents: agg.agents,
-    byPath: agg.byPath,
+    byPath: opts.top ? agg.byPath.slice(0, opts.top) : agg.byPath,
     byAuthor: opts.byAuthor ? agg.byAuthor : null,
     commits,
     history: null,
