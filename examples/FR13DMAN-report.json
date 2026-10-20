@@ -1,0 +1,207 @@
+{
+  "version": 1,
+  "generatedAt": "2026-10-20T06:36:15.360Z",
+  "tool": {
+    "name": "agent-blame",
+    "version": "0.1.0"
+  },
+  "repo": {
+    "path": "…/FR13DMAN",
+    "head": "7c3e5dd",
+    "branch": "main",
+    "subdir": null
+  },
+  "options": {
+    "ignoreBots": true,
+    "defaultPatterns": true,
+    "depth": 1,
+    "perFile": false,
+    "top": null,
+    "include": [],
+    "exclude": [],
+    "maxFileSize": 2097152,
+    "config": null
+  },
+  "totals": {
+    "files": 26,
+    "lines": 3070,
+    "counted": 3070,
+    "ai": 615,
+    "human": 2455,
+    "bot": 0,
+    "uncommitted": 0,
+    "unknown": 0,
+    "aiShare": 0.200326,
+    "commits": 15,
+    "aiCommits": 4,
+    "humanCommits": 11,
+    "botCommits": 0
+  },
+  "agents": [
+    {
+      "id": "claude",
+      "label": "Claude Code",
+      "lines": 615,
+      "share": 0.200326,
+      "commits": 4
+    }
+  ],
+  "byPath": [
+    {
+      "path": "README.md",
+      "files": 1,
+      "lines": 15,
+      "counted": 15,
+      "ai": 15,
+      "human": 0,
+      "bot": 0,
+      "share": 1
+    },
+    {
+      "path": ".gitattributes",
+      "files": 1,
+      "lines": 9,
+      "counted": 9,
+      "ai": 9,
+      "human": 0,
+      "bot": 0,
+      "share": 1
+    },
+    {
+      "path": "PROGRAM/",
+      "files": 11,
+      "lines": 1684,
+      "counted": 1684,
+      "ai": 591,
+      "human": 1093,
+      "bot": 0,
+      "share": 0.35095
+    },
+    {
+      "path": "engine/",
+      "files": 5,
+      "lines": 1083,
+      "counted": 1083,
+      "ai": 0,
+      "human": 1083,
+      "bot": 0,
+      "share": 0
+    },
+    {
+      "path": "lab/",
+      "files": 1,
+      "lines": 152,
+      "counted": 152,
+      "ai": 0,
+      "human": 152,
+      "bot": 0,
+      "share": 0
+    },
+    {
+      "path": ".github/",
+      "files": 1,
+      "lines": 33,
+      "counted": 33,
+      "ai": 0,
+      "human": 33,
+      "bot": 0,
+      "share": 0
+    },
+    {
+      "path": "quarantine/",
+      "files": 1,
+      "lines": 28,
+      "counted": 28,
+      "ai": 0,
+      "human": 28,
+      "bot": 0,
+      "share": 0
+    },
+    {
+      "path": "corpora/",
+      "files": 1,
+      "lines": 21,
+      "counted": 21,
+      "ai": 0,
+      "human": 21,
+      "bot": 0,
+      "share": 0
+    },
+    {
+      "path": "scripts/",
+      "files": 1,
+      "lines": 20,
+      "counted": 20,
+      "ai": 0,
+      "human": 20,
+      "bot": 0,
+      "share": 0
+    },
+    {
+      "path": "gallery/",
+      "files": 1,
+      "lines": 12,
+      "counted": 12,
+      "ai": 0,
+      "human": 12,
+      "bot": 0,
+      "share": 0
+    },
+    {
+      "path": ".gitignore",
+      "files": 1,
+      "lines": 10,
+      "counted": 10,
+      "ai": 0,
+      "human": 10,
+      "bot": 0,
+      "share": 0
+    },
+    {
+      "path": "rust-toolchain.toml",
+      "files": 1,
+      "lines": 3,
+      "counted": 3,
+      "ai": 0,
+      "human": 3,
+      "bot": 0,
+      "share": 0
+    }
+  ],
+  "skipped": {
+    "count": 0,
+    "byReason": {},
+    "files": []
+  },
+  "byAuthor": [
+    {
+      "name": "Quigles1337",
+      "email": "adz@alphx.io",
+      "kind": "human",
+      "lines": 3070,
+      "ai": 615,
+      "agents": {
+        "claude": 615
+      },
+      "share": 0.200326
+    }
+  ],
+  "history": {
+    "granularity": "month",
+    "since": null,
+    "until": null,
+    "periods": [
+      {
+        "period": "2026-08",
+        "added": 3236,
+        "ai": 656,
+        "human": 2580,
+        "bot": 0,
+        "commits": 15,
+        "aiCommits": 4,
+        "counted": 3236,
+        "share": 0.202719
+      }
+    ]
+  }
+}

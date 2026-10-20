@@ -1,22 +1,22 @@
-agent-blame …/agent-blame @ 760a349 (feat/pr-mode-action)
+agent-blame …/agent-blame @ 0123111 (fix/public-sample)
 
 Summary                            Lines   Share
-Lines (blame of the working tree)  5,010
-  AI-assisted                      5,010  100.0%  ████████████████████
+Lines (blame of the working tree)  5,525
+  AI-assisted                      5,525  100.0%  ████████████████████
   Human                                0    0.0%
 
 By agent       Lines   Share  Commits
-  Claude Code  5,010  100.0%        7
+  Claude Code  5,525  100.0%       17
 
-7 commits across all refs: 7 AI-assisted (100.0%), 0 human, 0 bot
+17 commits across all refs: 17 AI-assisted (100.0%), 0 human, 0 bot
 
 Path (depth 1)  Files  Lines  AI-assisted   Share
-src/               12  2,489        2,489  100.0%  ████████████████████
-test/              11  1,656        1,656  100.0%  ████████████████████
-README.md           1    413          413  100.0%  ████████████████████
+src/               13  2,773        2,773  100.0%  ████████████████████
+test/              12  1,829        1,829  100.0%  ████████████████████
+README.md           1    443          443  100.0%  ████████████████████
 action.yml          1    190          190  100.0%  ████████████████████
 .github/            3    103          103  100.0%  ████████████████████
-scripts/            1     54           54  100.0%  ████████████████████
+scripts/            1     82           82  100.0%  ████████████████████
 package.json        1     53           53  100.0%  ████████████████████
 LICENSE             1     21           21  100.0%  ████████████████████
 .editorconfig       1     12           12  100.0%  ████████████████████
@@ -25,9 +25,9 @@ bin/                1     12           12  100.0%  █████████�
 .gitattributes      1      2            2  100.0%  ████████████████████
 
 Author                        Lines  AI-assisted   Share
-Quigles1337 <adz@alphx.io>    5,010        5,010  100.0%  ████████████████████
+Quigles1337 <adz@alphx.io>    5,525        5,525  100.0%  ████████████████████
   Lines are credited to the commit author; the share is how many of them were agent-assisted.
 
 Month (added lines, HEAD history)  Added  AI-assisted   Share     Commits
-2026-10                            5,049        5,049  100.0%  █        7
+2026-10                            5,629        5,629  100.0%  █        9
   Trend: █
