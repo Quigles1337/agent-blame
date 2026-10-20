@@ -1,14 +1,14 @@
 {
   "version": 1,
-  "generatedAt": "2026-10-20T05:32:14.929Z",
+  "generatedAt": "2026-10-20T05:36:21.118Z",
   "tool": {
     "name": "agent-blame",
     "version": "0.1.0"
   },
   "repo": {
     "path": "…/agent-blame",
-    "head": "81374cf",
-    "branch": "feat/dogfood-examples",
+    "head": "f8da0f2",
+    "branch": "docs/readme-ci",
     "subdir": null
   },
   "options": {
@@ -17,22 +17,24 @@
     "depth": 1,
     "perFile": false,
     "include": [],
-    "exclude": [],
+    "exclude": [
+      "examples/**"
+    ],
     "maxFileSize": 2097152,
     "config": null
   },
   "totals": {
-    "files": 29,
-    "lines": 3487,
-    "counted": 3487,
-    "ai": 3487,
+    "files": 30,
+    "lines": 3553,
+    "counted": 3553,
+    "ai": 3553,
     "human": 0,
     "bot": 0,
     "uncommitted": 0,
     "unknown": 0,
     "aiShare": 1,
-    "commits": 9,
-    "aiCommits": 9,
+    "commits": 12,
+    "aiCommits": 12,
     "humanCommits": 0,
     "botCommits": 0
   },
@@ -40,18 +42,18 @@
     {
       "id": "claude",
       "label": "Claude Code",
-      "lines": 3487,
+      "lines": 3553,
       "share": 1,
-      "commits": 9
+      "commits": 12
     }
   ],
   "byPath": [
     {
       "path": "src/",
       "files": 11,
-      "lines": 1953,
-      "counted": 1953,
-      "ai": 1953,
+      "lines": 1960,
+      "counted": 1960,
+      "ai": 1960,
       "human": 0,
       "bot": 0,
       "share": 1
@@ -59,9 +61,19 @@
     {
       "path": "test/",
       "files": 10,
-      "lines": 1339,
-      "counted": 1339,
-      "ai": 1339,
+      "lines": 1361,
+      "counted": 1361,
+      "ai": 1361,
+      "human": 0,
+      "bot": 0,
+      "share": 1
+    },
+    {
+      "path": ".github/",
+      "files": 2,
+      "lines": 76,
+      "counted": 76,
+      "ai": 76,
       "human": 0,
       "bot": 0,
       "share": 1
@@ -79,19 +91,9 @@
     {
       "path": "scripts/",
       "files": 1,
-      "lines": 49,
-      "counted": 49,
-      "ai": 49,
-      "human": 0,
-      "bot": 0,
-      "share": 1
-    },
-    {
-      "path": ".github/",
-      "files": 1,
-      "lines": 41,
-      "counted": 41,
-      "ai": 41,
+      "lines": 51,
+      "counted": 51,
+      "ai": 51,
       "human": 0,
       "bot": 0,
       "share": 1
@@ -157,10 +159,10 @@
       "name": "Quigles1337",
       "email": "adz@alphx.io",
       "kind": "human",
-      "lines": 3487,
-      "ai": 3487,
+      "lines": 3553,
+      "ai": 3553,
       "agents": {
-        "claude": 3487
+        "claude": 3553
       },
       "share": 1
     }
@@ -172,13 +174,13 @@
     "periods": [
       {
         "period": "2026-10",
-        "added": 3490,
-        "ai": 3490,
+        "added": 3566,
+        "ai": 3566,
         "human": 0,
         "bot": 0,
-        "commits": 5,
-        "aiCommits": 5,
-        "counted": 3490,
+        "commits": 6,
+        "aiCommits": 6,
+        "counted": 3566,
         "share": 1
       }
     ]
