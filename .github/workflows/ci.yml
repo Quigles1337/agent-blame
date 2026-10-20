@@ -1,0 +1,41 @@
+name: CI
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+
+permissions:
+  contents: read
+
+concurrency:
+  group: ci-${{ github.ref }}
+  cancel-in-progress: true
+
+jobs:
+  test:
+    name: test (node ${{ matrix.node }}, ${{ matrix.os }})
+    runs-on: ${{ matrix.os }}
+    strategy:
+      fail-fast: false
+      matrix:
+        os: [ubuntu-latest, windows-latest]
+        node: [20, 22]
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+      - uses: actions/setup-node@v4
+        with:
+          node-version: ${{ matrix.node }}
+      - name: Show versions
+        run: |
+          node --version
+          git --version
+      - name: Unit and end-to-end tests
+        run: npm test
+      - name: Package contents are clean
+        run: npm pack --dry-run
+      - name: Self-measurement smoke test
+        run: node bin/agent-blame.js --json
+        if: hashFiles('bin/agent-blame.js') != ''

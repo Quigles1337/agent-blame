@@ -1,0 +1,48 @@
+{
+  "name": "agent-blame",
+  "version": "0.1.0",
+  "description": "Measure how much of a codebase was written with AI coding agents, from the Co-Authored-By trailers they already leave. Line-level, retroactive, zero dependencies.",
+  "type": "module",
+  "exports": {
+    ".": "./src/index.js",
+    "./package.json": "./package.json"
+  },
+  "files": [
+    "bin",
+    "src",
+    "README.md",
+    "LICENSE"
+  ],
+  "engines": {
+    "node": ">=20"
+  },
+  "scripts": {
+    "test": "node --test"
+  },
+  "keywords": [
+    "git",
+    "blame",
+    "ai",
+    "provenance",
+    "code-attribution",
+    "co-authored-by",
+    "copilot",
+    "claude-code",
+    "cursor",
+    "codex",
+    "aider",
+    "cli",
+    "zero-dependencies",
+    "developer-tools"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Quigles1337/agent-blame.git"
+  },
+  "bugs": {
+    "url": "https://github.com/Quigles1337/agent-blame/issues"
+  },
+  "homepage": "https://github.com/Quigles1337/agent-blame#readme",
+  "author": "Quigles1337 <adz@alphx.io>",
+  "license": "MIT"
+}
