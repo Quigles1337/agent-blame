@@ -29,6 +29,22 @@ Requires Node 20 or later and `git` on `PATH`. Nothing is installed globally and
 npx github:Quigles1337/agent-blame
 ```
 
+## Trends
+
+How much AI co-authorship is there on GitHub as a whole, and is it growing? [`scripts/trends.mjs`](scripts/trends.mjs) asks the GitHub commit search API, for each of the last 18 complete calendar months and each agent, how many indexed commits carry that agent's `Co-authored-by` trailer, and [`trends.yml`](.github/workflows/trends.yml) regenerates the chart every Monday.
+
+![AI co-authorship on GitHub: indexed commits per month by agent, log scale](docs/trends.svg)
+
+Read these as a floor, not a census: GitHub's search only indexes default-branch commits of repositories it has indexed, trailers are voluntary and some workflows strip them, and each number is the search API's `total_count`, which is a partial count whenever the search hits GitHub's time limit (marked † below; that is the case for every `Co-authored-by` phrase query). The order of magnitude and the direction of travel are more trustworthy than any individual month-over-month figure.
+
+<!-- trends:start -->
+**2026-09** (month-over-month in parentheses; † = partial count, GitHub's search timed out): Claude Code 15M† (+47%) · GitHub Copilot 256K† (-0.6%) · OpenAI Codex 119K† (+34%) · Cursor 1.1M† (+33%) · Aider 34K (+14%) · Devin 726† (-19%) · Gemini 867 (-25%) · Jules 25K† (+12%).
+
+Queries, one per agent and calendar month: `"Co-authored-by: Claude"`, `"Co-authored-by: Copilot"`, `"Co-authored-by: Codex"`, `"Co-authored-by: Cursor"`, `"(aider)"`, `"Co-authored-by: devin-ai-integration"`, `"Co-authored-by: gemini-code-assist"`, `"Co-authored-by: google-labs-jules"`; each is run as `<query> committer-date:<first day>..<last day>` against the commit search API and the `total_count` is recorded. Updated 2026-10-20.
+<!-- trends:end -->
+
+The full month-by-month table, the query strings, the methodology and the weekly-split calibration of the latest month are in [`docs/trends.md`](docs/trends.md); the raw numbers are in [`docs/trends.json`](docs/trends.json).
+
 ## Example output
 
 Run against [Quigles1337/FR13DMAN](https://github.com/Quigles1337/FR13DMAN), a Rust and Markdown research repository with a mix of human and Claude Code commits (repository path shortened):
