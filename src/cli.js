@@ -6,6 +6,7 @@ import fs from 'node:fs';
 import path from 'node:path';
 import { parseArgs } from 'node:util';
 import { analyze, TOOL } from './analyze.js';
+import { explainFile } from './explain.js';
 import { renderBadge, renderShields } from './badge.js';
 import { formatShare, renderMarkdown, renderText, toJSON } from './report.js';
 
@@ -34,6 +35,7 @@ Output
   --badge <file.svg>        Also write a shields-style "AI-assisted | NN%" badge
   --shields <file.json>     Also write a shields.io endpoint document for a dynamic badge
   --files                   Per-file table instead of per-directory
+  --top <n>                 Only the n files with the highest AI-assisted share
   --depth <n>               Directory depth for the path table (default: 1)
   --by-author               Per-author table: lines and how many were agent-assisted
   --history                 Monthly share of added lines that were agent-assisted
@@ -42,6 +44,10 @@ Output
   --until <date>            Only count history up to this date
   --no-color                Disable ANSI colour (also honours NO_COLOR)
   -q, --quiet               No progress or notes on stderr
+
+Disputes
+  --explain <file>          List every commit that touched the file with the
+                            evidence behind its classification
 
 Scope and classification
   --include <glob>          Only these paths (repeatable; * ** ? supported)
@@ -73,6 +79,8 @@ const OPTIONS = {
   base: { type: 'string' },
   head: { type: 'string' },
   files: { type: 'boolean' },
+  top: { type: 'string' },
+  explain: { type: 'string' },
   depth: { type: 'string' },
   'by-author': { type: 'boolean' },
   history: { type: 'boolean' },
@@ -144,6 +152,22 @@ export async function main(argv, { stdout = process.stdout, stderr = process.std
   let model;
   try {
     const target = path.resolve(cwd, positionals[0] ?? '.');
+    if (values.explain !== undefined) {
+      if (values.range || values.base || values.head || values.history || values.weekly || values.badge || values.shields || values.threshold) {
+        throw new Error('--explain only takes --json, --markdown, --config, --no-default-patterns and --no-ignore-bots');
+      }
+      const explained = await explainFile({
+        file: values.explain,
+        path: target,
+        config: values.config,
+        defaultPatterns: !values['no-default-patterns'],
+        ignoreBots: values['no-ignore-bots'] ? false : undefined,
+      });
+      if (values.json) stdout.write(`${JSON.stringify(toJSON(explained), null, 2)}\n`);
+      else if (values.markdown) stdout.write(renderMarkdown(explained));
+      else stdout.write(renderText(explained, { color: wantColor({ stdout, env, noColorFlag: values['no-color'] }) }));
+      return 0;
+    }
     model = await analyze({
       path: target,
       config: values.config,
@@ -154,6 +178,7 @@ export async function main(argv, { stdout = process.stdout, stderr = process.std
       maxFileSize: values['max-file-size'],
       depth: intOption('depth', values.depth, { min: 0, max: 64 }),
       perFile: Boolean(values.files),
+      top: intOption('top', values.top, { min: 1, max: 1000000 }),
       byAuthor: Boolean(values['by-author']),
       history: Boolean(values.history || values.weekly),
       weekly: Boolean(values.weekly),

@@ -31,7 +31,8 @@ export {
 export { SCHEMA_VERSION, aggregate, bucketPath } from './aggregate.js';
 export { bucketHistory, isoWeek, nextPeriod, periodOf, sparkline } from './history.js';
 export { bandColor, formatBadgePercent, renderBadge, renderShields } from './badge.js';
-export { bar, describeEvidence, formatInt, formatShare, kindLabel, renderMarkdown, renderRangeMarkdown, renderRangeText, renderText, table, toJSON } from './report.js';
+export { bar, describeEvidence, formatInt, formatShare, kindLabel, renderExplainMarkdown, renderExplainText, renderMarkdown, renderRangeMarkdown, renderRangeText, renderText, table, toJSON } from './report.js';
+export { explainClassification, explainFile, readFileLog } from './explain.js';
 export { TOOL, analyze, analyzeRange } from './analyze.js';
 export { collectRange, parseRangeLog, readRange, resolveRangeSpec, scopedMatcher, shortRev } from './range.js';
 export { HELP, USAGE, main } from './cli.js';

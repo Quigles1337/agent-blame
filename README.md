@@ -19,6 +19,8 @@ npx agent-blame --by-author --history # who, and how it changed month by month
 npx agent-blame --json > ai.json      # stable schema for tooling
 npx agent-blame --badge ai.svg        # shields-style badge
 npx agent-blame --range main..HEAD    # only the commits of this branch (pull-request mode)
+npx agent-blame --top 10              # the ten files with the highest AI-assisted share
+npx agent-blame --explain src/x.js    # every commit behind one file's number, with the evidence
 ```
 
 Requires Node 20 or later and `git` on `PATH`. Nothing is installed globally and nothing leaves your machine. Until the first npm release, run it straight from this repository:
@@ -80,24 +82,26 @@ The badge written by `--badge`: ![AI-assisted 46%](examples/G-del.svg)
 And this repository measuring itself (`examples/agent-blame.txt`, regenerated with `npm run examples`; the self-sample excludes `examples/`, which is this very output):
 
 ```
-agent-blame …/agent-blame @ f8da0f2 (docs/readme-ci)
+agent-blame …/agent-blame @ 760a349 (feat/pr-mode-action)
 
 Summary                            Lines   Share
-Lines (blame of the working tree)  3,553
-  AI-assisted                      3,553  100.0%  ████████████████████
+Lines (blame of the working tree)  5,010
+  AI-assisted                      5,010  100.0%  ████████████████████
   Human                                0    0.0%
 
 By agent       Lines   Share  Commits
-  Claude Code  3,553  100.0%       12
+  Claude Code  5,010  100.0%        7
 
-12 commits across all refs: 12 AI-assisted (100.0%), 0 human, 0 bot
+7 commits across all refs: 7 AI-assisted (100.0%), 0 human, 0 bot
 
 Path (depth 1)  Files  Lines  AI-assisted   Share
-src/               11  1,960        1,960  100.0%  ████████████████████
-test/              10  1,361        1,361  100.0%  ████████████████████
-.github/            2     76           76  100.0%  ████████████████████
+src/               12  2,489        2,489  100.0%  ████████████████████
+test/              11  1,656        1,656  100.0%  ████████████████████
+README.md           1    413          413  100.0%  ████████████████████
+action.yml          1    190          190  100.0%  ████████████████████
+.github/            3    103          103  100.0%  ████████████████████
+scripts/            1     54           54  100.0%  ████████████████████
 package.json        1     53           53  100.0%  ████████████████████
-scripts/            1     51           51  100.0%  ████████████████████
 LICENSE             1     21           21  100.0%  ████████████████████
 .editorconfig       1     12           12  100.0%  ████████████████████
 bin/                1     12           12  100.0%  ████████████████████
@@ -123,6 +127,8 @@ agent-blame [path] [options]
 | `--range <base>..<head>` | [Pull-request mode](#pull-request-mode): classify only the commits in the range and report the share of the lines they added. A single revision means `<rev>..HEAD` |
 | `--base <rev>`, `--head <rev>` | The same as `--range <base>..<head>`; `--head` defaults to `HEAD` |
 | `--files` | Per-file table instead of per-directory |
+| `--top <n>` | Only the `n` files with the highest AI-assisted share (ties broken by size); implies `--files` |
+| `--explain <file>` | [Dispute mode](#disputing-a-number): every commit that touched the file, with the evidence behind its classification and the lines it still owns |
 | `--depth <n>` | Directory depth of the path table (default `1`; `0` collapses everything) |
 | `--by-author` | Per-author table: lines credited to each author and how many were agent-assisted |
 | `--history` | Monthly share of added lines that were agent-assisted, with a sparkline |
@@ -172,6 +178,29 @@ Commit   Date        Author       Class        Added  Subject                   
 ```
 
 `--json`, `--markdown`, `--files`, `--depth`, `--by-author`, `--include`/`--exclude`, a subdirectory scope, `--threshold`, `--badge` and `--shields` all work in this mode; `--history` does not, because the range already selects the commits. Binary files are listed but add no lines; merge commits are left out (they add no lines of their own); an empty range reports zero commits and a 0% share. In the JSON document the mode is marked with `"mode": "range"`, `range` holds the resolved endpoints and `commits` holds every commit with its `kind`, `agents`, `added` lines and `evidence` (see [JSON schema](#json-schema)).
+
+## Disputing a number
+
+When someone questions a figure, `--explain <file>` shows exactly where it comes from: every commit on HEAD that touched the file (renames followed), its classification, the evidence that produced it, or, for a human commit, what was checked and found wanting, and how many of the file's current lines each commit still owns.
+
+```
+agent-blame src/b.js …/repo @ 9e2f0c1 (main)
+
+5 surviving lines: 3 AI-assisted (60.0%), 2 human
+3 commits touched this file (HEAD history, renames followed)
+
+Commit   Date        Author                  Class        Added  Deleted  Surviving  Subject
+3c1d9e2  2026-03-15  copilot-swe-agent[bot]  AI-assisted     +1       -1          1  Rename and shout
+         evidence: author: copilot-swe-agent[bot] <198982749+Copilot@users.noreply.github.com> (GitHub Copilot)
+b7a40f1  2026-02-15  Ada Lovelace            AI-assisted     +2       -0          2  Extend a.js with help
+         evidence: trailer: Co-Authored-By: Claude <noreply@anthropic.com> (Claude Code)
+51e0a77  2026-01-15  Ada Lovelace            human           +3       -0          2  Add a.js
+         because: author Ada Lovelace <ada@example.com> matches no agent or bot pattern
+         because: Co-Authored-By: Bob <bob@example.com> matches no agent pattern
+         because: no message marker
+```
+
+`--json` and `--markdown` give the same information as data and as a table. `--top <n>` is the complement for the whole repository: the `n` files with the highest AI-assisted share, which is usually where a review should start.
 
 ## Configuration file
 
@@ -407,6 +436,11 @@ The classifier is also exported on its own (`createClassifier`, `classify`, `DEF
 ## Contributing
 
 Bug reports and pull requests are welcome. Questions, requests for new agent patterns and design discussions belong in [GitHub Discussions](https://github.com/Quigles1337/agent-blame/discussions). The test suite (`npm test`, no dependencies) covers every built-in pattern in trailer and author form; a new pattern should come with a test and, where possible, a link to the vendor documentation or a public commit that shows the identity in the wild.
+
+## Related
+
+- [commit-tapestry](https://github.com/Quigles1337/commit-tapestry) weaves a repository's git history into a textile-style SVG.
+- [xrpl-sonic](https://github.com/Quigles1337/xrpl-sonic) turns the live XRP Ledger into sound.
 
 ## License
 
