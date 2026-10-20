@@ -35,7 +35,7 @@ test('readCommits parses identities, dates and trailers from a real repository',
   assert.equal(byHash.get(h2).authorEmail, 'ada@example.com');
   assert.deepEqual(byHash.get(h2).trailers, [{ key: 'Co-Authored-By', value: 'Claude <noreply@anthropic.com>' }]);
   assert.match(byHash.get(h2).committerDate, /^2026-02-01T/);
-  assert.equal(await repoRoot(dir), fs.realpathSync(dir));
+  assert.equal(await repoRoot(dir), fs.realpathSync.native(dir));
 });
 
 test('a repository with zero commits yields no commits, no files and no numstat', async (t) => {

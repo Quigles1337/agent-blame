@@ -6,7 +6,7 @@ import os from 'node:os';
 import path from 'node:path';
 
 export function makeTempDir(prefix = 'agent-blame-') {
-  return fs.mkdtempSync(path.join(fs.realpathSync(os.tmpdir()), prefix));
+  return fs.mkdtempSync(path.join(fs.realpathSync.native(os.tmpdir()), prefix));
 }
 
 export function run(cwd, args, { env = {} } = {}) {
