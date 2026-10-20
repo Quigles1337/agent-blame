@@ -18,7 +18,8 @@
   },
   "scripts": {
     "test": "node --test",
-    "lint": "node --check bin/agent-blame.js && node --check src/index.js"
+    "lint": "node --check bin/agent-blame.js && node --check src/index.js",
+    "examples": "node scripts/examples.js"
   },
   "keywords": [
     "git",
