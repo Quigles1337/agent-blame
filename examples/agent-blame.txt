@@ -1,0 +1,23 @@
+agent-blame …/agent-blame @ 81374cf (feat/dogfood-examples)
+
+Summary                            Lines   Share
+Lines (blame of the working tree)  3,487
+  AI-assisted                      3,487  100.0%  ████████████████████
+  Human                                0    0.0%
+
+By agent       Lines   Share  Commits
+  Claude Code  3,487  100.0%        9
+
+9 commits across all refs: 9 AI-assisted (100.0%), 0 human, 0 bot
+
+Path (depth 1)  Files  Lines  AI-assisted   Share
+src/               11  1,953        1,953  100.0%  ████████████████████
+test/              10  1,339        1,339  100.0%  ████████████████████
+package.json        1     53           53  100.0%  ████████████████████
+scripts/            1     49           49  100.0%  ████████████████████
+.github/            1     41           41  100.0%  ████████████████████
+LICENSE             1     21           21  100.0%  ████████████████████
+.editorconfig       1     12           12  100.0%  ████████████████████
+bin/                1     12           12  100.0%  ████████████████████
+.gitignore          1      5            5  100.0%  ████████████████████
+.gitattributes      1      2            2  100.0%  ████████████████████
