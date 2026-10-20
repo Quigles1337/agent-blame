@@ -2,7 +2,6 @@
 
 [![CI](https://github.com/Quigles1337/agent-blame/actions/workflows/ci.yml/badge.svg)](https://github.com/Quigles1337/agent-blame/actions/workflows/ci.yml)
 ![AI-assisted](examples/agent-blame.svg)
-[![npm](https://img.shields.io/badge/npm-agent--blame-cb3837)](https://www.npmjs.com/package/agent-blame)
 ![Node 20+](https://img.shields.io/badge/node-%3E%3D20-brightgreen)
 ![Zero dependencies](https://img.shields.io/badge/dependencies-0-blue)
 [![License: MIT](https://img.shields.io/badge/license-MIT-lightgrey)](LICENSE)
@@ -21,7 +20,11 @@ npx agent-blame --json > ai.json      # stable schema for tooling
 npx agent-blame --badge ai.svg        # shields-style badge
 ```
 
-Requires Node 20 or later and `git` on `PATH`. Nothing is installed globally and nothing leaves your machine.
+Requires Node 20 or later and `git` on `PATH`. Nothing is installed globally and nothing leaves your machine. Until the first npm release, run it straight from this repository:
+
+```sh
+npx github:Quigles1337/agent-blame
+```
 
 ## Example output
 
@@ -258,6 +261,7 @@ jobs:
       - uses: actions/setup-node@v4
         with:
           node-version: 22
+      # until the first npm release: npx github:Quigles1337/agent-blame ...
       - run: npx agent-blame --threshold 60 --markdown >> "$GITHUB_STEP_SUMMARY"
 ```
 
