@@ -39,257 +39,271 @@
 <text x="722.2" y="420" font-size="11" text-anchor="middle" fill="#898781">Aug</text>
 <text x="766.1" y="420" font-size="11" text-anchor="middle" fill="#898781">Sep</text>
 <text x="810" y="420" font-size="11" text-anchor="middle" fill="#898781">Oct</text>
-<path d="M64 226.5 L107.9 188.9 L151.8 178.4 L195.6 172.6 L239.5 175.7 L283.4 165.3 L327.3 159.8 L371.2 153.8 L415.1 144.6 L458.9 126.8 L502.8 115.3 L546.7 123 L590.6 119.8 L634.5 115.5 L678.4 112.6 L722.2 112.7 L766.1 104.5 L810 103.7" fill="none" stroke="#2a78d6" stroke-width="2" stroke-linejoin="round" stroke-linecap="round"/>
-<circle cx="64" cy="226.5" r="4" fill="#fcfcfb" stroke="#fcfcfb" stroke-width="2"><title>Claude Code, 2025-05: 43,031 (partial: search timed out)</title></circle>
-<circle cx="64" cy="226.5" r="3" fill="none" stroke="#2a78d6" stroke-width="2"><title>Claude Code, 2025-05: 43,031 (partial: search timed out)</title></circle>
-<circle cx="107.9" cy="188.9" r="4" fill="#fcfcfb" stroke="#fcfcfb" stroke-width="2"><title>Claude Code, 2025-06: 259,615 (partial: search timed out)</title></circle>
-<circle cx="107.9" cy="188.9" r="3" fill="none" stroke="#2a78d6" stroke-width="2"><title>Claude Code, 2025-06: 259,615 (partial: search timed out)</title></circle>
-<circle cx="151.8" cy="178.4" r="4" fill="#fcfcfb" stroke="#fcfcfb" stroke-width="2"><title>Claude Code, 2025-07: 427,049 (partial: search timed out)</title></circle>
-<circle cx="151.8" cy="178.4" r="3" fill="none" stroke="#2a78d6" stroke-width="2"><title>Claude Code, 2025-07: 427,049 (partial: search timed out)</title></circle>
-<circle cx="195.6" cy="172.6" r="4" fill="#fcfcfb" stroke="#fcfcfb" stroke-width="2"><title>Claude Code, 2025-08: 562,887 (partial: search timed out)</title></circle>
-<circle cx="195.6" cy="172.6" r="3" fill="none" stroke="#2a78d6" stroke-width="2"><title>Claude Code, 2025-08: 562,887 (partial: search timed out)</title></circle>
-<circle cx="239.5" cy="175.7" r="4" fill="#fcfcfb" stroke="#fcfcfb" stroke-width="2"><title>Claude Code, 2025-09: 485,947 (partial: search timed out)</title></circle>
-<circle cx="239.5" cy="175.7" r="3" fill="none" stroke="#2a78d6" stroke-width="2"><title>Claude Code, 2025-09: 485,947 (partial: search timed out)</title></circle>
-<circle cx="283.4" cy="165.3" r="4" fill="#fcfcfb" stroke="#fcfcfb" stroke-width="2"><title>Claude Code, 2025-10: 797,913 (partial: search timed out)</title></circle>
-<circle cx="283.4" cy="165.3" r="3" fill="none" stroke="#2a78d6" stroke-width="2"><title>Claude Code, 2025-10: 797,913 (partial: search timed out)</title></circle>
-<circle cx="327.3" cy="159.8" r="4" fill="#fcfcfb" stroke="#fcfcfb" stroke-width="2"><title>Claude Code, 2025-11: 1,036,850 (partial: search timed out)</title></circle>
-<circle cx="327.3" cy="159.8" r="3" fill="none" stroke="#2a78d6" stroke-width="2"><title>Claude Code, 2025-11: 1,036,850 (partial: search timed out)</title></circle>
-<circle cx="371.2" cy="153.8" r="4" fill="#fcfcfb" stroke="#fcfcfb" stroke-width="2"><title>Claude Code, 2025-12: 1,383,107 (partial: search timed out)</title></circle>
-<circle cx="371.2" cy="153.8" r="3" fill="none" stroke="#2a78d6" stroke-width="2"><title>Claude Code, 2025-12: 1,383,107 (partial: search timed out)</title></circle>
-<circle cx="415.1" cy="144.6" r="4" fill="#fcfcfb" stroke="#fcfcfb" stroke-width="2"><title>Claude Code, 2026-01: 2,138,281 (partial: search timed out)</title></circle>
-<circle cx="415.1" cy="144.6" r="3" fill="none" stroke="#2a78d6" stroke-width="2"><title>Claude Code, 2026-01: 2,138,281 (partial: search timed out)</title></circle>
-<circle cx="458.9" cy="126.8" r="4" fill="#fcfcfb" stroke="#fcfcfb" stroke-width="2"><title>Claude Code, 2026-02: 5,015,985 (partial: search timed out)</title></circle>
-<circle cx="458.9" cy="126.8" r="3" fill="none" stroke="#2a78d6" stroke-width="2"><title>Claude Code, 2026-02: 5,015,985 (partial: search timed out)</title></circle>
-<circle cx="502.8" cy="115.3" r="4" fill="#fcfcfb" stroke="#fcfcfb" stroke-width="2"><title>Claude Code, 2026-03: 8,674,562 (partial: search timed out)</title></circle>
-<circle cx="502.8" cy="115.3" r="3" fill="none" stroke="#2a78d6" stroke-width="2"><title>Claude Code, 2026-03: 8,674,562 (partial: search timed out)</title></circle>
-<circle cx="546.7" cy="123" r="4" fill="#fcfcfb" stroke="#fcfcfb" stroke-width="2"><title>Claude Code, 2026-04: 5,991,056 (partial: search timed out)</title></circle>
-<circle cx="546.7" cy="123" r="3" fill="none" stroke="#2a78d6" stroke-width="2"><title>Claude Code, 2026-04: 5,991,056 (partial: search timed out)</title></circle>
-<circle cx="590.6" cy="119.8" r="4" fill="#fcfcfb" stroke="#fcfcfb" stroke-width="2"><title>Claude Code, 2026-05: 6,973,602 (partial: search timed out)</title></circle>
-<circle cx="590.6" cy="119.8" r="3" fill="none" stroke="#2a78d6" stroke-width="2"><title>Claude Code, 2026-05: 6,973,602 (partial: search timed out)</title></circle>
-<circle cx="634.5" cy="115.5" r="4" fill="#fcfcfb" stroke="#fcfcfb" stroke-width="2"><title>Claude Code, 2026-06: 8,582,171 (partial: search timed out)</title></circle>
-<circle cx="634.5" cy="115.5" r="3" fill="none" stroke="#2a78d6" stroke-width="2"><title>Claude Code, 2026-06: 8,582,171 (partial: search timed out)</title></circle>
-<circle cx="678.4" cy="112.6" r="4" fill="#fcfcfb" stroke="#fcfcfb" stroke-width="2"><title>Claude Code, 2026-07: 9,862,656 (partial: search timed out)</title></circle>
-<circle cx="678.4" cy="112.6" r="3" fill="none" stroke="#2a78d6" stroke-width="2"><title>Claude Code, 2026-07: 9,862,656 (partial: search timed out)</title></circle>
-<circle cx="722.2" cy="112.7" r="4" fill="#fcfcfb" stroke="#fcfcfb" stroke-width="2"><title>Claude Code, 2026-08: 9,783,514 (partial: search timed out)</title></circle>
-<circle cx="722.2" cy="112.7" r="3" fill="none" stroke="#2a78d6" stroke-width="2"><title>Claude Code, 2026-08: 9,783,514 (partial: search timed out)</title></circle>
-<circle cx="766.1" cy="104.5" r="4" fill="#fcfcfb" stroke="#fcfcfb" stroke-width="2"><title>Claude Code, 2026-09: 14,520,442 (partial: search timed out)</title></circle>
-<circle cx="766.1" cy="104.5" r="3" fill="none" stroke="#2a78d6" stroke-width="2"><title>Claude Code, 2026-09: 14,520,442 (partial: search timed out)</title></circle>
-<circle cx="810" cy="103.7" r="4" fill="#fcfcfb" stroke="#fcfcfb" stroke-width="2"><title>Claude Code, 2026-10: 15,061,692 (partial: search timed out)</title></circle>
-<circle cx="810" cy="103.7" r="3" fill="none" stroke="#2a78d6" stroke-width="2"><title>Claude Code, 2026-10: 15,061,692 (partial: search timed out)</title></circle>
-<path d="M64 227 L107.9 226 L151.8 219.3 L195.6 217.8 L239.5 219.4 L283.4 207.5 L327.3 204.6 L371.2 207.7 L415.1 204.3 L458.9 192.1 L502.8 177.4 L546.7 170 L590.6 171.9 L634.5 189.5 L678.4 185.6 L722.2 185.9 L766.1 181.9 L810 166.8" fill="none" stroke="#eb6834" stroke-width="2" stroke-linejoin="round" stroke-linecap="round"/>
-<circle cx="64" cy="227" r="4" fill="#fcfcfb" stroke="#fcfcfb" stroke-width="2"><title>GitHub Copilot, 2025-05: 42,107 (partial: search timed out)</title></circle>
-<circle cx="64" cy="227" r="3" fill="none" stroke="#eb6834" stroke-width="2"><title>GitHub Copilot, 2025-05: 42,107 (partial: search timed out)</title></circle>
-<circle cx="107.9" cy="226" r="4" fill="#fcfcfb" stroke="#fcfcfb" stroke-width="2"><title>GitHub Copilot, 2025-06: 44,240 (partial: search timed out)</title></circle>
-<circle cx="107.9" cy="226" r="3" fill="none" stroke="#eb6834" stroke-width="2"><title>GitHub Copilot, 2025-06: 44,240 (partial: search timed out)</title></circle>
-<circle cx="151.8" cy="219.3" r="4" fill="#eb6834" stroke="#fcfcfb" stroke-width="2"><title>GitHub Copilot, 2025-07: 60,655</title></circle>
-<circle cx="195.6" cy="217.8" r="4" fill="#fcfcfb" stroke="#fcfcfb" stroke-width="2"><title>GitHub Copilot, 2025-08: 65,283 (partial: search timed out)</title></circle>
-<circle cx="195.6" cy="217.8" r="3" fill="none" stroke="#eb6834" stroke-width="2"><title>GitHub Copilot, 2025-08: 65,283 (partial: search timed out)</title></circle>
-<circle cx="239.5" cy="219.4" r="4" fill="#fcfcfb" stroke="#fcfcfb" stroke-width="2"><title>GitHub Copilot, 2025-09: 60,497 (partial: search timed out)</title></circle>
-<circle cx="239.5" cy="219.4" r="3" fill="none" stroke="#eb6834" stroke-width="2"><title>GitHub Copilot, 2025-09: 60,497 (partial: search timed out)</title></circle>
-<circle cx="283.4" cy="207.5" r="4" fill="#fcfcfb" stroke="#fcfcfb" stroke-width="2"><title>GitHub Copilot, 2025-10: 106,803 (partial: search timed out)</title></circle>
-<circle cx="283.4" cy="207.5" r="3" fill="none" stroke="#eb6834" stroke-width="2"><title>GitHub Copilot, 2025-10: 106,803 (partial: search timed out)</title></circle>
-<circle cx="327.3" cy="204.6" r="4" fill="#eb6834" stroke="#fcfcfb" stroke-width="2"><title>GitHub Copilot, 2025-11: 122,474</title></circle>
-<circle cx="371.2" cy="207.7" r="4" fill="#fcfcfb" stroke="#fcfcfb" stroke-width="2"><title>GitHub Copilot, 2025-12: 105,491 (partial: search timed out)</title></circle>
-<circle cx="371.2" cy="207.7" r="3" fill="none" stroke="#eb6834" stroke-width="2"><title>GitHub Copilot, 2025-12: 105,491 (partial: search timed out)</title></circle>
-<circle cx="415.1" cy="204.3" r="4" fill="#fcfcfb" stroke="#fcfcfb" stroke-width="2"><title>GitHub Copilot, 2026-01: 124,310 (partial: search timed out)</title></circle>
-<circle cx="415.1" cy="204.3" r="3" fill="none" stroke="#eb6834" stroke-width="2"><title>GitHub Copilot, 2026-01: 124,310 (partial: search timed out)</title></circle>
-<circle cx="458.9" cy="192.1" r="4" fill="#fcfcfb" stroke="#fcfcfb" stroke-width="2"><title>GitHub Copilot, 2026-02: 221,825 (partial: search timed out)</title></circle>
-<circle cx="458.9" cy="192.1" r="3" fill="none" stroke="#eb6834" stroke-width="2"><title>GitHub Copilot, 2026-02: 221,825 (partial: search timed out)</title></circle>
-<circle cx="502.8" cy="177.4" r="4" fill="#fcfcfb" stroke="#fcfcfb" stroke-width="2"><title>GitHub Copilot, 2026-03: 448,847 (partial: search timed out)</title></circle>
-<circle cx="502.8" cy="177.4" r="3" fill="none" stroke="#eb6834" stroke-width="2"><title>GitHub Copilot, 2026-03: 448,847 (partial: search timed out)</title></circle>
-<circle cx="546.7" cy="170" r="4" fill="#fcfcfb" stroke="#fcfcfb" stroke-width="2"><title>GitHub Copilot, 2026-04: 639,259 (partial: search timed out)</title></circle>
-<circle cx="546.7" cy="170" r="3" fill="none" stroke="#eb6834" stroke-width="2"><title>GitHub Copilot, 2026-04: 639,259 (partial: search timed out)</title></circle>
-<circle cx="590.6" cy="171.9" r="4" fill="#fcfcfb" stroke="#fcfcfb" stroke-width="2"><title>GitHub Copilot, 2026-05: 583,529 (partial: search timed out)</title></circle>
-<circle cx="590.6" cy="171.9" r="3" fill="none" stroke="#eb6834" stroke-width="2"><title>GitHub Copilot, 2026-05: 583,529 (partial: search timed out)</title></circle>
-<circle cx="634.5" cy="189.5" r="4" fill="#fcfcfb" stroke="#fcfcfb" stroke-width="2"><title>GitHub Copilot, 2026-06: 251,212 (partial: search timed out)</title></circle>
-<circle cx="634.5" cy="189.5" r="3" fill="none" stroke="#eb6834" stroke-width="2"><title>GitHub Copilot, 2026-06: 251,212 (partial: search timed out)</title></circle>
-<circle cx="678.4" cy="185.6" r="4" fill="#fcfcfb" stroke="#fcfcfb" stroke-width="2"><title>GitHub Copilot, 2026-07: 303,466 (partial: search timed out)</title></circle>
-<circle cx="678.4" cy="185.6" r="3" fill="none" stroke="#eb6834" stroke-width="2"><title>GitHub Copilot, 2026-07: 303,466 (partial: search timed out)</title></circle>
-<circle cx="722.2" cy="185.9" r="4" fill="#fcfcfb" stroke="#fcfcfb" stroke-width="2"><title>GitHub Copilot, 2026-08: 298,643 (partial: search timed out)</title></circle>
-<circle cx="722.2" cy="185.9" r="3" fill="none" stroke="#eb6834" stroke-width="2"><title>GitHub Copilot, 2026-08: 298,643 (partial: search timed out)</title></circle>
-<circle cx="766.1" cy="181.9" r="4" fill="#fcfcfb" stroke="#fcfcfb" stroke-width="2"><title>GitHub Copilot, 2026-09: 361,424 (partial: search timed out)</title></circle>
-<circle cx="766.1" cy="181.9" r="3" fill="none" stroke="#eb6834" stroke-width="2"><title>GitHub Copilot, 2026-09: 361,424 (partial: search timed out)</title></circle>
-<circle cx="810" cy="166.8" r="4" fill="#fcfcfb" stroke="#fcfcfb" stroke-width="2"><title>GitHub Copilot, 2026-10: 744,180 (partial: search timed out)</title></circle>
-<circle cx="810" cy="166.8" r="3" fill="none" stroke="#eb6834" stroke-width="2"><title>GitHub Copilot, 2026-10: 744,180 (partial: search timed out)</title></circle>
-<path d="M64 387.5 L107.9 390.9 L151.8 375.7 L195.6 371.9 L239.5 302.2 L283.4 275 L327.3 302.7 L371.2 304.3 L415.1 276.2 L458.9 236.5 L502.8 215.5 L546.7 222.2 L590.6 210.4 L634.5 205.4 L678.4 209 L722.2 209.2 L766.1 204.4 L810 189.1" fill="none" stroke="#1baf7a" stroke-width="2" stroke-linejoin="round" stroke-linecap="round"/>
-<circle cx="64" cy="387.5" r="4" fill="#fcfcfb" stroke="#fcfcfb" stroke-width="2"><title>OpenAI Codex, 2025-05: 20 (partial: search timed out)</title></circle>
-<circle cx="64" cy="387.5" r="3" fill="none" stroke="#1baf7a" stroke-width="2"><title>OpenAI Codex, 2025-05: 20 (partial: search timed out)</title></circle>
+<path d="M64 227.4 L107.9 189.6 L151.8 178.1 L195.6 173.1 L239.5 176 L283.4 163.3 L327.3 161.3 L371.2 155.9 L415.1 136.7 L458.9 131.2 L502.8 119.2 L546.7 114.9 L590.6 127.7 L634.5 127.2 L678.4 132.6 L722.2 125.5 L766.1 112.3 L810 108.6" fill="none" stroke="#2a78d6" stroke-width="2" stroke-linejoin="round" stroke-linecap="round"/>
+<circle cx="64" cy="227.4" r="4" fill="#fcfcfb" stroke="#fcfcfb" stroke-width="2"><title>Claude Code, 2025-05: 41,206 (partial: search timed out)</title></circle>
+<circle cx="64" cy="227.4" r="3" fill="none" stroke="#2a78d6" stroke-width="2"><title>Claude Code, 2025-05: 41,206 (partial: search timed out)</title></circle>
+<circle cx="107.9" cy="189.6" r="4" fill="#fcfcfb" stroke="#fcfcfb" stroke-width="2"><title>Claude Code, 2025-06: 250,589 (partial: search timed out)</title></circle>
+<circle cx="107.9" cy="189.6" r="3" fill="none" stroke="#2a78d6" stroke-width="2"><title>Claude Code, 2025-06: 250,589 (partial: search timed out)</title></circle>
+<circle cx="151.8" cy="178.1" r="4" fill="#fcfcfb" stroke="#fcfcfb" stroke-width="2"><title>Claude Code, 2025-07: 433,601 (partial: search timed out)</title></circle>
+<circle cx="151.8" cy="178.1" r="3" fill="none" stroke="#2a78d6" stroke-width="2"><title>Claude Code, 2025-07: 433,601 (partial: search timed out)</title></circle>
+<circle cx="195.6" cy="173.1" r="4" fill="#fcfcfb" stroke="#fcfcfb" stroke-width="2"><title>Claude Code, 2025-08: 551,068 (partial: search timed out)</title></circle>
+<circle cx="195.6" cy="173.1" r="3" fill="none" stroke="#2a78d6" stroke-width="2"><title>Claude Code, 2025-08: 551,068 (partial: search timed out)</title></circle>
+<circle cx="239.5" cy="176" r="4" fill="#fcfcfb" stroke="#fcfcfb" stroke-width="2"><title>Claude Code, 2025-09: 479,421 (partial: search timed out)</title></circle>
+<circle cx="239.5" cy="176" r="3" fill="none" stroke="#2a78d6" stroke-width="2"><title>Claude Code, 2025-09: 479,421 (partial: search timed out)</title></circle>
+<circle cx="283.4" cy="163.3" r="4" fill="#fcfcfb" stroke="#fcfcfb" stroke-width="2"><title>Claude Code, 2025-10: 879,100 (partial: search timed out)</title></circle>
+<circle cx="283.4" cy="163.3" r="3" fill="none" stroke="#2a78d6" stroke-width="2"><title>Claude Code, 2025-10: 879,100 (partial: search timed out)</title></circle>
+<circle cx="327.3" cy="161.3" r="4" fill="#fcfcfb" stroke="#fcfcfb" stroke-width="2"><title>Claude Code, 2025-11: 963,968 (partial: search timed out)</title></circle>
+<circle cx="327.3" cy="161.3" r="3" fill="none" stroke="#2a78d6" stroke-width="2"><title>Claude Code, 2025-11: 963,968 (partial: search timed out)</title></circle>
+<circle cx="371.2" cy="155.9" r="4" fill="#fcfcfb" stroke="#fcfcfb" stroke-width="2"><title>Claude Code, 2025-12: 1,250,162 (partial: search timed out)</title></circle>
+<circle cx="371.2" cy="155.9" r="3" fill="none" stroke="#2a78d6" stroke-width="2"><title>Claude Code, 2025-12: 1,250,162 (partial: search timed out)</title></circle>
+<circle cx="415.1" cy="136.7" r="4" fill="#fcfcfb" stroke="#fcfcfb" stroke-width="2"><title>Claude Code, 2026-01: 3,123,281 (partial: search timed out)</title></circle>
+<circle cx="415.1" cy="136.7" r="3" fill="none" stroke="#2a78d6" stroke-width="2"><title>Claude Code, 2026-01: 3,123,281 (partial: search timed out)</title></circle>
+<circle cx="458.9" cy="131.2" r="4" fill="#fcfcfb" stroke="#fcfcfb" stroke-width="2"><title>Claude Code, 2026-02: 4,053,367 (partial: search timed out)</title></circle>
+<circle cx="458.9" cy="131.2" r="3" fill="none" stroke="#2a78d6" stroke-width="2"><title>Claude Code, 2026-02: 4,053,367 (partial: search timed out)</title></circle>
+<circle cx="502.8" cy="119.2" r="4" fill="#fcfcfb" stroke="#fcfcfb" stroke-width="2"><title>Claude Code, 2026-03: 7,208,111 (partial: search timed out)</title></circle>
+<circle cx="502.8" cy="119.2" r="3" fill="none" stroke="#2a78d6" stroke-width="2"><title>Claude Code, 2026-03: 7,208,111 (partial: search timed out)</title></circle>
+<circle cx="546.7" cy="114.9" r="4" fill="#fcfcfb" stroke="#fcfcfb" stroke-width="2"><title>Claude Code, 2026-04: 8,818,774 (partial: search timed out)</title></circle>
+<circle cx="546.7" cy="114.9" r="3" fill="none" stroke="#2a78d6" stroke-width="2"><title>Claude Code, 2026-04: 8,818,774 (partial: search timed out)</title></circle>
+<circle cx="590.6" cy="127.7" r="4" fill="#fcfcfb" stroke="#fcfcfb" stroke-width="2"><title>Claude Code, 2026-05: 4,799,249 (partial: search timed out)</title></circle>
+<circle cx="590.6" cy="127.7" r="3" fill="none" stroke="#2a78d6" stroke-width="2"><title>Claude Code, 2026-05: 4,799,249 (partial: search timed out)</title></circle>
+<circle cx="634.5" cy="127.2" r="4" fill="#fcfcfb" stroke="#fcfcfb" stroke-width="2"><title>Claude Code, 2026-06: 4,904,801 (partial: search timed out)</title></circle>
+<circle cx="634.5" cy="127.2" r="3" fill="none" stroke="#2a78d6" stroke-width="2"><title>Claude Code, 2026-06: 4,904,801 (partial: search timed out)</title></circle>
+<circle cx="678.4" cy="132.6" r="4" fill="#fcfcfb" stroke="#fcfcfb" stroke-width="2"><title>Claude Code, 2026-07: 3,793,387 (partial: search timed out)</title></circle>
+<circle cx="678.4" cy="132.6" r="3" fill="none" stroke="#2a78d6" stroke-width="2"><title>Claude Code, 2026-07: 3,793,387 (partial: search timed out)</title></circle>
+<circle cx="722.2" cy="125.5" r="4" fill="#fcfcfb" stroke="#fcfcfb" stroke-width="2"><title>Claude Code, 2026-08: 5,321,225 (partial: search timed out)</title></circle>
+<circle cx="722.2" cy="125.5" r="3" fill="none" stroke="#2a78d6" stroke-width="2"><title>Claude Code, 2026-08: 5,321,225 (partial: search timed out)</title></circle>
+<circle cx="766.1" cy="112.3" r="4" fill="#fcfcfb" stroke="#fcfcfb" stroke-width="2"><title>Claude Code, 2026-09: 9,972,014 (partial: search timed out)</title></circle>
+<circle cx="766.1" cy="112.3" r="3" fill="none" stroke="#2a78d6" stroke-width="2"><title>Claude Code, 2026-09: 9,972,014 (partial: search timed out)</title></circle>
+<circle cx="810" cy="108.6" r="4" fill="#fcfcfb" stroke="#fcfcfb" stroke-width="2"><title>Claude Code, 2026-10: 11,915,811 (partial: search timed out)</title></circle>
+<circle cx="810" cy="108.6" r="3" fill="none" stroke="#2a78d6" stroke-width="2"><title>Claude Code, 2026-10: 11,915,811 (partial: search timed out)</title></circle>
+<path d="M64 227.1 L107.9 225.8 L151.8 224.7 L195.6 217.7 L239.5 215.5 L283.4 207.4 L327.3 204.8 L371.2 206.3 L415.1 204.3 L458.9 192.9 L502.8 176.9 L546.7 170.2 L590.6 174.7 L634.5 185.3 L678.4 187.7 L722.2 186.5 L766.1 185.6 L810 168.4" fill="none" stroke="#eb6834" stroke-width="2" stroke-linejoin="round" stroke-linecap="round"/>
+<circle cx="64" cy="227.1" r="4" fill="#fcfcfb" stroke="#fcfcfb" stroke-width="2"><title>GitHub Copilot, 2025-05: 41,830 (partial: search timed out)</title></circle>
+<circle cx="64" cy="227.1" r="3" fill="none" stroke="#eb6834" stroke-width="2"><title>GitHub Copilot, 2025-05: 41,830 (partial: search timed out)</title></circle>
+<circle cx="107.9" cy="225.8" r="4" fill="#fcfcfb" stroke="#fcfcfb" stroke-width="2"><title>GitHub Copilot, 2025-06: 44,594 (partial: search timed out)</title></circle>
+<circle cx="107.9" cy="225.8" r="3" fill="none" stroke="#eb6834" stroke-width="2"><title>GitHub Copilot, 2025-06: 44,594 (partial: search timed out)</title></circle>
+<circle cx="151.8" cy="224.7" r="4" fill="#fcfcfb" stroke="#fcfcfb" stroke-width="2"><title>GitHub Copilot, 2025-07: 47,023 (partial: search timed out)</title></circle>
+<circle cx="151.8" cy="224.7" r="3" fill="none" stroke="#eb6834" stroke-width="2"><title>GitHub Copilot, 2025-07: 47,023 (partial: search timed out)</title></circle>
+<circle cx="195.6" cy="217.7" r="4" fill="#fcfcfb" stroke="#fcfcfb" stroke-width="2"><title>GitHub Copilot, 2025-08: 65,747 (partial: search timed out)</title></circle>
+<circle cx="195.6" cy="217.7" r="3" fill="none" stroke="#eb6834" stroke-width="2"><title>GitHub Copilot, 2025-08: 65,747 (partial: search timed out)</title></circle>
+<circle cx="239.5" cy="215.5" r="4" fill="#fcfcfb" stroke="#fcfcfb" stroke-width="2"><title>GitHub Copilot, 2025-09: 72,692 (partial: search timed out)</title></circle>
+<circle cx="239.5" cy="215.5" r="3" fill="none" stroke="#eb6834" stroke-width="2"><title>GitHub Copilot, 2025-09: 72,692 (partial: search timed out)</title></circle>
+<circle cx="283.4" cy="207.4" r="4" fill="#fcfcfb" stroke="#fcfcfb" stroke-width="2"><title>GitHub Copilot, 2025-10: 107,397 (partial: search timed out)</title></circle>
+<circle cx="283.4" cy="207.4" r="3" fill="none" stroke="#eb6834" stroke-width="2"><title>GitHub Copilot, 2025-10: 107,397 (partial: search timed out)</title></circle>
+<circle cx="327.3" cy="204.8" r="4" fill="#fcfcfb" stroke="#fcfcfb" stroke-width="2"><title>GitHub Copilot, 2025-11: 121,261 (partial: search timed out)</title></circle>
+<circle cx="327.3" cy="204.8" r="3" fill="none" stroke="#eb6834" stroke-width="2"><title>GitHub Copilot, 2025-11: 121,261 (partial: search timed out)</title></circle>
+<circle cx="371.2" cy="206.3" r="4" fill="#fcfcfb" stroke="#fcfcfb" stroke-width="2"><title>GitHub Copilot, 2025-12: 112,858 (partial: search timed out)</title></circle>
+<circle cx="371.2" cy="206.3" r="3" fill="none" stroke="#eb6834" stroke-width="2"><title>GitHub Copilot, 2025-12: 112,858 (partial: search timed out)</title></circle>
+<circle cx="415.1" cy="204.3" r="4" fill="#fcfcfb" stroke="#fcfcfb" stroke-width="2"><title>GitHub Copilot, 2026-01: 124,419 (partial: search timed out)</title></circle>
+<circle cx="415.1" cy="204.3" r="3" fill="none" stroke="#eb6834" stroke-width="2"><title>GitHub Copilot, 2026-01: 124,419 (partial: search timed out)</title></circle>
+<circle cx="458.9" cy="192.9" r="4" fill="#fcfcfb" stroke="#fcfcfb" stroke-width="2"><title>GitHub Copilot, 2026-02: 214,189 (partial: search timed out)</title></circle>
+<circle cx="458.9" cy="192.9" r="3" fill="none" stroke="#eb6834" stroke-width="2"><title>GitHub Copilot, 2026-02: 214,189 (partial: search timed out)</title></circle>
+<circle cx="502.8" cy="176.9" r="4" fill="#fcfcfb" stroke="#fcfcfb" stroke-width="2"><title>GitHub Copilot, 2026-03: 459,923 (partial: search timed out)</title></circle>
+<circle cx="502.8" cy="176.9" r="3" fill="none" stroke="#eb6834" stroke-width="2"><title>GitHub Copilot, 2026-03: 459,923 (partial: search timed out)</title></circle>
+<circle cx="546.7" cy="170.2" r="4" fill="#fcfcfb" stroke="#fcfcfb" stroke-width="2"><title>GitHub Copilot, 2026-04: 630,347 (partial: search timed out)</title></circle>
+<circle cx="546.7" cy="170.2" r="3" fill="none" stroke="#eb6834" stroke-width="2"><title>GitHub Copilot, 2026-04: 630,347 (partial: search timed out)</title></circle>
+<circle cx="590.6" cy="174.7" r="4" fill="#fcfcfb" stroke="#fcfcfb" stroke-width="2"><title>GitHub Copilot, 2026-05: 509,320 (partial: search timed out)</title></circle>
+<circle cx="590.6" cy="174.7" r="3" fill="none" stroke="#eb6834" stroke-width="2"><title>GitHub Copilot, 2026-05: 509,320 (partial: search timed out)</title></circle>
+<circle cx="634.5" cy="185.3" r="4" fill="#fcfcfb" stroke="#fcfcfb" stroke-width="2"><title>GitHub Copilot, 2026-06: 308,099 (partial: search timed out)</title></circle>
+<circle cx="634.5" cy="185.3" r="3" fill="none" stroke="#eb6834" stroke-width="2"><title>GitHub Copilot, 2026-06: 308,099 (partial: search timed out)</title></circle>
+<circle cx="678.4" cy="187.7" r="4" fill="#fcfcfb" stroke="#fcfcfb" stroke-width="2"><title>GitHub Copilot, 2026-07: 273,669 (partial: search timed out)</title></circle>
+<circle cx="678.4" cy="187.7" r="3" fill="none" stroke="#eb6834" stroke-width="2"><title>GitHub Copilot, 2026-07: 273,669 (partial: search timed out)</title></circle>
+<circle cx="722.2" cy="186.5" r="4" fill="#fcfcfb" stroke="#fcfcfb" stroke-width="2"><title>GitHub Copilot, 2026-08: 290,082 (partial: search timed out)</title></circle>
+<circle cx="722.2" cy="186.5" r="3" fill="none" stroke="#eb6834" stroke-width="2"><title>GitHub Copilot, 2026-08: 290,082 (partial: search timed out)</title></circle>
+<circle cx="766.1" cy="185.6" r="4" fill="#fcfcfb" stroke="#fcfcfb" stroke-width="2"><title>GitHub Copilot, 2026-09: 302,549 (partial: search timed out)</title></circle>
+<circle cx="766.1" cy="185.6" r="3" fill="none" stroke="#eb6834" stroke-width="2"><title>GitHub Copilot, 2026-09: 302,549 (partial: search timed out)</title></circle>
+<circle cx="810" cy="168.4" r="4" fill="#fcfcfb" stroke="#fcfcfb" stroke-width="2"><title>GitHub Copilot, 2026-10: 688,745 (partial: search timed out)</title></circle>
+<circle cx="810" cy="168.4" r="3" fill="none" stroke="#eb6834" stroke-width="2"><title>GitHub Copilot, 2026-10: 688,745 (partial: search timed out)</title></circle>
+<path d="M64 389.7 L107.9 390.9 L151.8 375.7 L195.6 371.9 L239.5 297 L283.4 275 L327.3 302.6 L371.2 304.4 L415.1 275.8 L458.9 235.5 L502.8 215.2 L546.7 215.1 L590.6 210.2 L634.5 203.3 L678.4 209 L722.2 210.2 L766.1 211.7 L810 188.1" fill="none" stroke="#1baf7a" stroke-width="2" stroke-linejoin="round" stroke-linecap="round"/>
+<circle cx="64" cy="389.7" r="4" fill="#fcfcfb" stroke="#fcfcfb" stroke-width="2"><title>OpenAI Codex, 2025-05: 18 (partial: search timed out)</title></circle>
+<circle cx="64" cy="389.7" r="3" fill="none" stroke="#1baf7a" stroke-width="2"><title>OpenAI Codex, 2025-05: 18 (partial: search timed out)</title></circle>
 <circle cx="107.9" cy="390.9" r="4" fill="#1baf7a" stroke="#fcfcfb" stroke-width="2"><title>OpenAI Codex, 2025-06: 17</title></circle>
 <circle cx="151.8" cy="375.7" r="4" fill="#fcfcfb" stroke="#fcfcfb" stroke-width="2"><title>OpenAI Codex, 2025-07: 35 (partial: search timed out)</title></circle>
 <circle cx="151.8" cy="375.7" r="3" fill="none" stroke="#1baf7a" stroke-width="2"><title>OpenAI Codex, 2025-07: 35 (partial: search timed out)</title></circle>
 <circle cx="195.6" cy="371.9" r="4" fill="#1baf7a" stroke="#fcfcfb" stroke-width="2"><title>OpenAI Codex, 2025-08: 42</title></circle>
-<circle cx="239.5" cy="302.2" r="4" fill="#fcfcfb" stroke="#fcfcfb" stroke-width="2"><title>OpenAI Codex, 2025-09: 1,164 (partial: search timed out)</title></circle>
-<circle cx="239.5" cy="302.2" r="3" fill="none" stroke="#1baf7a" stroke-width="2"><title>OpenAI Codex, 2025-09: 1,164 (partial: search timed out)</title></circle>
-<circle cx="283.4" cy="275" r="4" fill="#1baf7a" stroke="#fcfcfb" stroke-width="2"><title>OpenAI Codex, 2025-10: 4,273</title></circle>
-<circle cx="327.3" cy="302.7" r="4" fill="#fcfcfb" stroke="#fcfcfb" stroke-width="2"><title>OpenAI Codex, 2025-11: 1,139 (partial: search timed out)</title></circle>
-<circle cx="327.3" cy="302.7" r="3" fill="none" stroke="#1baf7a" stroke-width="2"><title>OpenAI Codex, 2025-11: 1,139 (partial: search timed out)</title></circle>
-<circle cx="371.2" cy="304.3" r="4" fill="#fcfcfb" stroke="#fcfcfb" stroke-width="2"><title>OpenAI Codex, 2025-12: 1,054 (partial: search timed out)</title></circle>
-<circle cx="371.2" cy="304.3" r="3" fill="none" stroke="#1baf7a" stroke-width="2"><title>OpenAI Codex, 2025-12: 1,054 (partial: search timed out)</title></circle>
-<circle cx="415.1" cy="276.2" r="4" fill="#fcfcfb" stroke="#fcfcfb" stroke-width="2"><title>OpenAI Codex, 2026-01: 4,025 (partial: search timed out)</title></circle>
-<circle cx="415.1" cy="276.2" r="3" fill="none" stroke="#1baf7a" stroke-width="2"><title>OpenAI Codex, 2026-01: 4,025 (partial: search timed out)</title></circle>
-<circle cx="458.9" cy="236.5" r="4" fill="#fcfcfb" stroke="#fcfcfb" stroke-width="2"><title>OpenAI Codex, 2026-02: 26,808 (partial: search timed out)</title></circle>
-<circle cx="458.9" cy="236.5" r="3" fill="none" stroke="#1baf7a" stroke-width="2"><title>OpenAI Codex, 2026-02: 26,808 (partial: search timed out)</title></circle>
-<circle cx="502.8" cy="215.5" r="4" fill="#fcfcfb" stroke="#fcfcfb" stroke-width="2"><title>OpenAI Codex, 2026-03: 72,977 (partial: search timed out)</title></circle>
-<circle cx="502.8" cy="215.5" r="3" fill="none" stroke="#1baf7a" stroke-width="2"><title>OpenAI Codex, 2026-03: 72,977 (partial: search timed out)</title></circle>
-<circle cx="546.7" cy="222.2" r="4" fill="#fcfcfb" stroke="#fcfcfb" stroke-width="2"><title>OpenAI Codex, 2026-04: 52,960 (partial: search timed out)</title></circle>
-<circle cx="546.7" cy="222.2" r="3" fill="none" stroke="#1baf7a" stroke-width="2"><title>OpenAI Codex, 2026-04: 52,960 (partial: search timed out)</title></circle>
-<circle cx="590.6" cy="210.4" r="4" fill="#1baf7a" stroke="#fcfcfb" stroke-width="2"><title>OpenAI Codex, 2026-05: 93,082</title></circle>
-<circle cx="634.5" cy="205.4" r="4" fill="#fcfcfb" stroke="#fcfcfb" stroke-width="2"><title>OpenAI Codex, 2026-06: 118,123 (partial: search timed out)</title></circle>
-<circle cx="634.5" cy="205.4" r="3" fill="none" stroke="#1baf7a" stroke-width="2"><title>OpenAI Codex, 2026-06: 118,123 (partial: search timed out)</title></circle>
-<circle cx="678.4" cy="209" r="4" fill="#fcfcfb" stroke="#fcfcfb" stroke-width="2"><title>OpenAI Codex, 2026-07: 99,233 (partial: search timed out)</title></circle>
-<circle cx="678.4" cy="209" r="3" fill="none" stroke="#1baf7a" stroke-width="2"><title>OpenAI Codex, 2026-07: 99,233 (partial: search timed out)</title></circle>
-<circle cx="722.2" cy="209.2" r="4" fill="#fcfcfb" stroke="#fcfcfb" stroke-width="2"><title>OpenAI Codex, 2026-08: 98,612 (partial: search timed out)</title></circle>
-<circle cx="722.2" cy="209.2" r="3" fill="none" stroke="#1baf7a" stroke-width="2"><title>OpenAI Codex, 2026-08: 98,612 (partial: search timed out)</title></circle>
-<circle cx="766.1" cy="204.4" r="4" fill="#fcfcfb" stroke="#fcfcfb" stroke-width="2"><title>OpenAI Codex, 2026-09: 123,844 (partial: search timed out)</title></circle>
-<circle cx="766.1" cy="204.4" r="3" fill="none" stroke="#1baf7a" stroke-width="2"><title>OpenAI Codex, 2026-09: 123,844 (partial: search timed out)</title></circle>
-<circle cx="810" cy="189.1" r="4" fill="#fcfcfb" stroke="#fcfcfb" stroke-width="2"><title>OpenAI Codex, 2026-10: 256,954 (partial: search timed out)</title></circle>
-<circle cx="810" cy="189.1" r="3" fill="none" stroke="#1baf7a" stroke-width="2"><title>OpenAI Codex, 2026-10: 256,954 (partial: search timed out)</title></circle>
-<path d="M64 337 L107.9 256 L151.8 249.9 L195.6 249.4 L239.5 259.1 L283.4 255.4 L327.3 260.1 L371.2 258.3 L415.1 236.4 L458.9 172.6 L502.8 241.4 L546.7 241 L590.6 158.2 L634.5 159.4 L678.4 152.7 L722.2 154.3 L766.1 162.6 L810 167.2" fill="none" stroke="#eda100" stroke-width="2" stroke-linejoin="round" stroke-linecap="round"/>
-<circle cx="64" cy="337" r="4" fill="#fcfcfb" stroke="#fcfcfb" stroke-width="2"><title>Cursor, 2025-05: 222 (partial: search timed out)</title></circle>
-<circle cx="64" cy="337" r="3" fill="none" stroke="#eda100" stroke-width="2"><title>Cursor, 2025-05: 222 (partial: search timed out)</title></circle>
-<circle cx="107.9" cy="256" r="4" fill="#fcfcfb" stroke="#fcfcfb" stroke-width="2"><title>Cursor, 2025-06: 10,576 (partial: search timed out)</title></circle>
-<circle cx="107.9" cy="256" r="3" fill="none" stroke="#eda100" stroke-width="2"><title>Cursor, 2025-06: 10,576 (partial: search timed out)</title></circle>
-<circle cx="151.8" cy="249.9" r="4" fill="#fcfcfb" stroke="#fcfcfb" stroke-width="2"><title>Cursor, 2025-07: 14,156 (partial: search timed out)</title></circle>
-<circle cx="151.8" cy="249.9" r="3" fill="none" stroke="#eda100" stroke-width="2"><title>Cursor, 2025-07: 14,156 (partial: search timed out)</title></circle>
-<circle cx="195.6" cy="249.4" r="4" fill="#eda100" stroke="#fcfcfb" stroke-width="2"><title>Cursor, 2025-08: 14,467</title></circle>
-<circle cx="239.5" cy="259.1" r="4" fill="#fcfcfb" stroke="#fcfcfb" stroke-width="2"><title>Cursor, 2025-09: 9,127 (partial: search timed out)</title></circle>
-<circle cx="239.5" cy="259.1" r="3" fill="none" stroke="#eda100" stroke-width="2"><title>Cursor, 2025-09: 9,127 (partial: search timed out)</title></circle>
-<circle cx="283.4" cy="255.4" r="4" fill="#eda100" stroke="#fcfcfb" stroke-width="2"><title>Cursor, 2025-10: 10,872</title></circle>
-<circle cx="327.3" cy="260.1" r="4" fill="#fcfcfb" stroke="#fcfcfb" stroke-width="2"><title>Cursor, 2025-11: 8,701 (partial: search timed out)</title></circle>
-<circle cx="327.3" cy="260.1" r="3" fill="none" stroke="#eda100" stroke-width="2"><title>Cursor, 2025-11: 8,701 (partial: search timed out)</title></circle>
-<circle cx="371.2" cy="258.3" r="4" fill="#eda100" stroke="#fcfcfb" stroke-width="2"><title>Cursor, 2025-12: 9,441</title></circle>
-<circle cx="415.1" cy="236.4" r="4" fill="#fcfcfb" stroke="#fcfcfb" stroke-width="2"><title>Cursor, 2026-01: 26,907 (partial: search timed out)</title></circle>
-<circle cx="415.1" cy="236.4" r="3" fill="none" stroke="#eda100" stroke-width="2"><title>Cursor, 2026-01: 26,907 (partial: search timed out)</title></circle>
-<circle cx="458.9" cy="172.6" r="4" fill="#fcfcfb" stroke="#fcfcfb" stroke-width="2"><title>Cursor, 2026-02: 562,831 (partial: search timed out)</title></circle>
-<circle cx="458.9" cy="172.6" r="3" fill="none" stroke="#eda100" stroke-width="2"><title>Cursor, 2026-02: 562,831 (partial: search timed out)</title></circle>
-<circle cx="502.8" cy="241.4" r="4" fill="#fcfcfb" stroke="#fcfcfb" stroke-width="2"><title>Cursor, 2026-03: 21,165 (partial: search timed out)</title></circle>
-<circle cx="502.8" cy="241.4" r="3" fill="none" stroke="#eda100" stroke-width="2"><title>Cursor, 2026-03: 21,165 (partial: search timed out)</title></circle>
-<circle cx="546.7" cy="241" r="4" fill="#fcfcfb" stroke="#fcfcfb" stroke-width="2"><title>Cursor, 2026-04: 21,564 (partial: search timed out)</title></circle>
-<circle cx="546.7" cy="241" r="3" fill="none" stroke="#eda100" stroke-width="2"><title>Cursor, 2026-04: 21,564 (partial: search timed out)</title></circle>
-<circle cx="590.6" cy="158.2" r="4" fill="#fcfcfb" stroke="#fcfcfb" stroke-width="2"><title>Cursor, 2026-05: 1,120,527 (partial: search timed out)</title></circle>
-<circle cx="590.6" cy="158.2" r="3" fill="none" stroke="#eda100" stroke-width="2"><title>Cursor, 2026-05: 1,120,527 (partial: search timed out)</title></circle>
-<circle cx="634.5" cy="159.4" r="4" fill="#fcfcfb" stroke="#fcfcfb" stroke-width="2"><title>Cursor, 2026-06: 1,059,540 (partial: search timed out)</title></circle>
-<circle cx="634.5" cy="159.4" r="3" fill="none" stroke="#eda100" stroke-width="2"><title>Cursor, 2026-06: 1,059,540 (partial: search timed out)</title></circle>
-<circle cx="678.4" cy="152.7" r="4" fill="#fcfcfb" stroke="#fcfcfb" stroke-width="2"><title>Cursor, 2026-07: 1,457,267 (partial: search timed out)</title></circle>
-<circle cx="678.4" cy="152.7" r="3" fill="none" stroke="#eda100" stroke-width="2"><title>Cursor, 2026-07: 1,457,267 (partial: search timed out)</title></circle>
-<circle cx="722.2" cy="154.3" r="4" fill="#fcfcfb" stroke="#fcfcfb" stroke-width="2"><title>Cursor, 2026-08: 1,350,663 (partial: search timed out)</title></circle>
-<circle cx="722.2" cy="154.3" r="3" fill="none" stroke="#eda100" stroke-width="2"><title>Cursor, 2026-08: 1,350,663 (partial: search timed out)</title></circle>
-<circle cx="766.1" cy="162.6" r="4" fill="#fcfcfb" stroke="#fcfcfb" stroke-width="2"><title>Cursor, 2026-09: 906,875 (partial: search timed out)</title></circle>
-<circle cx="766.1" cy="162.6" r="3" fill="none" stroke="#eda100" stroke-width="2"><title>Cursor, 2026-09: 906,875 (partial: search timed out)</title></circle>
-<circle cx="810" cy="167.2" r="4" fill="#fcfcfb" stroke="#fcfcfb" stroke-width="2"><title>Cursor, 2026-10: 727,663 (partial: search timed out)</title></circle>
-<circle cx="810" cy="167.2" r="3" fill="none" stroke="#eda100" stroke-width="2"><title>Cursor, 2026-10: 727,663 (partial: search timed out)</title></circle>
-<path d="M64 270.1 L107.9 267.4 L151.8 248.3 L195.6 246.2 L239.5 250.9 L283.4 250.1 L327.3 245.9 L371.2 252.3 L415.1 255.1 L458.9 252.9 L502.8 242.5 L546.7 238.5 L590.6 234.4 L634.5 238.7 L678.4 235.7 L722.2 234.4 L766.1 231.3 L810 225.7" fill="none" stroke="#e87ba4" stroke-width="2" stroke-linejoin="round" stroke-linecap="round"/>
-<circle cx="64" cy="270.1" r="4" fill="#fcfcfb" stroke="#fcfcfb" stroke-width="2"><title>Aider, 2025-05: 5,389 (partial: search timed out)</title></circle>
-<circle cx="64" cy="270.1" r="3" fill="none" stroke="#e87ba4" stroke-width="2"><title>Aider, 2025-05: 5,389 (partial: search timed out)</title></circle>
-<circle cx="107.9" cy="267.4" r="4" fill="#e87ba4" stroke="#fcfcfb" stroke-width="2"><title>Aider, 2025-06: 6,134</title></circle>
-<circle cx="151.8" cy="248.3" r="4" fill="#e87ba4" stroke="#fcfcfb" stroke-width="2"><title>Aider, 2025-07: 15,274</title></circle>
-<circle cx="195.6" cy="246.2" r="4" fill="#e87ba4" stroke="#fcfcfb" stroke-width="2"><title>Aider, 2025-08: 16,884</title></circle>
-<circle cx="239.5" cy="250.9" r="4" fill="#e87ba4" stroke="#fcfcfb" stroke-width="2"><title>Aider, 2025-09: 13,491</title></circle>
-<circle cx="283.4" cy="250.1" r="4" fill="#e87ba4" stroke="#fcfcfb" stroke-width="2"><title>Aider, 2025-10: 14,012</title></circle>
-<circle cx="327.3" cy="245.9" r="4" fill="#e87ba4" stroke="#fcfcfb" stroke-width="2"><title>Aider, 2025-11: 17,127</title></circle>
-<circle cx="371.2" cy="252.3" r="4" fill="#e87ba4" stroke="#fcfcfb" stroke-width="2"><title>Aider, 2025-12: 12,584</title></circle>
-<circle cx="415.1" cy="255.1" r="4" fill="#e87ba4" stroke="#fcfcfb" stroke-width="2"><title>Aider, 2026-01: 11,017</title></circle>
-<circle cx="458.9" cy="252.9" r="4" fill="#e87ba4" stroke="#fcfcfb" stroke-width="2"><title>Aider, 2026-02: 12,248</title></circle>
-<circle cx="502.8" cy="242.5" r="4" fill="#e87ba4" stroke="#fcfcfb" stroke-width="2"><title>Aider, 2026-03: 20,103</title></circle>
-<circle cx="546.7" cy="238.5" r="4" fill="#e87ba4" stroke="#fcfcfb" stroke-width="2"><title>Aider, 2026-04: 24,342</title></circle>
-<circle cx="590.6" cy="234.4" r="4" fill="#e87ba4" stroke="#fcfcfb" stroke-width="2"><title>Aider, 2026-05: 29,512</title></circle>
-<circle cx="634.5" cy="238.7" r="4" fill="#e87ba4" stroke="#fcfcfb" stroke-width="2"><title>Aider, 2026-06: 24,113</title></circle>
-<circle cx="678.4" cy="235.7" r="4" fill="#e87ba4" stroke="#fcfcfb" stroke-width="2"><title>Aider, 2026-07: 27,814</title></circle>
-<circle cx="722.2" cy="234.4" r="4" fill="#fcfcfb" stroke="#fcfcfb" stroke-width="2"><title>Aider, 2026-08: 29,638 (partial: search timed out)</title></circle>
-<circle cx="722.2" cy="234.4" r="3" fill="none" stroke="#e87ba4" stroke-width="2"><title>Aider, 2026-08: 29,638 (partial: search timed out)</title></circle>
-<circle cx="766.1" cy="231.3" r="4" fill="#e87ba4" stroke="#fcfcfb" stroke-width="2"><title>Aider, 2026-09: 34,281</title></circle>
-<circle cx="810" cy="225.7" r="4" fill="#e87ba4" stroke="#fcfcfb" stroke-width="2"><title>Aider, 2026-10: 44,878</title></circle>
-<path d="M64 320.8 L107.9 353.1 L151.8 312.6 L195.6 343.9 L239.5 348.7 L283.4 351.7 L327.3 353.1 L371.2 352.1 L415.1 349 L458.9 287.3 L502.8 282.6 L546.7 284.1 L590.6 303.7 L634.5 314.4 L678.4 308.6 L722.2 307.8 L766.1 305.7 L810 310.8" fill="none" stroke="#008300" stroke-width="2" stroke-linejoin="round" stroke-linecap="round"/>
-<circle cx="64" cy="320.8" r="4" fill="#fcfcfb" stroke="#fcfcfb" stroke-width="2"><title>Devin, 2025-05: 481 (partial: search timed out)</title></circle>
-<circle cx="64" cy="320.8" r="3" fill="none" stroke="#008300" stroke-width="2"><title>Devin, 2025-05: 481 (partial: search timed out)</title></circle>
-<circle cx="107.9" cy="353.1" r="4" fill="#008300" stroke="#fcfcfb" stroke-width="2"><title>Devin, 2025-06: 103</title></circle>
-<circle cx="151.8" cy="312.6" r="4" fill="#008300" stroke="#fcfcfb" stroke-width="2"><title>Devin, 2025-07: 709</title></circle>
-<circle cx="195.6" cy="343.9" r="4" fill="#008300" stroke="#fcfcfb" stroke-width="2"><title>Devin, 2025-08: 160</title></circle>
-<circle cx="239.5" cy="348.7" r="4" fill="#fcfcfb" stroke="#fcfcfb" stroke-width="2"><title>Devin, 2025-09: 127 (partial: search timed out)</title></circle>
-<circle cx="239.5" cy="348.7" r="3" fill="none" stroke="#008300" stroke-width="2"><title>Devin, 2025-09: 127 (partial: search timed out)</title></circle>
-<circle cx="283.4" cy="351.7" r="4" fill="#fcfcfb" stroke="#fcfcfb" stroke-width="2"><title>Devin, 2025-10: 110 (partial: search timed out)</title></circle>
-<circle cx="283.4" cy="351.7" r="3" fill="none" stroke="#008300" stroke-width="2"><title>Devin, 2025-10: 110 (partial: search timed out)</title></circle>
-<circle cx="327.3" cy="353.1" r="4" fill="#008300" stroke="#fcfcfb" stroke-width="2"><title>Devin, 2025-11: 103</title></circle>
-<circle cx="371.2" cy="352.1" r="4" fill="#fcfcfb" stroke="#fcfcfb" stroke-width="2"><title>Devin, 2025-12: 108 (partial: search timed out)</title></circle>
-<circle cx="371.2" cy="352.1" r="3" fill="none" stroke="#008300" stroke-width="2"><title>Devin, 2025-12: 108 (partial: search timed out)</title></circle>
-<circle cx="415.1" cy="349" r="4" fill="#fcfcfb" stroke="#fcfcfb" stroke-width="2"><title>Devin, 2026-01: 125 (partial: search timed out)</title></circle>
-<circle cx="415.1" cy="349" r="3" fill="none" stroke="#008300" stroke-width="2"><title>Devin, 2026-01: 125 (partial: search timed out)</title></circle>
-<circle cx="458.9" cy="287.3" r="4" fill="#fcfcfb" stroke="#fcfcfb" stroke-width="2"><title>Devin, 2026-02: 2,376 (partial: search timed out)</title></circle>
-<circle cx="458.9" cy="287.3" r="3" fill="none" stroke="#008300" stroke-width="2"><title>Devin, 2026-02: 2,376 (partial: search timed out)</title></circle>
-<circle cx="502.8" cy="282.6" r="4" fill="#008300" stroke="#fcfcfb" stroke-width="2"><title>Devin, 2026-03: 2,974</title></circle>
-<circle cx="546.7" cy="284.1" r="4" fill="#008300" stroke="#fcfcfb" stroke-width="2"><title>Devin, 2026-04: 2,766</title></circle>
-<circle cx="590.6" cy="303.7" r="4" fill="#fcfcfb" stroke="#fcfcfb" stroke-width="2"><title>Devin, 2026-05: 1,084 (partial: search timed out)</title></circle>
-<circle cx="590.6" cy="303.7" r="3" fill="none" stroke="#008300" stroke-width="2"><title>Devin, 2026-05: 1,084 (partial: search timed out)</title></circle>
-<circle cx="634.5" cy="314.4" r="4" fill="#fcfcfb" stroke="#fcfcfb" stroke-width="2"><title>Devin, 2026-06: 651 (partial: search timed out)</title></circle>
-<circle cx="634.5" cy="314.4" r="3" fill="none" stroke="#008300" stroke-width="2"><title>Devin, 2026-06: 651 (partial: search timed out)</title></circle>
-<circle cx="678.4" cy="308.6" r="4" fill="#fcfcfb" stroke="#fcfcfb" stroke-width="2"><title>Devin, 2026-07: 858 (partial: search timed out)</title></circle>
-<circle cx="678.4" cy="308.6" r="3" fill="none" stroke="#008300" stroke-width="2"><title>Devin, 2026-07: 858 (partial: search timed out)</title></circle>
-<circle cx="722.2" cy="307.8" r="4" fill="#fcfcfb" stroke="#fcfcfb" stroke-width="2"><title>Devin, 2026-08: 894 (partial: search timed out)</title></circle>
-<circle cx="722.2" cy="307.8" r="3" fill="none" stroke="#008300" stroke-width="2"><title>Devin, 2026-08: 894 (partial: search timed out)</title></circle>
-<circle cx="766.1" cy="305.7" r="4" fill="#fcfcfb" stroke="#fcfcfb" stroke-width="2"><title>Devin, 2026-09: 985 (partial: search timed out)</title></circle>
-<circle cx="766.1" cy="305.7" r="3" fill="none" stroke="#008300" stroke-width="2"><title>Devin, 2026-09: 985 (partial: search timed out)</title></circle>
-<circle cx="810" cy="310.8" r="4" fill="#fcfcfb" stroke="#fcfcfb" stroke-width="2"><title>Devin, 2026-10: 775 (partial: search timed out)</title></circle>
-<circle cx="810" cy="310.8" r="3" fill="none" stroke="#008300" stroke-width="2"><title>Devin, 2026-10: 775 (partial: search timed out)</title></circle>
-<path d="M64 322.4 L107.9 271.2 L151.8 245.8 L195.6 233.9 L239.5 234.8 L283.4 232.8 L327.3 233.7 L371.2 234.2 L415.1 237 L458.9 239.1 L502.8 237.8 L546.7 243.1 L590.6 243.9 L634.5 255.6 L678.4 269.7 L722.2 299.5 L766.1 306.3 L810 307.2" fill="none" stroke="#6250d6" stroke-width="2" stroke-linejoin="round" stroke-linecap="round"/>
-<circle cx="64" cy="322.4" r="4" fill="#fcfcfb" stroke="#fcfcfb" stroke-width="2"><title>Gemini, 2025-05: 446 (partial: search timed out)</title></circle>
-<circle cx="64" cy="322.4" r="3" fill="none" stroke="#6250d6" stroke-width="2"><title>Gemini, 2025-05: 446 (partial: search timed out)</title></circle>
-<circle cx="107.9" cy="271.2" r="4" fill="#6250d6" stroke="#fcfcfb" stroke-width="2"><title>Gemini, 2025-06: 5,112</title></circle>
-<circle cx="151.8" cy="245.8" r="4" fill="#6250d6" stroke="#fcfcfb" stroke-width="2"><title>Gemini, 2025-07: 17,165</title></circle>
-<circle cx="195.6" cy="233.9" r="4" fill="#fcfcfb" stroke="#fcfcfb" stroke-width="2"><title>Gemini, 2025-08: 30,317 (partial: search timed out)</title></circle>
-<circle cx="195.6" cy="233.9" r="3" fill="none" stroke="#6250d6" stroke-width="2"><title>Gemini, 2025-08: 30,317 (partial: search timed out)</title></circle>
-<circle cx="239.5" cy="234.8" r="4" fill="#fcfcfb" stroke="#fcfcfb" stroke-width="2"><title>Gemini, 2025-09: 29,087 (partial: search timed out)</title></circle>
-<circle cx="239.5" cy="234.8" r="3" fill="none" stroke="#6250d6" stroke-width="2"><title>Gemini, 2025-09: 29,087 (partial: search timed out)</title></circle>
-<circle cx="283.4" cy="232.8" r="4" fill="#6250d6" stroke="#fcfcfb" stroke-width="2"><title>Gemini, 2025-10: 31,997</title></circle>
-<circle cx="327.3" cy="233.7" r="4" fill="#6250d6" stroke="#fcfcfb" stroke-width="2"><title>Gemini, 2025-11: 30,554</title></circle>
-<circle cx="371.2" cy="234.2" r="4" fill="#fcfcfb" stroke="#fcfcfb" stroke-width="2"><title>Gemini, 2025-12: 29,819 (partial: search timed out)</title></circle>
-<circle cx="371.2" cy="234.2" r="3" fill="none" stroke="#6250d6" stroke-width="2"><title>Gemini, 2025-12: 29,819 (partial: search timed out)</title></circle>
-<circle cx="415.1" cy="237" r="4" fill="#6250d6" stroke="#fcfcfb" stroke-width="2"><title>Gemini, 2026-01: 26,085</title></circle>
-<circle cx="458.9" cy="239.1" r="4" fill="#6250d6" stroke="#fcfcfb" stroke-width="2"><title>Gemini, 2026-02: 23,610</title></circle>
-<circle cx="502.8" cy="237.8" r="4" fill="#fcfcfb" stroke="#fcfcfb" stroke-width="2"><title>Gemini, 2026-03: 25,172 (partial: search timed out)</title></circle>
-<circle cx="502.8" cy="237.8" r="3" fill="none" stroke="#6250d6" stroke-width="2"><title>Gemini, 2026-03: 25,172 (partial: search timed out)</title></circle>
-<circle cx="546.7" cy="243.1" r="4" fill="#6250d6" stroke="#fcfcfb" stroke-width="2"><title>Gemini, 2026-04: 19,531</title></circle>
-<circle cx="590.6" cy="243.9" r="4" fill="#6250d6" stroke="#fcfcfb" stroke-width="2"><title>Gemini, 2026-05: 18,830</title></circle>
-<circle cx="634.5" cy="255.6" r="4" fill="#6250d6" stroke="#fcfcfb" stroke-width="2"><title>Gemini, 2026-06: 10,740</title></circle>
-<circle cx="678.4" cy="269.7" r="4" fill="#6250d6" stroke="#fcfcfb" stroke-width="2"><title>Gemini, 2026-07: 5,483</title></circle>
-<circle cx="722.2" cy="299.5" r="4" fill="#6250d6" stroke="#fcfcfb" stroke-width="2"><title>Gemini, 2026-08: 1,325</title></circle>
-<circle cx="766.1" cy="306.3" r="4" fill="#6250d6" stroke="#fcfcfb" stroke-width="2"><title>Gemini, 2026-09: 960</title></circle>
-<circle cx="810" cy="307.2" r="4" fill="#6250d6" stroke="#fcfcfb" stroke-width="2"><title>Gemini, 2026-10: 918</title></circle>
-<path d="M64 290.7 L107.9 281.6 L151.8 288.2 L195.6 285.2 L239.5 282.1 L283.4 280.3 L327.3 284.1 L371.2 268.4 L415.1 251.9 L458.9 238.2 L502.8 235.1 L546.7 235.9 L590.6 237 L634.5 239.4 L678.4 241.3 L722.2 240.3 L766.1 238.2 L810 238.6" fill="none" stroke="#e34948" stroke-width="2" stroke-linejoin="round" stroke-linecap="round"/>
-<circle cx="64" cy="290.7" r="4" fill="#fcfcfb" stroke="#fcfcfb" stroke-width="2"><title>Jules, 2025-05: 2,021 (partial: search timed out)</title></circle>
-<circle cx="64" cy="290.7" r="3" fill="none" stroke="#e34948" stroke-width="2"><title>Jules, 2025-05: 2,021 (partial: search timed out)</title></circle>
-<circle cx="107.9" cy="281.6" r="4" fill="#e34948" stroke="#fcfcfb" stroke-width="2"><title>Jules, 2025-06: 3,112</title></circle>
-<circle cx="151.8" cy="288.2" r="4" fill="#fcfcfb" stroke="#fcfcfb" stroke-width="2"><title>Jules, 2025-07: 2,279 (partial: search timed out)</title></circle>
-<circle cx="151.8" cy="288.2" r="3" fill="none" stroke="#e34948" stroke-width="2"><title>Jules, 2025-07: 2,279 (partial: search timed out)</title></circle>
-<circle cx="195.6" cy="285.2" r="4" fill="#e34948" stroke="#fcfcfb" stroke-width="2"><title>Jules, 2025-08: 2,623</title></circle>
-<circle cx="239.5" cy="282.1" r="4" fill="#fcfcfb" stroke="#fcfcfb" stroke-width="2"><title>Jules, 2025-09: 3,037 (partial: search timed out)</title></circle>
-<circle cx="239.5" cy="282.1" r="3" fill="none" stroke="#e34948" stroke-width="2"><title>Jules, 2025-09: 3,037 (partial: search timed out)</title></circle>
-<circle cx="283.4" cy="280.3" r="4" fill="#fcfcfb" stroke="#fcfcfb" stroke-width="2"><title>Jules, 2025-10: 3,318 (partial: search timed out)</title></circle>
-<circle cx="283.4" cy="280.3" r="3" fill="none" stroke="#e34948" stroke-width="2"><title>Jules, 2025-10: 3,318 (partial: search timed out)</title></circle>
-<circle cx="327.3" cy="284.1" r="4" fill="#e34948" stroke="#fcfcfb" stroke-width="2"><title>Jules, 2025-11: 2,766</title></circle>
-<circle cx="371.2" cy="268.4" r="4" fill="#e34948" stroke="#fcfcfb" stroke-width="2"><title>Jules, 2025-12: 5,849</title></circle>
-<circle cx="415.1" cy="251.9" r="4" fill="#e34948" stroke="#fcfcfb" stroke-width="2"><title>Jules, 2026-01: 12,859</title></circle>
-<circle cx="458.9" cy="238.2" r="4" fill="#e34948" stroke="#fcfcfb" stroke-width="2"><title>Jules, 2026-02: 24,704</title></circle>
-<circle cx="502.8" cy="235.1" r="4" fill="#e34948" stroke="#fcfcfb" stroke-width="2"><title>Jules, 2026-03: 28,564</title></circle>
-<circle cx="546.7" cy="235.9" r="4" fill="#e34948" stroke="#fcfcfb" stroke-width="2"><title>Jules, 2026-04: 27,506</title></circle>
-<circle cx="590.6" cy="237" r="4" fill="#e34948" stroke="#fcfcfb" stroke-width="2"><title>Jules, 2026-05: 26,174</title></circle>
-<circle cx="634.5" cy="239.4" r="4" fill="#e34948" stroke="#fcfcfb" stroke-width="2"><title>Jules, 2026-06: 23,335</title></circle>
-<circle cx="678.4" cy="241.3" r="4" fill="#e34948" stroke="#fcfcfb" stroke-width="2"><title>Jules, 2026-07: 21,294</title></circle>
-<circle cx="722.2" cy="240.3" r="4" fill="#e34948" stroke="#fcfcfb" stroke-width="2"><title>Jules, 2026-08: 22,300</title></circle>
-<circle cx="766.1" cy="238.2" r="4" fill="#e34948" stroke="#fcfcfb" stroke-width="2"><title>Jules, 2026-09: 24,720</title></circle>
-<circle cx="810" cy="238.6" r="4" fill="#fcfcfb" stroke="#fcfcfb" stroke-width="2"><title>Jules, 2026-10: 24,228 (partial: search timed out)</title></circle>
-<circle cx="810" cy="238.6" r="3" fill="none" stroke="#e34948" stroke-width="2"><title>Jules, 2026-10: 24,228 (partial: search timed out)</title></circle>
-<text x="822" y="107.7" font-size="11" fill="#52514e">Claude Code <tspan fill="#898781" font-variant-numeric="tabular-nums">15M</tspan></text>
-<text x="822" y="170.8" font-size="11" fill="#52514e">GitHub Copilot <tspan fill="#898781" font-variant-numeric="tabular-nums">744K</tspan></text>
-<line x1="816" y1="167.2" x2="818" y2="180.8" stroke="#c3c2b7" stroke-width="1"/>
-<text x="822" y="184.8" font-size="11" fill="#52514e">Cursor <tspan fill="#898781" font-variant-numeric="tabular-nums">728K</tspan></text>
-<line x1="816" y1="189.1" x2="818" y2="194.8" stroke="#c3c2b7" stroke-width="1"/>
-<text x="822" y="198.8" font-size="11" fill="#52514e">OpenAI Codex <tspan fill="#898781" font-variant-numeric="tabular-nums">257K</tspan></text>
-<text x="822" y="229.7" font-size="11" fill="#52514e">Aider <tspan fill="#898781" font-variant-numeric="tabular-nums">45K</tspan></text>
-<line x1="816" y1="238.6" x2="818" y2="239.7" stroke="#c3c2b7" stroke-width="1"/>
-<text x="822" y="243.7" font-size="11" fill="#52514e">Jules <tspan fill="#898781" font-variant-numeric="tabular-nums">24K</tspan></text>
-<text x="822" y="311.2" font-size="11" fill="#52514e">Gemini <tspan fill="#898781" font-variant-numeric="tabular-nums">918</tspan></text>
-<line x1="816" y1="310.8" x2="818" y2="321.2" stroke="#c3c2b7" stroke-width="1"/>
-<text x="822" y="325.2" font-size="11" fill="#52514e">Devin <tspan fill="#898781" font-variant-numeric="tabular-nums">775</tspan></text>
+<circle cx="239.5" cy="297" r="4" fill="#fcfcfb" stroke="#fcfcfb" stroke-width="2"><title>OpenAI Codex, 2025-09: 1,493 (partial: search timed out)</title></circle>
+<circle cx="239.5" cy="297" r="3" fill="none" stroke="#1baf7a" stroke-width="2"><title>OpenAI Codex, 2025-09: 1,493 (partial: search timed out)</title></circle>
+<circle cx="283.4" cy="275" r="4" fill="#fcfcfb" stroke="#fcfcfb" stroke-width="2"><title>OpenAI Codex, 2025-10: 4,275 (partial: search timed out)</title></circle>
+<circle cx="283.4" cy="275" r="3" fill="none" stroke="#1baf7a" stroke-width="2"><title>OpenAI Codex, 2025-10: 4,275 (partial: search timed out)</title></circle>
+<circle cx="327.3" cy="302.6" r="4" fill="#1baf7a" stroke="#fcfcfb" stroke-width="2"><title>OpenAI Codex, 2025-11: 1,143</title></circle>
+<circle cx="371.2" cy="304.4" r="4" fill="#fcfcfb" stroke="#fcfcfb" stroke-width="2"><title>OpenAI Codex, 2025-12: 1,050 (partial: search timed out)</title></circle>
+<circle cx="371.2" cy="304.4" r="3" fill="none" stroke="#1baf7a" stroke-width="2"><title>OpenAI Codex, 2025-12: 1,050 (partial: search timed out)</title></circle>
+<circle cx="415.1" cy="275.8" r="4" fill="#fcfcfb" stroke="#fcfcfb" stroke-width="2"><title>OpenAI Codex, 2026-01: 4,115 (partial: search timed out)</title></circle>
+<circle cx="415.1" cy="275.8" r="3" fill="none" stroke="#1baf7a" stroke-width="2"><title>OpenAI Codex, 2026-01: 4,115 (partial: search timed out)</title></circle>
+<circle cx="458.9" cy="235.5" r="4" fill="#fcfcfb" stroke="#fcfcfb" stroke-width="2"><title>OpenAI Codex, 2026-02: 28,009 (partial: search timed out)</title></circle>
+<circle cx="458.9" cy="235.5" r="3" fill="none" stroke="#1baf7a" stroke-width="2"><title>OpenAI Codex, 2026-02: 28,009 (partial: search timed out)</title></circle>
+<circle cx="502.8" cy="215.2" r="4" fill="#fcfcfb" stroke="#fcfcfb" stroke-width="2"><title>OpenAI Codex, 2026-03: 73,833 (partial: search timed out)</title></circle>
+<circle cx="502.8" cy="215.2" r="3" fill="none" stroke="#1baf7a" stroke-width="2"><title>OpenAI Codex, 2026-03: 73,833 (partial: search timed out)</title></circle>
+<circle cx="546.7" cy="215.1" r="4" fill="#fcfcfb" stroke="#fcfcfb" stroke-width="2"><title>OpenAI Codex, 2026-04: 74,177 (partial: search timed out)</title></circle>
+<circle cx="546.7" cy="215.1" r="3" fill="none" stroke="#1baf7a" stroke-width="2"><title>OpenAI Codex, 2026-04: 74,177 (partial: search timed out)</title></circle>
+<circle cx="590.6" cy="210.2" r="4" fill="#fcfcfb" stroke="#fcfcfb" stroke-width="2"><title>OpenAI Codex, 2026-05: 93,582 (partial: search timed out)</title></circle>
+<circle cx="590.6" cy="210.2" r="3" fill="none" stroke="#1baf7a" stroke-width="2"><title>OpenAI Codex, 2026-05: 93,582 (partial: search timed out)</title></circle>
+<circle cx="634.5" cy="203.3" r="4" fill="#fcfcfb" stroke="#fcfcfb" stroke-width="2"><title>OpenAI Codex, 2026-06: 130,239 (partial: search timed out)</title></circle>
+<circle cx="634.5" cy="203.3" r="3" fill="none" stroke="#1baf7a" stroke-width="2"><title>OpenAI Codex, 2026-06: 130,239 (partial: search timed out)</title></circle>
+<circle cx="678.4" cy="209" r="4" fill="#fcfcfb" stroke="#fcfcfb" stroke-width="2"><title>OpenAI Codex, 2026-07: 99,225 (partial: search timed out)</title></circle>
+<circle cx="678.4" cy="209" r="3" fill="none" stroke="#1baf7a" stroke-width="2"><title>OpenAI Codex, 2026-07: 99,225 (partial: search timed out)</title></circle>
+<circle cx="722.2" cy="210.2" r="4" fill="#fcfcfb" stroke="#fcfcfb" stroke-width="2"><title>OpenAI Codex, 2026-08: 93,693 (partial: search timed out)</title></circle>
+<circle cx="722.2" cy="210.2" r="3" fill="none" stroke="#1baf7a" stroke-width="2"><title>OpenAI Codex, 2026-08: 93,693 (partial: search timed out)</title></circle>
+<circle cx="766.1" cy="211.7" r="4" fill="#fcfcfb" stroke="#fcfcfb" stroke-width="2"><title>OpenAI Codex, 2026-09: 87,303 (partial: search timed out)</title></circle>
+<circle cx="766.1" cy="211.7" r="3" fill="none" stroke="#1baf7a" stroke-width="2"><title>OpenAI Codex, 2026-09: 87,303 (partial: search timed out)</title></circle>
+<circle cx="810" cy="188.1" r="4" fill="#fcfcfb" stroke="#fcfcfb" stroke-width="2"><title>OpenAI Codex, 2026-10: 269,602 (partial: search timed out)</title></circle>
+<circle cx="810" cy="188.1" r="3" fill="none" stroke="#1baf7a" stroke-width="2"><title>OpenAI Codex, 2026-10: 269,602 (partial: search timed out)</title></circle>
+<path d="M64 338 L107.9 256.1 L151.8 249.7 L195.6 249.5 L239.5 259.7 L283.4 255.8 L327.3 260.1 L371.2 259.7 L415.1 235.3 L458.9 172 L502.8 243.4 L546.7 251.5 L590.6 164.4 L634.5 162.8 L678.4 148.1 L722.2 156.1 L766.1 160.7 L810 162.2" fill="none" stroke="#eda100" stroke-width="2" stroke-linejoin="round" stroke-linecap="round"/>
+<circle cx="64" cy="338" r="4" fill="#fcfcfb" stroke="#fcfcfb" stroke-width="2"><title>Cursor, 2025-05: 212 (partial: search timed out)</title></circle>
+<circle cx="64" cy="338" r="3" fill="none" stroke="#eda100" stroke-width="2"><title>Cursor, 2025-05: 212 (partial: search timed out)</title></circle>
+<circle cx="107.9" cy="256.1" r="4" fill="#fcfcfb" stroke="#fcfcfb" stroke-width="2"><title>Cursor, 2025-06: 10,520 (partial: search timed out)</title></circle>
+<circle cx="107.9" cy="256.1" r="3" fill="none" stroke="#eda100" stroke-width="2"><title>Cursor, 2025-06: 10,520 (partial: search timed out)</title></circle>
+<circle cx="151.8" cy="249.7" r="4" fill="#fcfcfb" stroke="#fcfcfb" stroke-width="2"><title>Cursor, 2025-07: 14,279 (partial: search timed out)</title></circle>
+<circle cx="151.8" cy="249.7" r="3" fill="none" stroke="#eda100" stroke-width="2"><title>Cursor, 2025-07: 14,279 (partial: search timed out)</title></circle>
+<circle cx="195.6" cy="249.5" r="4" fill="#fcfcfb" stroke="#fcfcfb" stroke-width="2"><title>Cursor, 2025-08: 14,376 (partial: search timed out)</title></circle>
+<circle cx="195.6" cy="249.5" r="3" fill="none" stroke="#eda100" stroke-width="2"><title>Cursor, 2025-08: 14,376 (partial: search timed out)</title></circle>
+<circle cx="239.5" cy="259.7" r="4" fill="#fcfcfb" stroke="#fcfcfb" stroke-width="2"><title>Cursor, 2025-09: 8,863 (partial: search timed out)</title></circle>
+<circle cx="239.5" cy="259.7" r="3" fill="none" stroke="#eda100" stroke-width="2"><title>Cursor, 2025-09: 8,863 (partial: search timed out)</title></circle>
+<circle cx="283.4" cy="255.8" r="4" fill="#fcfcfb" stroke="#fcfcfb" stroke-width="2"><title>Cursor, 2025-10: 10,648 (partial: search timed out)</title></circle>
+<circle cx="283.4" cy="255.8" r="3" fill="none" stroke="#eda100" stroke-width="2"><title>Cursor, 2025-10: 10,648 (partial: search timed out)</title></circle>
+<circle cx="327.3" cy="260.1" r="4" fill="#fcfcfb" stroke="#fcfcfb" stroke-width="2"><title>Cursor, 2025-11: 8,702 (partial: search timed out)</title></circle>
+<circle cx="327.3" cy="260.1" r="3" fill="none" stroke="#eda100" stroke-width="2"><title>Cursor, 2025-11: 8,702 (partial: search timed out)</title></circle>
+<circle cx="371.2" cy="259.7" r="4" fill="#fcfcfb" stroke="#fcfcfb" stroke-width="2"><title>Cursor, 2025-12: 8,849 (partial: search timed out)</title></circle>
+<circle cx="371.2" cy="259.7" r="3" fill="none" stroke="#eda100" stroke-width="2"><title>Cursor, 2025-12: 8,849 (partial: search timed out)</title></circle>
+<circle cx="415.1" cy="235.3" r="4" fill="#fcfcfb" stroke="#fcfcfb" stroke-width="2"><title>Cursor, 2026-01: 28,340 (partial: search timed out)</title></circle>
+<circle cx="415.1" cy="235.3" r="3" fill="none" stroke="#eda100" stroke-width="2"><title>Cursor, 2026-01: 28,340 (partial: search timed out)</title></circle>
+<circle cx="458.9" cy="172" r="4" fill="#fcfcfb" stroke="#fcfcfb" stroke-width="2"><title>Cursor, 2026-02: 578,606 (partial: search timed out)</title></circle>
+<circle cx="458.9" cy="172" r="3" fill="none" stroke="#eda100" stroke-width="2"><title>Cursor, 2026-02: 578,606 (partial: search timed out)</title></circle>
+<circle cx="502.8" cy="243.4" r="4" fill="#fcfcfb" stroke="#fcfcfb" stroke-width="2"><title>Cursor, 2026-03: 19,299 (partial: search timed out)</title></circle>
+<circle cx="502.8" cy="243.4" r="3" fill="none" stroke="#eda100" stroke-width="2"><title>Cursor, 2026-03: 19,299 (partial: search timed out)</title></circle>
+<circle cx="546.7" cy="251.5" r="4" fill="#fcfcfb" stroke="#fcfcfb" stroke-width="2"><title>Cursor, 2026-04: 13,084 (partial: search timed out)</title></circle>
+<circle cx="546.7" cy="251.5" r="3" fill="none" stroke="#eda100" stroke-width="2"><title>Cursor, 2026-04: 13,084 (partial: search timed out)</title></circle>
+<circle cx="590.6" cy="164.4" r="4" fill="#fcfcfb" stroke="#fcfcfb" stroke-width="2"><title>Cursor, 2026-05: 833,219 (partial: search timed out)</title></circle>
+<circle cx="590.6" cy="164.4" r="3" fill="none" stroke="#eda100" stroke-width="2"><title>Cursor, 2026-05: 833,219 (partial: search timed out)</title></circle>
+<circle cx="634.5" cy="162.8" r="4" fill="#fcfcfb" stroke="#fcfcfb" stroke-width="2"><title>Cursor, 2026-06: 899,020 (partial: search timed out)</title></circle>
+<circle cx="634.5" cy="162.8" r="3" fill="none" stroke="#eda100" stroke-width="2"><title>Cursor, 2026-06: 899,020 (partial: search timed out)</title></circle>
+<circle cx="678.4" cy="148.1" r="4" fill="#fcfcfb" stroke="#fcfcfb" stroke-width="2"><title>Cursor, 2026-07: 1,811,335 (partial: search timed out)</title></circle>
+<circle cx="678.4" cy="148.1" r="3" fill="none" stroke="#eda100" stroke-width="2"><title>Cursor, 2026-07: 1,811,335 (partial: search timed out)</title></circle>
+<circle cx="722.2" cy="156.1" r="4" fill="#fcfcfb" stroke="#fcfcfb" stroke-width="2"><title>Cursor, 2026-08: 1,235,934 (partial: search timed out)</title></circle>
+<circle cx="722.2" cy="156.1" r="3" fill="none" stroke="#eda100" stroke-width="2"><title>Cursor, 2026-08: 1,235,934 (partial: search timed out)</title></circle>
+<circle cx="766.1" cy="160.7" r="4" fill="#fcfcfb" stroke="#fcfcfb" stroke-width="2"><title>Cursor, 2026-09: 996,214 (partial: search timed out)</title></circle>
+<circle cx="766.1" cy="160.7" r="3" fill="none" stroke="#eda100" stroke-width="2"><title>Cursor, 2026-09: 996,214 (partial: search timed out)</title></circle>
+<circle cx="810" cy="162.2" r="4" fill="#fcfcfb" stroke="#fcfcfb" stroke-width="2"><title>Cursor, 2026-10: 924,571 (partial: search timed out)</title></circle>
+<circle cx="810" cy="162.2" r="3" fill="none" stroke="#eda100" stroke-width="2"><title>Cursor, 2026-10: 924,571 (partial: search timed out)</title></circle>
+<path d="M64 269.7 L107.9 267.3 L151.8 248.4 L195.6 246.1 L239.5 250.9 L283.4 250 L327.3 245.8 L371.2 252.3 L415.1 251.2 L458.9 250.2 L502.8 242.5 L546.7 238.5 L590.6 234.5 L634.5 238.6 L678.4 235.7 L722.2 234.5 L766.1 231.5 L810 225.5" fill="none" stroke="#e87ba4" stroke-width="2" stroke-linejoin="round" stroke-linecap="round"/>
+<circle cx="64" cy="269.7" r="4" fill="#fcfcfb" stroke="#fcfcfb" stroke-width="2"><title>Aider, 2025-05: 5,504 (partial: search timed out)</title></circle>
+<circle cx="64" cy="269.7" r="3" fill="none" stroke="#e87ba4" stroke-width="2"><title>Aider, 2025-05: 5,504 (partial: search timed out)</title></circle>
+<circle cx="107.9" cy="267.3" r="4" fill="#fcfcfb" stroke="#fcfcfb" stroke-width="2"><title>Aider, 2025-06: 6,175 (partial: search timed out)</title></circle>
+<circle cx="107.9" cy="267.3" r="3" fill="none" stroke="#e87ba4" stroke-width="2"><title>Aider, 2025-06: 6,175 (partial: search timed out)</title></circle>
+<circle cx="151.8" cy="248.4" r="4" fill="#e87ba4" stroke="#fcfcfb" stroke-width="2"><title>Aider, 2025-07: 15,206</title></circle>
+<circle cx="195.6" cy="246.1" r="4" fill="#e87ba4" stroke="#fcfcfb" stroke-width="2"><title>Aider, 2025-08: 16,923</title></circle>
+<circle cx="239.5" cy="250.9" r="4" fill="#e87ba4" stroke="#fcfcfb" stroke-width="2"><title>Aider, 2025-09: 13,488</title></circle>
+<circle cx="283.4" cy="250" r="4" fill="#e87ba4" stroke="#fcfcfb" stroke-width="2"><title>Aider, 2025-10: 14,050</title></circle>
+<circle cx="327.3" cy="245.8" r="4" fill="#e87ba4" stroke="#fcfcfb" stroke-width="2"><title>Aider, 2025-11: 17,216</title></circle>
+<circle cx="371.2" cy="252.3" r="4" fill="#e87ba4" stroke="#fcfcfb" stroke-width="2"><title>Aider, 2025-12: 12,624</title></circle>
+<circle cx="415.1" cy="251.2" r="4" fill="#e87ba4" stroke="#fcfcfb" stroke-width="2"><title>Aider, 2026-01: 13,269</title></circle>
+<circle cx="458.9" cy="250.2" r="4" fill="#e87ba4" stroke="#fcfcfb" stroke-width="2"><title>Aider, 2026-02: 13,937</title></circle>
+<circle cx="502.8" cy="242.5" r="4" fill="#fcfcfb" stroke="#fcfcfb" stroke-width="2"><title>Aider, 2026-03: 20,138 (partial: search timed out)</title></circle>
+<circle cx="502.8" cy="242.5" r="3" fill="none" stroke="#e87ba4" stroke-width="2"><title>Aider, 2026-03: 20,138 (partial: search timed out)</title></circle>
+<circle cx="546.7" cy="238.5" r="4" fill="#e87ba4" stroke="#fcfcfb" stroke-width="2"><title>Aider, 2026-04: 24,306</title></circle>
+<circle cx="590.6" cy="234.5" r="4" fill="#e87ba4" stroke="#fcfcfb" stroke-width="2"><title>Aider, 2026-05: 29,479</title></circle>
+<circle cx="634.5" cy="238.6" r="4" fill="#e87ba4" stroke="#fcfcfb" stroke-width="2"><title>Aider, 2026-06: 24,236</title></circle>
+<circle cx="678.4" cy="235.7" r="4" fill="#e87ba4" stroke="#fcfcfb" stroke-width="2"><title>Aider, 2026-07: 27,797</title></circle>
+<circle cx="722.2" cy="234.5" r="4" fill="#e87ba4" stroke="#fcfcfb" stroke-width="2"><title>Aider, 2026-08: 29,478</title></circle>
+<circle cx="766.1" cy="231.5" r="4" fill="#e87ba4" stroke="#fcfcfb" stroke-width="2"><title>Aider, 2026-09: 33,998</title></circle>
+<circle cx="810" cy="225.5" r="4" fill="#e87ba4" stroke="#fcfcfb" stroke-width="2"><title>Aider, 2026-10: 45,302</title></circle>
+<path d="M64 322.2 L107.9 353.3 L151.8 312.8 L195.6 343.6 L239.5 348.9 L283.4 352.1 L327.3 353.3 L371.2 352.5 L415.1 349.5 L458.9 285.8 L502.8 282 L546.7 283.7 L590.6 303.4 L634.5 313.5 L678.4 307.1 L722.2 307.4 L766.1 304.5 L810 304.3" fill="none" stroke="#008300" stroke-width="2" stroke-linejoin="round" stroke-linecap="round"/>
+<circle cx="64" cy="322.2" r="4" fill="#fcfcfb" stroke="#fcfcfb" stroke-width="2"><title>Devin, 2025-05: 450 (partial: search timed out)</title></circle>
+<circle cx="64" cy="322.2" r="3" fill="none" stroke="#008300" stroke-width="2"><title>Devin, 2025-05: 450 (partial: search timed out)</title></circle>
+<circle cx="107.9" cy="353.3" r="4" fill="#fcfcfb" stroke="#fcfcfb" stroke-width="2"><title>Devin, 2025-06: 102 (partial: search timed out)</title></circle>
+<circle cx="107.9" cy="353.3" r="3" fill="none" stroke="#008300" stroke-width="2"><title>Devin, 2025-06: 102 (partial: search timed out)</title></circle>
+<circle cx="151.8" cy="312.8" r="4" fill="#008300" stroke="#fcfcfb" stroke-width="2"><title>Devin, 2025-07: 705</title></circle>
+<circle cx="195.6" cy="343.6" r="4" fill="#fcfcfb" stroke="#fcfcfb" stroke-width="2"><title>Devin, 2025-08: 162 (partial: search timed out)</title></circle>
+<circle cx="195.6" cy="343.6" r="3" fill="none" stroke="#008300" stroke-width="2"><title>Devin, 2025-08: 162 (partial: search timed out)</title></circle>
+<circle cx="239.5" cy="348.9" r="4" fill="#fcfcfb" stroke="#fcfcfb" stroke-width="2"><title>Devin, 2025-09: 126 (partial: search timed out)</title></circle>
+<circle cx="239.5" cy="348.9" r="3" fill="none" stroke="#008300" stroke-width="2"><title>Devin, 2025-09: 126 (partial: search timed out)</title></circle>
+<circle cx="283.4" cy="352.1" r="4" fill="#fcfcfb" stroke="#fcfcfb" stroke-width="2"><title>Devin, 2025-10: 108 (partial: search timed out)</title></circle>
+<circle cx="283.4" cy="352.1" r="3" fill="none" stroke="#008300" stroke-width="2"><title>Devin, 2025-10: 108 (partial: search timed out)</title></circle>
+<circle cx="327.3" cy="353.3" r="4" fill="#fcfcfb" stroke="#fcfcfb" stroke-width="2"><title>Devin, 2025-11: 102 (partial: search timed out)</title></circle>
+<circle cx="327.3" cy="353.3" r="3" fill="none" stroke="#008300" stroke-width="2"><title>Devin, 2025-11: 102 (partial: search timed out)</title></circle>
+<circle cx="371.2" cy="352.5" r="4" fill="#fcfcfb" stroke="#fcfcfb" stroke-width="2"><title>Devin, 2025-12: 106 (partial: search timed out)</title></circle>
+<circle cx="371.2" cy="352.5" r="3" fill="none" stroke="#008300" stroke-width="2"><title>Devin, 2025-12: 106 (partial: search timed out)</title></circle>
+<circle cx="415.1" cy="349.5" r="4" fill="#fcfcfb" stroke="#fcfcfb" stroke-width="2"><title>Devin, 2026-01: 122 (partial: search timed out)</title></circle>
+<circle cx="415.1" cy="349.5" r="3" fill="none" stroke="#008300" stroke-width="2"><title>Devin, 2026-01: 122 (partial: search timed out)</title></circle>
+<circle cx="458.9" cy="285.8" r="4" fill="#fcfcfb" stroke="#fcfcfb" stroke-width="2"><title>Devin, 2026-02: 2,544 (partial: search timed out)</title></circle>
+<circle cx="458.9" cy="285.8" r="3" fill="none" stroke="#008300" stroke-width="2"><title>Devin, 2026-02: 2,544 (partial: search timed out)</title></circle>
+<circle cx="502.8" cy="282" r="4" fill="#fcfcfb" stroke="#fcfcfb" stroke-width="2"><title>Devin, 2026-03: 3,059 (partial: search timed out)</title></circle>
+<circle cx="502.8" cy="282" r="3" fill="none" stroke="#008300" stroke-width="2"><title>Devin, 2026-03: 3,059 (partial: search timed out)</title></circle>
+<circle cx="546.7" cy="283.7" r="4" fill="#fcfcfb" stroke="#fcfcfb" stroke-width="2"><title>Devin, 2026-04: 2,824 (partial: search timed out)</title></circle>
+<circle cx="546.7" cy="283.7" r="3" fill="none" stroke="#008300" stroke-width="2"><title>Devin, 2026-04: 2,824 (partial: search timed out)</title></circle>
+<circle cx="590.6" cy="303.4" r="4" fill="#fcfcfb" stroke="#fcfcfb" stroke-width="2"><title>Devin, 2026-05: 1,103 (partial: search timed out)</title></circle>
+<circle cx="590.6" cy="303.4" r="3" fill="none" stroke="#008300" stroke-width="2"><title>Devin, 2026-05: 1,103 (partial: search timed out)</title></circle>
+<circle cx="634.5" cy="313.5" r="4" fill="#008300" stroke="#fcfcfb" stroke-width="2"><title>Devin, 2026-06: 681</title></circle>
+<circle cx="678.4" cy="307.1" r="4" fill="#fcfcfb" stroke="#fcfcfb" stroke-width="2"><title>Devin, 2026-07: 924 (partial: search timed out)</title></circle>
+<circle cx="678.4" cy="307.1" r="3" fill="none" stroke="#008300" stroke-width="2"><title>Devin, 2026-07: 924 (partial: search timed out)</title></circle>
+<circle cx="722.2" cy="307.4" r="4" fill="#fcfcfb" stroke="#fcfcfb" stroke-width="2"><title>Devin, 2026-08: 910 (partial: search timed out)</title></circle>
+<circle cx="722.2" cy="307.4" r="3" fill="none" stroke="#008300" stroke-width="2"><title>Devin, 2026-08: 910 (partial: search timed out)</title></circle>
+<circle cx="766.1" cy="304.5" r="4" fill="#fcfcfb" stroke="#fcfcfb" stroke-width="2"><title>Devin, 2026-09: 1,047 (partial: search timed out)</title></circle>
+<circle cx="766.1" cy="304.5" r="3" fill="none" stroke="#008300" stroke-width="2"><title>Devin, 2026-09: 1,047 (partial: search timed out)</title></circle>
+<circle cx="810" cy="304.3" r="4" fill="#fcfcfb" stroke="#fcfcfb" stroke-width="2"><title>Devin, 2026-10: 1,054 (partial: search timed out)</title></circle>
+<circle cx="810" cy="304.3" r="3" fill="none" stroke="#008300" stroke-width="2"><title>Devin, 2026-10: 1,054 (partial: search timed out)</title></circle>
+<path d="M64 321.2 L107.9 271 L151.8 246.1 L195.6 233.5 L239.5 234.4 L283.4 232.5 L327.3 233.4 L371.2 233.8 L415.1 236.7 L458.9 238.8 L502.8 236.6 L546.7 242.6 L590.6 243.4 L634.5 255.3 L678.4 269.2 L722.2 298.6 L766.1 306.4 L810 306.6" fill="none" stroke="#6250d6" stroke-width="2" stroke-linejoin="round" stroke-linecap="round"/>
+<circle cx="64" cy="321.2" r="4" fill="#fcfcfb" stroke="#fcfcfb" stroke-width="2"><title>Gemini, 2025-05: 471 (partial: search timed out)</title></circle>
+<circle cx="64" cy="321.2" r="3" fill="none" stroke="#6250d6" stroke-width="2"><title>Gemini, 2025-05: 471 (partial: search timed out)</title></circle>
+<circle cx="107.9" cy="271" r="4" fill="#fcfcfb" stroke="#fcfcfb" stroke-width="2"><title>Gemini, 2025-06: 5,174 (partial: search timed out)</title></circle>
+<circle cx="107.9" cy="271" r="3" fill="none" stroke="#6250d6" stroke-width="2"><title>Gemini, 2025-06: 5,174 (partial: search timed out)</title></circle>
+<circle cx="151.8" cy="246.1" r="4" fill="#fcfcfb" stroke="#fcfcfb" stroke-width="2"><title>Gemini, 2025-07: 16,906 (partial: search timed out)</title></circle>
+<circle cx="151.8" cy="246.1" r="3" fill="none" stroke="#6250d6" stroke-width="2"><title>Gemini, 2025-07: 16,906 (partial: search timed out)</title></circle>
+<circle cx="195.6" cy="233.5" r="4" fill="#6250d6" stroke="#fcfcfb" stroke-width="2"><title>Gemini, 2025-08: 30,862</title></circle>
+<circle cx="239.5" cy="234.4" r="4" fill="#6250d6" stroke="#fcfcfb" stroke-width="2"><title>Gemini, 2025-09: 29,547</title></circle>
+<circle cx="283.4" cy="232.5" r="4" fill="#fcfcfb" stroke="#fcfcfb" stroke-width="2"><title>Gemini, 2025-10: 32,443 (partial: search timed out)</title></circle>
+<circle cx="283.4" cy="232.5" r="3" fill="none" stroke="#6250d6" stroke-width="2"><title>Gemini, 2025-10: 32,443 (partial: search timed out)</title></circle>
+<circle cx="327.3" cy="233.4" r="4" fill="#6250d6" stroke="#fcfcfb" stroke-width="2"><title>Gemini, 2025-11: 31,031</title></circle>
+<circle cx="371.2" cy="233.8" r="4" fill="#fcfcfb" stroke="#fcfcfb" stroke-width="2"><title>Gemini, 2025-12: 30,387 (partial: search timed out)</title></circle>
+<circle cx="371.2" cy="233.8" r="3" fill="none" stroke="#6250d6" stroke-width="2"><title>Gemini, 2025-12: 30,387 (partial: search timed out)</title></circle>
+<circle cx="415.1" cy="236.7" r="4" fill="#6250d6" stroke="#fcfcfb" stroke-width="2"><title>Gemini, 2026-01: 26,553</title></circle>
+<circle cx="458.9" cy="238.8" r="4" fill="#6250d6" stroke="#fcfcfb" stroke-width="2"><title>Gemini, 2026-02: 24,020</title></circle>
+<circle cx="502.8" cy="236.6" r="4" fill="#6250d6" stroke="#fcfcfb" stroke-width="2"><title>Gemini, 2026-03: 26,679</title></circle>
+<circle cx="546.7" cy="242.6" r="4" fill="#fcfcfb" stroke="#fcfcfb" stroke-width="2"><title>Gemini, 2026-04: 19,992 (partial: search timed out)</title></circle>
+<circle cx="546.7" cy="242.6" r="3" fill="none" stroke="#6250d6" stroke-width="2"><title>Gemini, 2026-04: 19,992 (partial: search timed out)</title></circle>
+<circle cx="590.6" cy="243.4" r="4" fill="#6250d6" stroke="#fcfcfb" stroke-width="2"><title>Gemini, 2026-05: 19,262</title></circle>
+<circle cx="634.5" cy="255.3" r="4" fill="#fcfcfb" stroke="#fcfcfb" stroke-width="2"><title>Gemini, 2026-06: 10,898 (partial: search timed out)</title></circle>
+<circle cx="634.5" cy="255.3" r="3" fill="none" stroke="#6250d6" stroke-width="2"><title>Gemini, 2026-06: 10,898 (partial: search timed out)</title></circle>
+<circle cx="678.4" cy="269.2" r="4" fill="#6250d6" stroke="#fcfcfb" stroke-width="2"><title>Gemini, 2026-07: 5,616</title></circle>
+<circle cx="722.2" cy="298.6" r="4" fill="#6250d6" stroke="#fcfcfb" stroke-width="2"><title>Gemini, 2026-08: 1,388</title></circle>
+<circle cx="766.1" cy="306.4" r="4" fill="#fcfcfb" stroke="#fcfcfb" stroke-width="2"><title>Gemini, 2026-09: 954 (partial: search timed out)</title></circle>
+<circle cx="766.1" cy="306.4" r="3" fill="none" stroke="#6250d6" stroke-width="2"><title>Gemini, 2026-09: 954 (partial: search timed out)</title></circle>
+<circle cx="810" cy="306.6" r="4" fill="#6250d6" stroke="#fcfcfb" stroke-width="2"><title>Gemini, 2026-10: 944</title></circle>
+<path d="M64 290.5 L107.9 281.4 L151.8 287.1 L195.6 285.2 L239.5 282.2 L283.4 280.2 L327.3 284 L371.2 268.3 L415.1 251.8 L458.9 238.1 L502.8 235.1 L546.7 235.9 L590.6 237 L634.5 239.7 L678.4 241.3 L722.2 240.3 L766.1 238.1 L810 238.5" fill="none" stroke="#e34948" stroke-width="2" stroke-linejoin="round" stroke-linecap="round"/>
+<circle cx="64" cy="290.5" r="4" fill="#fcfcfb" stroke="#fcfcfb" stroke-width="2"><title>Jules, 2025-05: 2,038 (partial: search timed out)</title></circle>
+<circle cx="64" cy="290.5" r="3" fill="none" stroke="#e34948" stroke-width="2"><title>Jules, 2025-05: 2,038 (partial: search timed out)</title></circle>
+<circle cx="107.9" cy="281.4" r="4" fill="#e34948" stroke="#fcfcfb" stroke-width="2"><title>Jules, 2025-06: 3,141</title></circle>
+<circle cx="151.8" cy="287.1" r="4" fill="#fcfcfb" stroke="#fcfcfb" stroke-width="2"><title>Jules, 2025-07: 2,396 (partial: search timed out)</title></circle>
+<circle cx="151.8" cy="287.1" r="3" fill="none" stroke="#e34948" stroke-width="2"><title>Jules, 2025-07: 2,396 (partial: search timed out)</title></circle>
+<circle cx="195.6" cy="285.2" r="4" fill="#e34948" stroke="#fcfcfb" stroke-width="2"><title>Jules, 2025-08: 2,620</title></circle>
+<circle cx="239.5" cy="282.2" r="4" fill="#fcfcfb" stroke="#fcfcfb" stroke-width="2"><title>Jules, 2025-09: 3,028 (partial: search timed out)</title></circle>
+<circle cx="239.5" cy="282.2" r="3" fill="none" stroke="#e34948" stroke-width="2"><title>Jules, 2025-09: 3,028 (partial: search timed out)</title></circle>
+<circle cx="283.4" cy="280.2" r="4" fill="#fcfcfb" stroke="#fcfcfb" stroke-width="2"><title>Jules, 2025-10: 3,324 (partial: search timed out)</title></circle>
+<circle cx="283.4" cy="280.2" r="3" fill="none" stroke="#e34948" stroke-width="2"><title>Jules, 2025-10: 3,324 (partial: search timed out)</title></circle>
+<circle cx="327.3" cy="284" r="4" fill="#e34948" stroke="#fcfcfb" stroke-width="2"><title>Jules, 2025-11: 2,778</title></circle>
+<circle cx="371.2" cy="268.3" r="4" fill="#e34948" stroke="#fcfcfb" stroke-width="2"><title>Jules, 2025-12: 5,862</title></circle>
+<circle cx="415.1" cy="251.8" r="4" fill="#e34948" stroke="#fcfcfb" stroke-width="2"><title>Jules, 2026-01: 12,902</title></circle>
+<circle cx="458.9" cy="238.1" r="4" fill="#e34948" stroke="#fcfcfb" stroke-width="2"><title>Jules, 2026-02: 24,845</title></circle>
+<circle cx="502.8" cy="235.1" r="4" fill="#e34948" stroke="#fcfcfb" stroke-width="2"><title>Jules, 2026-03: 28,676</title></circle>
+<circle cx="546.7" cy="235.9" r="4" fill="#e34948" stroke="#fcfcfb" stroke-width="2"><title>Jules, 2026-04: 27,490</title></circle>
+<circle cx="590.6" cy="237" r="4" fill="#fcfcfb" stroke="#fcfcfb" stroke-width="2"><title>Jules, 2026-05: 26,110 (partial: search timed out)</title></circle>
+<circle cx="590.6" cy="237" r="3" fill="none" stroke="#e34948" stroke-width="2"><title>Jules, 2026-05: 26,110 (partial: search timed out)</title></circle>
+<circle cx="634.5" cy="239.7" r="4" fill="#fcfcfb" stroke="#fcfcfb" stroke-width="2"><title>Jules, 2026-06: 22,953 (partial: search timed out)</title></circle>
+<circle cx="634.5" cy="239.7" r="3" fill="none" stroke="#e34948" stroke-width="2"><title>Jules, 2026-06: 22,953 (partial: search timed out)</title></circle>
+<circle cx="678.4" cy="241.3" r="4" fill="#e34948" stroke="#fcfcfb" stroke-width="2"><title>Jules, 2026-07: 21,318</title></circle>
+<circle cx="722.2" cy="240.3" r="4" fill="#e34948" stroke="#fcfcfb" stroke-width="2"><title>Jules, 2026-08: 22,322</title></circle>
+<circle cx="766.1" cy="238.1" r="4" fill="#e34948" stroke="#fcfcfb" stroke-width="2"><title>Jules, 2026-09: 24,749</title></circle>
+<circle cx="810" cy="238.5" r="4" fill="#e34948" stroke="#fcfcfb" stroke-width="2"><title>Jules, 2026-10: 24,298</title></circle>
+<text x="822" y="112.6" font-size="11" fill="#52514e">Claude Code <tspan fill="#898781" font-variant-numeric="tabular-nums">12M</tspan></text>
+<text x="822" y="166.2" font-size="11" fill="#52514e">Cursor <tspan fill="#898781" font-variant-numeric="tabular-nums">925K</tspan></text>
+<line x1="816" y1="168.4" x2="818" y2="176.2" stroke="#c3c2b7" stroke-width="1"/>
+<text x="822" y="180.2" font-size="11" fill="#52514e">GitHub Copilot <tspan fill="#898781" font-variant-numeric="tabular-nums">689K</tspan></text>
+<line x1="816" y1="188.1" x2="818" y2="190.2" stroke="#c3c2b7" stroke-width="1"/>
+<text x="822" y="194.2" font-size="11" fill="#52514e">OpenAI Codex <tspan fill="#898781" font-variant-numeric="tabular-nums">270K</tspan></text>
+<text x="822" y="229.5" font-size="11" fill="#52514e">Aider <tspan fill="#898781" font-variant-numeric="tabular-nums">45K</tspan></text>
+<text x="822" y="243.5" font-size="11" fill="#52514e">Jules <tspan fill="#898781" font-variant-numeric="tabular-nums">24K</tspan></text>
+<text x="822" y="308.3" font-size="11" fill="#52514e">Devin <tspan fill="#898781" font-variant-numeric="tabular-nums">1.1K</tspan></text>
+<line x1="816" y1="306.6" x2="818" y2="318.3" stroke="#c3c2b7" stroke-width="1"/>
+<text x="822" y="322.3" font-size="11" fill="#52514e">Gemini <tspan fill="#898781" font-variant-numeric="tabular-nums">944</tspan></text>
 <line x1="64" x2="82" y1="448" y2="448" stroke="#2a78d6" stroke-width="2" stroke-linecap="round"/>
 <circle cx="73" cy="448" r="3.5" fill="#2a78d6" stroke="#fcfcfb" stroke-width="1.5"/>
 <text x="90" y="452" font-size="12" fill="#52514e">Claude Code</text>
@@ -318,5 +332,5 @@
 <text x="78" y="498" font-size="11" fill="#898781">complete count</text>
 <circle cx="184" cy="494" r="3" fill="#fcfcfb" stroke="#52514e" stroke-width="2"/>
 <text x="194" y="498" font-size="11" fill="#898781">partial count: GitHub's search timed out (incomplete_results), the true number is higher</text>
-<text x="944" y="508" font-size="10" text-anchor="end" fill="#898781">github.com/Quigles1337/agent-blame · 2026-11-09</text>
+<text x="944" y="508" font-size="10" text-anchor="end" fill="#898781">github.com/Quigles1337/agent-blame · 2026-11-16</text>
 </svg>
