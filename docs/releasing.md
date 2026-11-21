@@ -1,6 +1,6 @@
 # Releasing
 
-`agent-blame` is published to npm by [`release.yml`](../.github/workflows/release.yml) when a version tag is pushed. The workflow authenticates with [npm trusted publishing](https://docs.npmjs.com/trusted-publishers), so the repository holds no npm token, and npm attaches a provenance attestation to each version it publishes this way.
+`agent-blame` is published to npm as `@quigles1337/agent-blame` by [`release.yml`](../.github/workflows/release.yml) when a version tag is pushed. The workflow authenticates with [npm trusted publishing](https://docs.npmjs.com/trusted-publishers), so the repository holds no npm token, and npm attaches a provenance attestation to each version it publishes this way.
 
 ## Cutting a release
 
@@ -13,7 +13,7 @@ The workflow then checks that the tag matches `package.json`, runs the tests, li
 
 ## One-time setup
 
-npm can only trust a workflow for a package that already exists, so the first version is published by hand.
+npm can only trust a workflow for a package that already exists, so the first version is published by hand. The package is scoped, and scoped packages are private unless told otherwise, so `package.json` sets `publishConfig.access` to `public`; plain `npm publish` is enough.
 
 1. **Publish the first version from a clean checkout of `main`.**
 

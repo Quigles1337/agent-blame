@@ -1,7 +1,7 @@
 # agent-blame
 
 [![CI](https://github.com/Quigles1337/agent-blame/actions/workflows/ci.yml/badge.svg)](https://github.com/Quigles1337/agent-blame/actions/workflows/ci.yml)
-[![npm](https://img.shields.io/npm/v/agent-blame)](https://www.npmjs.com/package/agent-blame)
+[![npm](https://img.shields.io/npm/v/@quigles1337/agent-blame)](https://www.npmjs.com/package/@quigles1337/agent-blame)
 ![AI-assisted](https://img.shields.io/endpoint?url=https%3A%2F%2Fraw.githubusercontent.com%2FQuigles1337%2Fagent-blame%2Fmain%2Fexamples%2Fagent-blame.json)
 ![Node 20+](https://img.shields.io/badge/node-%3E%3D20-brightgreen)
 ![Zero dependencies](https://img.shields.io/badge/dependencies-0-blue)
@@ -14,17 +14,17 @@ AI coding agents sign their work: Claude Code, GitHub Copilot, Cursor, Codex, Ai
 ## Quick start
 
 ```sh
-npx agent-blame                       # the repository in the current directory
-npx agent-blame path/to/repo --files  # per-file instead of per-directory
-npx agent-blame --by-author --history # who, and how it changed month by month
-npx agent-blame --json > ai.json      # stable schema for tooling
-npx agent-blame --badge ai.svg        # shields-style badge
-npx agent-blame --range main..HEAD    # only the commits of this branch (pull-request mode)
-npx agent-blame --top 10              # the ten files with the highest AI-assisted share
-npx agent-blame --explain src/x.js    # every commit behind one file's number, with the evidence
+npx @quigles1337/agent-blame                       # the repository in the current directory
+npx @quigles1337/agent-blame path/to/repo --files  # per-file instead of per-directory
+npx @quigles1337/agent-blame --by-author --history # who, and how it changed month by month
+npx @quigles1337/agent-blame --json > ai.json      # stable schema for tooling
+npx @quigles1337/agent-blame --badge ai.svg        # shields-style badge
+npx @quigles1337/agent-blame --range main..HEAD    # only the commits of this branch (pull-request mode)
+npx @quigles1337/agent-blame --top 10              # the ten files with the highest AI-assisted share
+npx @quigles1337/agent-blame --explain src/x.js    # every commit behind one file's number, with the evidence
 ```
 
-Requires Node 20 or later and `git` on `PATH`. Nothing is installed globally and nothing leaves your machine. To run the unreleased version straight from this repository:
+Requires Node 20 or later and `git` on `PATH`. Nothing is installed globally and nothing leaves your machine. The package is scoped, but the command it installs is plain `agent-blame`: after `npm install -g @quigles1337/agent-blame`, drop the `npx @quigles1337/` prefix from the lines above. To run the unreleased version straight from this repository:
 
 ```sh
 npx github:Quigles1337/agent-blame
@@ -383,7 +383,7 @@ Outputs: `share` (for example `46%`), `exceeded` (`true`/`false`), `mode` and `r
       - uses: actions/setup-node@v4
         with:
           node-version: 22
-      - run: npx agent-blame --threshold 60 --markdown >> "$GITHUB_STEP_SUMMARY"
+      - run: npx @quigles1337/agent-blame --threshold 60 --markdown >> "$GITHUB_STEP_SUMMARY"
 ```
 
 The step fails with exit code 2 when more than 60% of the counted lines are AI-assisted, and the Markdown tables appear in the workflow summary either way. Add `--range "${{ github.event.pull_request.base.sha }}..${{ github.event.pull_request.head.sha }}"` on pull requests to measure only their commits.
@@ -417,7 +417,7 @@ jobs:
       - uses: actions/setup-node@v4
         with:
           node-version: 22
-      - run: npx agent-blame --quiet --badge .github/badges/ai-assisted.svg --shields .github/badges/ai-assisted.json
+      - run: npx @quigles1337/agent-blame --quiet --badge .github/badges/ai-assisted.svg --shields .github/badges/ai-assisted.json
       - name: Commit the badge if it changed
         run: |
           git config user.name "github-actions[bot]"
@@ -432,7 +432,7 @@ That badge commit is authored by `github-actions[bot]`, so `agent-blame` itself 
 ## Programmatic use
 
 ```js
-import { analyze, renderMarkdown, toJSON } from 'agent-blame';
+import { analyze, renderMarkdown, toJSON } from '@quigles1337/agent-blame';
 
 const model = await analyze({ path: '.', byAuthor: true, history: true });
 console.log(model.totals.aiShare);       // 0.2003...
