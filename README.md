@@ -451,8 +451,8 @@ Bug reports and pull requests are welcome. Questions, requests for new agent pat
 
 ## Related
 
-- [commit-tapestry](https://github.com/Quigles1337/commit-tapestry) weaves a repository's git history into a textile-style SVG.
-- [xrpl-sonic](https://github.com/Quigles1337/xrpl-sonic) turns the live XRP Ledger into sound.
+- [commit-tapestry](https://quigles1337.github.io/commit-tapestry/) weaves a repository's git history into a textile-style SVG.
+- [xrpl-sonic](https://quigles1337.github.io/xrpl-sonic/) turns the live XRP Ledger into sound.
 
 ## License
 
