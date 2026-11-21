@@ -1,5 +1,5 @@
 {
-  "name": "agent-blame",
+  "name": "@quigles1337/agent-blame",
   "version": "0.1.0",
   "description": "Measure how much of a codebase was written with AI coding agents, from the Co-Authored-By trailers they already leave. Line-level, retroactive, zero dependencies.",
   "type": "module",
@@ -49,5 +49,8 @@
   "license": "MIT",
   "bin": {
     "agent-blame": "bin/agent-blame.js"
+  },
+  "publishConfig": {
+    "access": "public"
   }
 }

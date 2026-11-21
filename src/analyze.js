@@ -1,7 +1,7 @@
 /**
  * Orchestration: resolve the repository, load config, classify every commit,
  * blame every eligible file and assemble the report model. This is the
- * programmatic entry point (`import { analyze } from 'agent-blame'`).
+ * programmatic entry point (`import { analyze } from '@quigles1337/agent-blame'`).
  */
 import fs from 'node:fs';
 import path from 'node:path';
@@ -17,7 +17,9 @@ import { collectRange, readRange, resolveRangeSpec, scopedMatcher, shortRev } fr
 const require = createRequire(import.meta.url);
 const pkg = require('../package.json');
 
-export const TOOL = Object.freeze({ name: pkg.name, version: pkg.version });
+// The tool's name is fixed: it is what the reports and the JSON schema print.
+// The npm package name carries a scope and is not the same thing.
+export const TOOL = Object.freeze({ name: 'agent-blame', version: pkg.version });
 
 function toPosix(p) {
   return p.split(path.sep).join('/');
