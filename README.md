@@ -1,6 +1,7 @@
 # agent-blame
 
 [![CI](https://github.com/Quigles1337/agent-blame/actions/workflows/ci.yml/badge.svg)](https://github.com/Quigles1337/agent-blame/actions/workflows/ci.yml)
+[![npm](https://img.shields.io/npm/v/agent-blame)](https://www.npmjs.com/package/agent-blame)
 ![AI-assisted](https://img.shields.io/endpoint?url=https%3A%2F%2Fraw.githubusercontent.com%2FQuigles1337%2Fagent-blame%2Fmain%2Fexamples%2Fagent-blame.json)
 ![Node 20+](https://img.shields.io/badge/node-%3E%3D20-brightgreen)
 ![Zero dependencies](https://img.shields.io/badge/dependencies-0-blue)
@@ -23,7 +24,7 @@ npx agent-blame --top 10              # the ten files with the highest AI-assist
 npx agent-blame --explain src/x.js    # every commit behind one file's number, with the evidence
 ```
 
-Requires Node 20 or later and `git` on `PATH`. Nothing is installed globally and nothing leaves your machine. Until the first npm release, run it straight from this repository:
+Requires Node 20 or later and `git` on `PATH`. Nothing is installed globally and nothing leaves your machine. To run the unreleased version straight from this repository:
 
 ```sh
 npx github:Quigles1337/agent-blame
@@ -359,7 +360,7 @@ jobs:
           threshold: 60           # optional: fail the job above this share
 ```
 
-The action runs the CLI from its own checkout, so it needs no npm release and no network access beyond posting the comment. Pull requests from forks get a read-only `GITHUB_TOKEN`; the action then prints a warning instead of a comment and still produces the report and the exit code. This repository runs the action on its own pull requests ([`.github/workflows/pr-report.yml`](.github/workflows/pr-report.yml)).
+The action runs the CLI from its own checkout, so it needs nothing from npm and no network access beyond posting the comment. Pull requests from forks get a read-only `GITHUB_TOKEN`; the action then prints a warning instead of a comment and still produces the report and the exit code. This repository runs the action on its own pull requests ([`.github/workflows/pr-report.yml`](.github/workflows/pr-report.yml)).
 
 | Input | Default | Description |
 | --- | --- | --- |
@@ -382,7 +383,6 @@ Outputs: `share` (for example `46%`), `exceeded` (`true`/`false`), `mode` and `r
       - uses: actions/setup-node@v4
         with:
           node-version: 22
-      # until the first npm release: npx github:Quigles1337/agent-blame ...
       - run: npx agent-blame --threshold 60 --markdown >> "$GITHUB_STEP_SUMMARY"
 ```
 
@@ -447,7 +447,7 @@ The classifier is also exported on its own (`createClassifier`, `classify`, `DEF
 
 ## Contributing
 
-Bug reports and pull requests are welcome. Questions, requests for new agent patterns and design discussions belong in [GitHub Discussions](https://github.com/Quigles1337/agent-blame/discussions). The test suite (`npm test`, no dependencies) covers every built-in pattern in trailer and author form; a new pattern should come with a test and, where possible, a link to the vendor documentation or a public commit that shows the identity in the wild.
+Bug reports and pull requests are welcome. Questions, requests for new agent patterns and design discussions belong in [GitHub Discussions](https://github.com/Quigles1337/agent-blame/discussions). The test suite (`npm test`, no dependencies) covers every built-in pattern in trailer and author form; a new pattern should come with a test and, where possible, a link to the vendor documentation or a public commit that shows the identity in the wild. Releases are cut as described in [`docs/releasing.md`](docs/releasing.md).
 
 ## Related
 
