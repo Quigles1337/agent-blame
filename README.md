@@ -39,9 +39,9 @@ How much AI co-authorship is there on GitHub as a whole, and is it growing? [`sc
 Read these as a floor, not a census: GitHub's search only indexes default-branch commits of repositories it has indexed, trailers are voluntary and some workflows strip them, and each number is the search API's `total_count`, which is a partial count whenever the search hits GitHub's time limit (marked † below; that is the case for every `Co-authored-by` phrase query). The order of magnitude and the direction of travel are more trustworthy than any individual month-over-month figure.
 
 <!-- trends:start -->
-**2026-10** (month-over-month in parentheses; † = partial count, GitHub's search timed out): Claude Code 12M† (+19%) · GitHub Copilot 689K† (+128%) · OpenAI Codex 270K† (+209%) · Cursor 925K† (-7.2%) · Aider 45K (+33%) · Devin 1.1K† (+0.7%) · Gemini 944 (-1.0%) · Jules 24K (-1.8%).
+**2026-10** (month-over-month in parentheses; † = partial count, GitHub's search timed out): Claude Code 14M† (+7.0%) · GitHub Copilot 601K† (+84%) · OpenAI Codex 323K† (+168%) · Cursor 1.1M† (+13%) · Aider 45K (+35%) · Devin 821† (-22%) · Gemini 1K (+0.1%) · Jules 24K† (-3.2%).
 
-Queries, one per agent and calendar month: `"Co-authored-by: Claude"`, `"Co-authored-by: Copilot"`, `"Co-authored-by: Codex"`, `"Co-authored-by: Cursor"`, `"(aider)"`, `"Co-authored-by: devin-ai-integration"`, `"Co-authored-by: gemini-code-assist"`, `"Co-authored-by: google-labs-jules"`; each is run as `<query> committer-date:<first day>..<last day>` against the commit search API and the `total_count` is recorded. Updated 2026-11-16.
+Queries, one per agent and calendar month: `"Co-authored-by: Claude"`, `"Co-authored-by: Copilot"`, `"Co-authored-by: Codex"`, `"Co-authored-by: Cursor"`, `"(aider)"`, `"Co-authored-by: devin-ai-integration"`, `"Co-authored-by: gemini-code-assist"`, `"Co-authored-by: google-labs-jules"`; each is run as `<query> committer-date:<first day>..<last day>` against the commit search API and the `total_count` is recorded. Updated 2026-11-23.
 <!-- trends:end -->
 
 The full month-by-month table, the query strings, the methodology and the weekly-split calibration of the latest month are in [`docs/trends.md`](docs/trends.md); the raw numbers are in [`docs/trends.json`](docs/trends.json).

@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "generatedAt": "2026-11-16T07:59:40.159Z",
+  "generatedAt": "2026-11-23T08:02:28.301Z",
   "source": "https://api.github.com/search/commits",
   "months": [
     "2025-05",
@@ -68,109 +68,109 @@
     "claude": [
       {
         "month": "2025-05",
-        "count": 41206,
+        "count": 41058,
         "incomplete": true,
         "attempts": 1
       },
       {
         "month": "2025-06",
-        "count": 250589,
+        "count": 252061,
         "incomplete": true,
         "attempts": 1
       },
       {
         "month": "2025-07",
-        "count": 433601,
+        "count": 439133,
         "incomplete": true,
         "attempts": 1
       },
       {
         "month": "2025-08",
-        "count": 551068,
+        "count": 492558,
         "incomplete": true,
         "attempts": 1
       },
       {
         "month": "2025-09",
-        "count": 479421,
+        "count": 483326,
         "incomplete": true,
         "attempts": 1
       },
       {
         "month": "2025-10",
-        "count": 879100,
+        "count": 836993,
         "incomplete": true,
         "attempts": 1
       },
       {
         "month": "2025-11",
-        "count": 963968,
+        "count": 993235,
         "incomplete": true,
         "attempts": 1
       },
       {
         "month": "2025-12",
-        "count": 1250162,
+        "count": 1378456,
         "incomplete": true,
         "attempts": 1
       },
       {
         "month": "2026-01",
-        "count": 3123281,
+        "count": 3074976,
         "incomplete": true,
         "attempts": 1
       },
       {
         "month": "2026-02",
-        "count": 4053367,
+        "count": 3516111,
         "incomplete": true,
         "attempts": 1
       },
       {
         "month": "2026-03",
-        "count": 7208111,
+        "count": 6596338,
         "incomplete": true,
         "attempts": 1
       },
       {
         "month": "2026-04",
-        "count": 8818774,
+        "count": 5596036,
         "incomplete": true,
         "attempts": 1
       },
       {
         "month": "2026-05",
-        "count": 4799249,
+        "count": 7725836,
         "incomplete": true,
         "attempts": 1
       },
       {
         "month": "2026-06",
-        "count": 4904801,
+        "count": 8319281,
         "incomplete": true,
         "attempts": 1
       },
       {
         "month": "2026-07",
-        "count": 3793387,
+        "count": 7978880,
         "incomplete": true,
         "attempts": 1
       },
       {
         "month": "2026-08",
-        "count": 5321225,
+        "count": 8983260,
         "incomplete": true,
         "attempts": 1
       },
       {
         "month": "2026-09",
-        "count": 9972014,
+        "count": 12689982,
         "incomplete": true,
         "attempts": 1
       },
       {
         "month": "2026-10",
-        "count": 11915811,
+        "count": 13579633,
         "incomplete": true,
         "attempts": 1
       }
@@ -178,109 +178,109 @@
     "copilot": [
       {
         "month": "2025-05",
-        "count": 41830,
+        "count": 43563,
         "incomplete": true,
         "attempts": 1
       },
       {
         "month": "2025-06",
-        "count": 44594,
+        "count": 44891,
         "incomplete": true,
         "attempts": 1
       },
       {
         "month": "2025-07",
-        "count": 47023,
+        "count": 60728,
         "incomplete": true,
         "attempts": 1
       },
       {
         "month": "2025-08",
-        "count": 65747,
+        "count": 66531,
         "incomplete": true,
         "attempts": 1
       },
       {
         "month": "2025-09",
-        "count": 72692,
+        "count": 74675,
         "incomplete": true,
         "attempts": 1
       },
       {
         "month": "2025-10",
-        "count": 107397,
+        "count": 107546,
         "incomplete": true,
         "attempts": 1
       },
       {
         "month": "2025-11",
-        "count": 121261,
+        "count": 118354,
         "incomplete": true,
         "attempts": 1
       },
       {
         "month": "2025-12",
-        "count": 112858,
+        "count": 114132,
         "incomplete": true,
         "attempts": 1
       },
       {
         "month": "2026-01",
-        "count": 124419,
+        "count": 125077,
         "incomplete": true,
         "attempts": 1
       },
       {
         "month": "2026-02",
-        "count": 214189,
+        "count": 225362,
         "incomplete": true,
         "attempts": 1
       },
       {
         "month": "2026-03",
-        "count": 459923,
+        "count": 422990,
         "incomplete": true,
         "attempts": 1
       },
       {
         "month": "2026-04",
-        "count": 630347,
+        "count": 732018,
         "incomplete": true,
         "attempts": 1
       },
       {
         "month": "2026-05",
-        "count": 509320,
+        "count": 479246,
         "incomplete": true,
         "attempts": 1
       },
       {
         "month": "2026-06",
-        "count": 308099,
+        "count": 282506,
         "incomplete": true,
         "attempts": 1
       },
       {
         "month": "2026-07",
-        "count": 273669,
+        "count": 299331,
         "incomplete": true,
         "attempts": 1
       },
       {
         "month": "2026-08",
-        "count": 290082,
+        "count": 297161,
         "incomplete": true,
         "attempts": 1
       },
       {
         "month": "2026-09",
-        "count": 302549,
+        "count": 326429,
         "incomplete": true,
         "attempts": 1
       },
       {
         "month": "2026-10",
-        "count": 688745,
+        "count": 600973,
         "incomplete": true,
         "attempts": 1
       }
@@ -288,109 +288,109 @@
     "codex": [
       {
         "month": "2025-05",
-        "count": 18,
+        "count": 20,
         "incomplete": true,
         "attempts": 1
       },
       {
         "month": "2025-06",
         "count": 17,
-        "incomplete": false,
+        "incomplete": true,
         "attempts": 1
       },
       {
         "month": "2025-07",
         "count": 35,
-        "incomplete": true,
-        "attempts": 1
-      },
-      {
-        "month": "2025-08",
-        "count": 42,
         "incomplete": false,
         "attempts": 1
       },
       {
+        "month": "2025-08",
+        "count": 45,
+        "incomplete": true,
+        "attempts": 1
+      },
+      {
         "month": "2025-09",
-        "count": 1493,
+        "count": 1589,
         "incomplete": true,
         "attempts": 1
       },
       {
         "month": "2025-10",
-        "count": 4275,
+        "count": 4304,
         "incomplete": true,
         "attempts": 1
       },
       {
         "month": "2025-11",
-        "count": 1143,
-        "incomplete": false,
+        "count": 1219,
+        "incomplete": true,
         "attempts": 1
       },
       {
         "month": "2025-12",
-        "count": 1050,
+        "count": 901,
         "incomplete": true,
         "attempts": 1
       },
       {
         "month": "2026-01",
-        "count": 4115,
+        "count": 3894,
         "incomplete": true,
         "attempts": 1
       },
       {
         "month": "2026-02",
-        "count": 28009,
+        "count": 29408,
         "incomplete": true,
         "attempts": 1
       },
       {
         "month": "2026-03",
-        "count": 73833,
+        "count": 68022,
         "incomplete": true,
         "attempts": 1
       },
       {
         "month": "2026-04",
-        "count": 74177,
+        "count": 77411,
         "incomplete": true,
         "attempts": 1
       },
       {
         "month": "2026-05",
-        "count": 93582,
+        "count": 94869,
         "incomplete": true,
         "attempts": 1
       },
       {
         "month": "2026-06",
-        "count": 130239,
+        "count": 132491,
         "incomplete": true,
         "attempts": 1
       },
       {
         "month": "2026-07",
-        "count": 99225,
+        "count": 86357,
         "incomplete": true,
         "attempts": 1
       },
       {
         "month": "2026-08",
-        "count": 93693,
+        "count": 51987,
         "incomplete": true,
         "attempts": 1
       },
       {
         "month": "2026-09",
-        "count": 87303,
+        "count": 120669,
         "incomplete": true,
         "attempts": 1
       },
       {
         "month": "2026-10",
-        "count": 269602,
+        "count": 323495,
         "incomplete": true,
         "attempts": 1
       }
@@ -398,109 +398,109 @@
     "cursor": [
       {
         "month": "2025-05",
-        "count": 212,
+        "count": 224,
         "incomplete": true,
         "attempts": 1
       },
       {
         "month": "2025-06",
-        "count": 10520,
+        "count": 10429,
         "incomplete": true,
         "attempts": 1
       },
       {
         "month": "2025-07",
-        "count": 14279,
+        "count": 12880,
         "incomplete": true,
         "attempts": 1
       },
       {
         "month": "2025-08",
-        "count": 14376,
+        "count": 11512,
         "incomplete": true,
         "attempts": 1
       },
       {
         "month": "2025-09",
-        "count": 8863,
+        "count": 7916,
         "incomplete": true,
         "attempts": 1
       },
       {
         "month": "2025-10",
-        "count": 10648,
+        "count": 10385,
         "incomplete": true,
         "attempts": 1
       },
       {
         "month": "2025-11",
-        "count": 8702,
+        "count": 8684,
         "incomplete": true,
         "attempts": 1
       },
       {
         "month": "2025-12",
-        "count": 8849,
+        "count": 9383,
         "incomplete": true,
         "attempts": 1
       },
       {
         "month": "2026-01",
-        "count": 28340,
+        "count": 27856,
         "incomplete": true,
         "attempts": 1
       },
       {
         "month": "2026-02",
-        "count": 578606,
+        "count": 551455,
         "incomplete": true,
         "attempts": 1
       },
       {
         "month": "2026-03",
-        "count": 19299,
+        "count": 21152,
         "incomplete": true,
         "attempts": 1
       },
       {
         "month": "2026-04",
-        "count": 13084,
+        "count": 23217,
         "incomplete": true,
         "attempts": 1
       },
       {
         "month": "2026-05",
-        "count": 833219,
+        "count": 867671,
         "incomplete": true,
         "attempts": 1
       },
       {
         "month": "2026-06",
-        "count": 899020,
+        "count": 1009574,
         "incomplete": true,
         "attempts": 1
       },
       {
         "month": "2026-07",
-        "count": 1811335,
+        "count": 1298715,
         "incomplete": true,
         "attempts": 1
       },
       {
         "month": "2026-08",
-        "count": 1235934,
+        "count": 1085214,
         "incomplete": true,
         "attempts": 1
       },
       {
         "month": "2026-09",
-        "count": 996214,
+        "count": 936172,
         "incomplete": true,
         "attempts": 1
       },
       {
         "month": "2026-10",
-        "count": 924571,
+        "count": 1060940,
         "incomplete": true,
         "attempts": 1
       }
@@ -508,109 +508,109 @@
     "aider": [
       {
         "month": "2025-05",
-        "count": 5504,
+        "count": 5704,
         "incomplete": true,
         "attempts": 1
       },
       {
         "month": "2025-06",
-        "count": 6175,
-        "incomplete": true,
+        "count": 6236,
+        "incomplete": false,
         "attempts": 1
       },
       {
         "month": "2025-07",
-        "count": 15206,
+        "count": 15392,
         "incomplete": false,
         "attempts": 1
       },
       {
         "month": "2025-08",
-        "count": 16923,
+        "count": 16981,
         "incomplete": false,
         "attempts": 1
       },
       {
         "month": "2025-09",
-        "count": 13488,
+        "count": 13487,
         "incomplete": false,
         "attempts": 1
       },
       {
         "month": "2025-10",
-        "count": 14050,
+        "count": 14056,
         "incomplete": false,
         "attempts": 1
       },
       {
         "month": "2025-11",
-        "count": 17216,
+        "count": 17235,
         "incomplete": false,
         "attempts": 1
       },
       {
         "month": "2025-12",
-        "count": 12624,
+        "count": 12651,
         "incomplete": false,
         "attempts": 1
       },
       {
         "month": "2026-01",
-        "count": 13269,
+        "count": 13288,
         "incomplete": false,
         "attempts": 1
       },
       {
         "month": "2026-02",
-        "count": 13937,
+        "count": 13986,
         "incomplete": false,
         "attempts": 1
       },
       {
         "month": "2026-03",
-        "count": 20138,
-        "incomplete": true,
+        "count": 20293,
+        "incomplete": false,
         "attempts": 1
       },
       {
         "month": "2026-04",
-        "count": 24306,
+        "count": 24394,
         "incomplete": false,
         "attempts": 1
       },
       {
         "month": "2026-05",
-        "count": 29479,
+        "count": 29361,
         "incomplete": false,
         "attempts": 1
       },
       {
         "month": "2026-06",
-        "count": 24236,
+        "count": 24339,
         "incomplete": false,
         "attempts": 1
       },
       {
         "month": "2026-07",
-        "count": 27797,
+        "count": 27939,
         "incomplete": false,
         "attempts": 1
       },
       {
         "month": "2026-08",
-        "count": 29478,
+        "count": 29554,
         "incomplete": false,
         "attempts": 1
       },
       {
         "month": "2026-09",
-        "count": 33998,
+        "count": 33704,
         "incomplete": false,
         "attempts": 1
       },
       {
         "month": "2026-10",
-        "count": 45302,
+        "count": 45355,
         "incomplete": false,
         "attempts": 1
       }
@@ -618,32 +618,32 @@
     "devin": [
       {
         "month": "2025-05",
-        "count": 450,
+        "count": 479,
         "incomplete": true,
         "attempts": 1
       },
       {
         "month": "2025-06",
         "count": 102,
-        "incomplete": true,
-        "attempts": 1
-      },
-      {
-        "month": "2025-07",
-        "count": 705,
         "incomplete": false,
         "attempts": 1
       },
       {
+        "month": "2025-07",
+        "count": 693,
+        "incomplete": true,
+        "attempts": 1
+      },
+      {
         "month": "2025-08",
-        "count": 162,
+        "count": 161,
         "incomplete": true,
         "attempts": 1
       },
       {
         "month": "2025-09",
         "count": 126,
-        "incomplete": true,
+        "incomplete": false,
         "attempts": 1
       },
       {
@@ -661,7 +661,7 @@
       {
         "month": "2025-12",
         "count": 106,
-        "incomplete": true,
+        "incomplete": false,
         "attempts": 1
       },
       {
@@ -672,55 +672,55 @@
       },
       {
         "month": "2026-02",
-        "count": 2544,
+        "count": 2550,
         "incomplete": true,
         "attempts": 1
       },
       {
         "month": "2026-03",
-        "count": 3059,
-        "incomplete": true,
+        "count": 3073,
+        "incomplete": false,
         "attempts": 1
       },
       {
         "month": "2026-04",
-        "count": 2824,
+        "count": 2811,
         "incomplete": true,
         "attempts": 1
       },
       {
         "month": "2026-05",
-        "count": 1103,
+        "count": 1076,
         "incomplete": true,
         "attempts": 1
       },
       {
         "month": "2026-06",
-        "count": 681,
-        "incomplete": false,
+        "count": 669,
+        "incomplete": true,
         "attempts": 1
       },
       {
         "month": "2026-07",
-        "count": 924,
+        "count": 899,
         "incomplete": true,
         "attempts": 1
       },
       {
         "month": "2026-08",
-        "count": 910,
+        "count": 885,
         "incomplete": true,
         "attempts": 1
       },
       {
         "month": "2026-09",
-        "count": 1047,
+        "count": 1059,
         "incomplete": true,
         "attempts": 1
       },
       {
         "month": "2026-10",
-        "count": 1054,
+        "count": 821,
         "incomplete": true,
         "attempts": 1
       }
@@ -728,109 +728,109 @@
     "gemini": [
       {
         "month": "2025-05",
-        "count": 471,
+        "count": 450,
         "incomplete": true,
         "attempts": 1
       },
       {
         "month": "2025-06",
-        "count": 5174,
+        "count": 5247,
         "incomplete": true,
         "attempts": 1
       },
       {
         "month": "2025-07",
-        "count": 16906,
-        "incomplete": true,
-        "attempts": 1
-      },
-      {
-        "month": "2025-08",
-        "count": 30862,
+        "count": 17569,
         "incomplete": false,
         "attempts": 1
       },
       {
+        "month": "2025-08",
+        "count": 30872,
+        "incomplete": true,
+        "attempts": 1
+      },
+      {
         "month": "2025-09",
-        "count": 29547,
+        "count": 29908,
         "incomplete": false,
         "attempts": 1
       },
       {
         "month": "2025-10",
-        "count": 32443,
+        "count": 32802,
         "incomplete": true,
         "attempts": 1
       },
       {
         "month": "2025-11",
-        "count": 31031,
+        "count": 31393,
         "incomplete": false,
         "attempts": 1
       },
       {
         "month": "2025-12",
-        "count": 30387,
+        "count": 30512,
         "incomplete": true,
         "attempts": 1
       },
       {
         "month": "2026-01",
-        "count": 26553,
-        "incomplete": false,
+        "count": 26217,
+        "incomplete": true,
         "attempts": 1
       },
       {
         "month": "2026-02",
-        "count": 24020,
+        "count": 24393,
         "incomplete": false,
         "attempts": 1
       },
       {
         "month": "2026-03",
-        "count": 26679,
-        "incomplete": false,
+        "count": 27105,
+        "incomplete": true,
         "attempts": 1
       },
       {
         "month": "2026-04",
-        "count": 19992,
+        "count": 20495,
         "incomplete": true,
         "attempts": 1
       },
       {
         "month": "2026-05",
-        "count": 19262,
+        "count": 19782,
         "incomplete": false,
         "attempts": 1
       },
       {
         "month": "2026-06",
-        "count": 10898,
-        "incomplete": true,
+        "count": 11127,
+        "incomplete": false,
         "attempts": 1
       },
       {
         "month": "2026-07",
-        "count": 5616,
+        "count": 5803,
         "incomplete": false,
         "attempts": 1
       },
       {
         "month": "2026-08",
-        "count": 1388,
+        "count": 1438,
         "incomplete": false,
         "attempts": 1
       },
       {
         "month": "2026-09",
-        "count": 954,
-        "incomplete": true,
+        "count": 1030,
+        "incomplete": false,
         "attempts": 1
       },
       {
         "month": "2026-10",
-        "count": 944,
+        "count": 1031,
         "incomplete": false,
         "attempts": 1
       }
@@ -838,110 +838,110 @@
     "jules": [
       {
         "month": "2025-05",
-        "count": 2038,
+        "count": 2017,
         "incomplete": true,
         "attempts": 1
       },
       {
         "month": "2025-06",
-        "count": 3141,
-        "incomplete": false,
+        "count": 3151,
+        "incomplete": true,
         "attempts": 1
       },
       {
         "month": "2025-07",
-        "count": 2396,
+        "count": 2408,
         "incomplete": true,
         "attempts": 1
       },
       {
         "month": "2025-08",
-        "count": 2620,
-        "incomplete": false,
+        "count": 2662,
+        "incomplete": true,
         "attempts": 1
       },
       {
         "month": "2025-09",
-        "count": 3028,
+        "count": 3061,
         "incomplete": true,
         "attempts": 1
       },
       {
         "month": "2025-10",
-        "count": 3324,
+        "count": 3361,
         "incomplete": true,
         "attempts": 1
       },
       {
         "month": "2025-11",
-        "count": 2778,
-        "incomplete": false,
+        "count": 2830,
+        "incomplete": true,
         "attempts": 1
       },
       {
         "month": "2025-12",
-        "count": 5862,
-        "incomplete": false,
+        "count": 5880,
+        "incomplete": true,
         "attempts": 1
       },
       {
         "month": "2026-01",
-        "count": 12902,
-        "incomplete": false,
+        "count": 12716,
+        "incomplete": true,
         "attempts": 1
       },
       {
         "month": "2026-02",
-        "count": 24845,
-        "incomplete": false,
+        "count": 24791,
+        "incomplete": true,
         "attempts": 1
       },
       {
         "month": "2026-03",
-        "count": 28676,
+        "count": 28387,
         "incomplete": false,
         "attempts": 1
       },
       {
         "month": "2026-04",
-        "count": 27490,
+        "count": 27274,
         "incomplete": false,
         "attempts": 1
       },
       {
         "month": "2026-05",
-        "count": 26110,
-        "incomplete": true,
+        "count": 25789,
+        "incomplete": false,
         "attempts": 1
       },
       {
         "month": "2026-06",
-        "count": 22953,
+        "count": 22399,
         "incomplete": true,
         "attempts": 1
       },
       {
         "month": "2026-07",
-        "count": 21318,
-        "incomplete": false,
+        "count": 21413,
+        "incomplete": true,
         "attempts": 1
       },
       {
         "month": "2026-08",
-        "count": 22322,
-        "incomplete": false,
+        "count": 22105,
+        "incomplete": true,
         "attempts": 1
       },
       {
         "month": "2026-09",
-        "count": 24749,
-        "incomplete": false,
+        "count": 24783,
+        "incomplete": true,
         "attempts": 1
       },
       {
         "month": "2026-10",
-        "count": 24298,
-        "incomplete": false,
+        "count": 23997,
+        "incomplete": true,
         "attempts": 1
       }
     ]
@@ -952,47 +952,56 @@
       {
         "id": "claude",
         "label": "Claude Code",
-        "monthly": 11915811,
+        "monthly": 13579633,
         "monthlyIncomplete": true,
-        "weeklySum": 34266885,
+        "weeklySum": 32349019,
         "weeks": 5,
         "weeksIncomplete": 5
       },
       {
         "id": "copilot",
         "label": "GitHub Copilot",
-        "monthly": 688745,
+        "monthly": 600973,
         "monthlyIncomplete": true,
-        "weeklySum": 785361,
+        "weeklySum": 783049,
         "weeks": 5,
-        "weeksIncomplete": 4
+        "weeksIncomplete": 5
       },
       {
         "id": "codex",
         "label": "OpenAI Codex",
-        "monthly": 269602,
+        "monthly": 323495,
         "monthlyIncomplete": true,
-        "weeklySum": 313288,
+        "weeklySum": 310717,
         "weeks": 5,
         "weeksIncomplete": 5
       },
       {
         "id": "cursor",
         "label": "Cursor",
-        "monthly": 924571,
+        "monthly": 1060940,
         "monthlyIncomplete": true,
-        "weeklySum": 1075115,
+        "weeklySum": 1062339,
         "weeks": 5,
         "weeksIncomplete": 5
       },
       {
         "id": "devin",
         "label": "Devin",
-        "monthly": 1054,
+        "monthly": 821,
         "monthlyIncomplete": true,
-        "weeklySum": 1052,
+        "weeklySum": 1061,
         "weeks": 5,
-        "weeksIncomplete": 5
+        "weeksIncomplete": 4
+      },
+      {
+        "id": "jules",
+        "label": "Jules",
+        "monthly": 23997,
+        "monthlyIncomplete": true,
+        "weeklySum": 24035,
+        "weeks": 5,
+        "weeksIncomplete": 0
       }
     ]
   },
@@ -1014,10 +1023,10 @@
     ]
   },
   "stats": {
-    "requests": 170,
+    "requests": 175,
     "retries": 1,
     "secondaryLimits": 1,
     "paceMs": 40000,
-    "durationSeconds": 6766
+    "durationSeconds": 6956
   }
 }
